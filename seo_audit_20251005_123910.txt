@@ -1,0 +1,58 @@
+
+============================================================
+CAIS WEBSITE SEO AUDIT & INVENTORY
+============================================================
+Scan Date: 2025-10-05 12:39:10
+Base URL: https://caisconf.org
+Root Directory: C:\Users\jquicksa\Desktop\Job Search\Portfolio\CAIS-Website
+------------------------------------------------------------
+FILE STATISTICS:
+  Total Files: 64
+  Total Size: 125.80 MB
+  HTML Pages: 8
+  CSS Files: 1
+  JavaScript Files: 0
+  Images: 30
+  Other Files: 25
+------------------------------------------------------------
+SEO SITEMAP STATISTICS:
+  Indexed Pages: 6
+  High Priority Pages (0.8+): 2
+  Medium Priority Pages (0.5-0.8): 4
+  Low Priority Pages (<0.5): 0
+============================================================
+
+PAGES IN SITEMAP:
+------------------------------------------------------------
+Priority 1.0: https://caisconf.org
+  Title: CAIS 2026 — ACM Conference on Agentic and AI Systems
+  Description: CAIS 2026 — the ACM Conference on Agentic and AI Systems. May 26–29, 2026 in San Francisco. The prem...
+  Last Modified: 2025-10-03
+  Change Frequency: monthly
+
+Priority 0.9: https://caisconf.org/pages/cais-2026-cfp.html
+  Title: Call for Papers — CAIS 2026
+  Description: Call for Papers for CAIS 2026 — ACM Conference on Agentic and AI Systems....
+  Last Modified: 2025-10-03
+  Change Frequency: weekly
+
+Priority 0.6: https://caisconf.org/pages/cais-2026-accessibility.html
+  Title: Accessibility — CAIS 2026
+  Last Modified: 2025-10-01
+  Change Frequency: weekly
+
+Priority 0.6: https://caisconf.org/pages/cais-2026-code-of-conduct.html
+  Title: Code of Conduct — CAIS 2026
+  Last Modified: 2025-10-01
+  Change Frequency: monthly
+
+Priority 0.6: https://caisconf.org/pages/cais-2026-diversity-inclusion.html
+  Title: Diversity & Inclusion — CAIS 2026
+  Last Modified: 2025-10-01
+  Change Frequency: monthly
+
+Priority 0.5: https://caisconf.org/pages/cais-2026-recording-media.html
+  Title: Recording & Media Policy — CAIS 2026
+  Last Modified: 2025-10-05
+  Change Frequency: monthly
+

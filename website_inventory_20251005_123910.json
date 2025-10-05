@@ -1,0 +1,641 @@
+{
+  "html_files": [
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "size": 21040,
+      "size_readable": "20.55 KB",
+      "modified": "2025-10-03 10:10:48",
+      "modified_iso": "2025-10-03T10:10:48.597976",
+      "type": "text/html"
+    },
+    {
+      "name": "index_OnlyCFP.html",
+      "path": "index_OnlyCFP.html",
+      "size": 12471,
+      "size_readable": "12.18 KB",
+      "modified": "2025-10-03 10:02:58",
+      "modified_iso": "2025-10-03T10:02:58.981838",
+      "type": "text/html"
+    },
+    {
+      "name": "cais-2026-accessibility.html",
+      "path": "pages/cais-2026-accessibility.html",
+      "size": 8966,
+      "size_readable": "8.76 KB",
+      "modified": "2025-10-01 20:56:49",
+      "modified_iso": "2025-10-01T20:56:49.867893",
+      "type": "text/html"
+    },
+    {
+      "name": "cais-2026-cfp.html",
+      "path": "pages/cais-2026-cfp.html",
+      "size": 10055,
+      "size_readable": "9.82 KB",
+      "modified": "2025-10-03 09:54:58",
+      "modified_iso": "2025-10-03T09:54:58.925800",
+      "type": "text/html"
+    },
+    {
+      "name": "cais-2026-code-of-conduct.html",
+      "path": "pages/cais-2026-code-of-conduct.html",
+      "size": 8294,
+      "size_readable": "8.10 KB",
+      "modified": "2025-10-01 20:47:45",
+      "modified_iso": "2025-10-01T20:47:45.291769",
+      "type": "text/html"
+    },
+    {
+      "name": "cais-2026-diversity-inclusion.html",
+      "path": "pages/cais-2026-diversity-inclusion.html",
+      "size": 7585,
+      "size_readable": "7.41 KB",
+      "modified": "2025-10-01 22:00:41",
+      "modified_iso": "2025-10-01T22:00:41.623690",
+      "type": "text/html"
+    },
+    {
+      "name": "cais-2026-recording-media.html",
+      "path": "pages/cais-2026-recording-media.html",
+      "size": 12309,
+      "size_readable": "12.02 KB",
+      "modified": "2025-10-05 10:43:53",
+      "modified_iso": "2025-10-05T10:43:53.400430",
+      "type": "text/html"
+    },
+    {
+      "name": "index_old_20250930-0927.html",
+      "path": "pages/old/index_old_20250930-0927.html",
+      "size": 21130,
+      "size_readable": "20.63 KB",
+      "modified": "2025-09-30 09:27:17",
+      "modified_iso": "2025-09-30T09:27:17.698348",
+      "type": "text/html"
+    }
+  ],
+  "css_files": [
+    {
+      "name": "styles.css",
+      "path": "assets/css/styles.css",
+      "size": 1477,
+      "size_readable": "1.44 KB",
+      "modified": "2025-10-01 20:38:29",
+      "modified_iso": "2025-10-01T20:38:29.094980",
+      "type": "text/css"
+    }
+  ],
+  "js_files": [],
+  "images": [
+    {
+      "name": "51-513243_education-world-planet-stanford-logo-stanford-university-high.png",
+      "path": "assets/images/51-513243_education-world-planet-stanford-logo-stanford-university-high.png",
+      "size": 124076,
+      "size_readable": "121.17 KB",
+      "modified": "2025-09-26 15:18:44",
+      "modified_iso": "2025-09-26T15:18:44.801780",
+      "type": "image/png"
+    },
+    {
+      "name": "68309ab48369f7ad9b4a40e1_open-graph.jpg",
+      "path": "assets/images/68309ab48369f7ad9b4a40e1_open-graph.jpg",
+      "size": 29390,
+      "size_readable": "28.70 KB",
+      "modified": "2025-09-26 15:20:51",
+      "modified_iso": "2025-09-26T15:20:51.362004",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg",
+      "path": "assets/images/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg",
+      "size": 140150,
+      "size_readable": "136.87 KB",
+      "modified": "2025-09-26 15:24:52",
+      "modified_iso": "2025-09-26T15:24:52.159513",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "CAIS Logo Long.png",
+      "path": "assets/images/CAIS Logo Long.png",
+      "size": 26686,
+      "size_readable": "26.06 KB",
+      "modified": "2025-09-26 23:14:42",
+      "modified_iso": "2025-09-26T23:14:42.506344",
+      "type": "image/png"
+    },
+    {
+      "name": "cais LOGO wordmark lockup _ short w 2026.png",
+      "path": "assets/images/cais LOGO wordmark lockup _ short w 2026.png",
+      "size": 162324,
+      "size_readable": "158.52 KB",
+      "modified": "2025-10-01 16:04:25",
+      "modified_iso": "2025-10-01T16:04:25.023224",
+      "type": "image/png"
+    },
+    {
+      "name": "cais LOGO wordmark lockup _ short w 2026.svg",
+      "path": "assets/images/cais LOGO wordmark lockup _ short w 2026.svg",
+      "size": 5562,
+      "size_readable": "5.43 KB",
+      "modified": "2025-09-26 20:51:49",
+      "modified_iso": "2025-09-26T20:51:49.994630",
+      "type": "image/svg+xml"
+    },
+    {
+      "name": "cais LOGO wordmark lockup _ short.svg",
+      "path": "assets/images/cais LOGO wordmark lockup _ short.svg",
+      "size": 4116,
+      "size_readable": "4.02 KB",
+      "modified": "2025-09-26 20:52:10",
+      "modified_iso": "2025-09-26T20:52:10.663346",
+      "type": "image/svg+xml"
+    },
+    {
+      "name": "CAIS_hero1.png",
+      "path": "assets/images/CAIS_hero1.png",
+      "size": 1600016,
+      "size_readable": "1.53 MB",
+      "modified": "2025-09-30 10:20:13",
+      "modified_iso": "2025-09-30T10:20:13.822914",
+      "type": "image/png"
+    },
+    {
+      "name": "Databricks_Logo.png",
+      "path": "assets/images/Databricks_Logo.png",
+      "size": 27894,
+      "size_readable": "27.24 KB",
+      "modified": "2025-09-26 15:26:36",
+      "modified_iso": "2025-09-26T15:26:36.117571",
+      "type": "image/png"
+    },
+    {
+      "name": "hero experiment output 1.png",
+      "path": "assets/images/hero experiment output 1.png",
+      "size": 491469,
+      "size_readable": "479.95 KB",
+      "modified": "2025-09-26 22:42:57",
+      "modified_iso": "2025-09-26T22:42:57.725869",
+      "type": "image/png"
+    },
+    {
+      "name": "hf-logo-with-title.png",
+      "path": "assets/images/hf-logo-with-title.png",
+      "size": 91529,
+      "size_readable": "89.38 KB",
+      "modified": "2025-09-26 15:21:19",
+      "modified_iso": "2025-09-26T15:21:19.508082",
+      "type": "image/png"
+    },
+    {
+      "name": "images.png",
+      "path": "assets/images/images.png",
+      "size": 5652,
+      "size_readable": "5.52 KB",
+      "modified": "2025-09-26 15:26:09",
+      "modified_iso": "2025-09-26T15:26:09.704772",
+      "type": "image/png"
+    },
+    {
+      "name": "imgbin-massachusetts-institute-of-technology-mit-license-technical-school-logo-university-massachusetts-6cVJ49t5NK1RDdXRtLdNX46M9_t.jpg",
+      "path": "assets/images/imgbin-massachusetts-institute-of-technology-mit-license-technical-school-logo-university-massachusetts-6cVJ49t5NK1RDdXRtLdNX46M9_t.jpg",
+      "size": 11780,
+      "size_readable": "11.50 KB",
+      "modified": "2025-09-26 15:19:08",
+      "modified_iso": "2025-09-26T15:19:08.583451",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "iStock-519434822.jpg",
+      "path": "assets/images/iStock-519434822.jpg",
+      "size": 13329027,
+      "size_readable": "12.71 MB",
+      "modified": "2016-12-02 06:31:54",
+      "modified_iso": "2016-12-02T06:31:54",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "iStock-523860874.jpg",
+      "path": "assets/images/iStock-523860874.jpg",
+      "size": 10936343,
+      "size_readable": "10.43 MB",
+      "modified": "2017-01-03 10:38:26",
+      "modified_iso": "2017-01-03T10:38:26",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "logo-variations-thumbnail-blue-white.png",
+      "path": "assets/images/logo-variations-thumbnail-blue-white.png",
+      "size": 33529,
+      "size_readable": "32.74 KB",
+      "modified": "2025-09-26 15:20:01",
+      "modified_iso": "2025-09-26T15:20:01.139271",
+      "type": "image/png"
+    },
+    {
+      "name": "nvidia-logo-vert.png",
+      "path": "assets/images/nvidia-logo-vert.png",
+      "size": 51970,
+      "size_readable": "50.75 KB",
+      "modified": "2025-09-26 15:25:28",
+      "modified_iso": "2025-09-26T15:25:28.599519",
+      "type": "image/png"
+    },
+    {
+      "name": "OpenAI-Logo-PNG.jpg",
+      "path": "assets/images/OpenAI-Logo-PNG.jpg",
+      "size": 104045,
+      "size_readable": "101.61 KB",
+      "modified": "2025-09-26 15:20:26",
+      "modified_iso": "2025-09-26T15:20:26.658345",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "Pillars_composition.svg",
+      "path": "assets/images/Pillars_composition.svg",
+      "size": 8479,
+      "size_readable": "8.28 KB",
+      "modified": "2025-09-26 20:30:20",
+      "modified_iso": "2025-09-26T20:30:20.104628",
+      "type": "image/svg+xml"
+    },
+    {
+      "name": "Pillars_EngOps.svg",
+      "path": "assets/images/Pillars_EngOps.svg",
+      "size": 8479,
+      "size_readable": "8.28 KB",
+      "modified": "2025-09-26 20:29:45",
+      "modified_iso": "2025-09-26T20:29:45.217585",
+      "type": "image/svg+xml"
+    },
+    {
+      "name": "Pillars_evaluation.svg",
+      "path": "assets/images/Pillars_evaluation.svg",
+      "size": 8479,
+      "size_readable": "8.28 KB",
+      "modified": "2025-09-26 20:30:39",
+      "modified_iso": "2025-09-26T20:30:39.882936",
+      "type": "image/svg+xml"
+    },
+    {
+      "name": "Pillars_optimization.svg",
+      "path": "assets/images/Pillars_optimization.svg",
+      "size": 8479,
+      "size_readable": "8.28 KB",
+      "modified": "2025-09-26 20:30:04",
+      "modified_iso": "2025-09-26T20:30:04.141264",
+      "type": "image/svg+xml"
+    },
+    {
+      "name": "shutterstock_1091706191.jpg",
+      "path": "assets/images/shutterstock_1091706191.jpg",
+      "size": 10772699,
+      "size_readable": "10.27 MB",
+      "modified": "2022-01-13 11:06:51",
+      "modified_iso": "2022-01-13T11:06:51.886000",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "shutterstock_230705539.jpg",
+      "path": "assets/images/shutterstock_230705539.jpg",
+      "size": 8089853,
+      "size_readable": "7.72 MB",
+      "modified": "2020-04-20 09:53:23",
+      "modified_iso": "2020-04-20T09:53:23",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "shutterstock_377075614.jpg",
+      "path": "assets/images/shutterstock_377075614.jpg",
+      "size": 14442318,
+      "size_readable": "13.77 MB",
+      "modified": "2020-04-20 09:49:11",
+      "modified_iso": "2020-04-20T09:49:11",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "shutterstock_381212158.jpg",
+      "path": "assets/images/shutterstock_381212158.jpg",
+      "size": 12042179,
+      "size_readable": "11.48 MB",
+      "modified": "2020-04-20 09:54:26",
+      "modified_iso": "2020-04-20T09:54:26",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "shutterstock_387029653.jpg",
+      "path": "assets/images/shutterstock_387029653.jpg",
+      "size": 13615458,
+      "size_readable": "12.98 MB",
+      "modified": "2020-04-20 09:50:02",
+      "modified_iso": "2020-04-20T09:50:02",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "shutterstock_520990084.jpg",
+      "path": "assets/images/shutterstock_520990084.jpg",
+      "size": 2212436,
+      "size_readable": "2.11 MB",
+      "modified": "2020-11-17 14:37:49",
+      "modified_iso": "2020-11-17T14:37:49.474699",
+      "type": "image/jpeg"
+    },
+    {
+      "name": "Snowflake_Logo.svg.png",
+      "path": "assets/images/Snowflake_Logo.svg.png",
+      "size": 93194,
+      "size_readable": "91.01 KB",
+      "modified": "2025-09-26 15:27:00",
+      "modified_iso": "2025-09-26T15:27:00.585481",
+      "type": "image/png"
+    },
+    {
+      "name": "acm_k_flat_vtag_b_pos.png",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_k_flat_vtag_b_pos/acm_k_flat_vtag_b_pos.png",
+      "size": 84336,
+      "size_readable": "82.36 KB",
+      "modified": "2025-10-03 10:20:17",
+      "modified_iso": "2025-10-03T10:20:17.540140",
+      "type": "image/png"
+    }
+  ],
+  "other": [
+    {
+      "name": "cais-website-mapper (1).py",
+      "path": "cais-website-mapper (1).py",
+      "size": 22082,
+      "size_readable": "21.56 KB",
+      "modified": "2025-10-05 12:37:51",
+      "modified_iso": "2025-10-05T12:37:51.311148",
+      "type": "text/x-python"
+    },
+    {
+      "name": "cais LOGO wordmark lockup _ short w 2026.ai",
+      "path": "assets/images/cais LOGO wordmark lockup _ short w 2026.ai",
+      "size": 420779,
+      "size_readable": "410.92 KB",
+      "modified": "2025-10-01 16:03:51",
+      "modified_iso": "2025-10-01T16:03:51.405066",
+      "type": "application/postscript"
+    },
+    {
+      "name": "hero experiment output 1.ai",
+      "path": "assets/images/hero experiment output 1.ai",
+      "size": 272324,
+      "size_readable": "265.94 KB",
+      "modified": "2025-09-26 22:42:03",
+      "modified_iso": "2025-09-26T22:42:03.757521",
+      "type": "application/postscript"
+    },
+    {
+      "name": "hero.psd",
+      "path": "assets/images/hero.psd",
+      "size": 30601944,
+      "size_readable": "29.18 MB",
+      "modified": "2025-10-01 10:55:27",
+      "modified_iso": "2025-10-01T10:55:27.608498",
+      "type": "unknown"
+    },
+    {
+      "name": "Pillars_composition.eps",
+      "path": "assets/images/Pillars_composition.eps",
+      "size": 1337726,
+      "size_readable": "1.28 MB",
+      "modified": "2025-09-26 19:09:50",
+      "modified_iso": "2025-09-26T19:09:50.410105",
+      "type": "application/postscript"
+    },
+    {
+      "name": "Pillars_EngOps.eps",
+      "path": "assets/images/Pillars_EngOps.eps",
+      "size": 1340422,
+      "size_readable": "1.28 MB",
+      "modified": "2025-09-26 19:09:01",
+      "modified_iso": "2025-09-26T19:09:01.531825",
+      "type": "application/postscript"
+    },
+    {
+      "name": "Pillars_evaluation.eps",
+      "path": "assets/images/Pillars_evaluation.eps",
+      "size": 1341194,
+      "size_readable": "1.28 MB",
+      "modified": "2025-09-26 19:10:24",
+      "modified_iso": "2025-09-26T19:10:24.633138",
+      "type": "application/postscript"
+    },
+    {
+      "name": "Pillars_optimization.eps",
+      "path": "assets/images/Pillars_optimization.eps",
+      "size": 1340578,
+      "size_readable": "1.28 MB",
+      "modified": "2025-09-26 19:09:26",
+      "modified_iso": "2025-09-26T19:09:26.495526",
+      "type": "application/postscript"
+    },
+    {
+      "name": "acm_1s_flat_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_1s_flat_vtag_b_pos.zip",
+      "size": 353707,
+      "size_readable": "345.42 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.701233",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_1s_flat_vtag_b_rev.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_1s_flat_vtag_b_rev.zip",
+      "size": 344175,
+      "size_readable": "336.11 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.718237",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_1s_grad_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_1s_grad_vtag_b_pos.zip",
+      "size": 355002,
+      "size_readable": "346.68 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.728236",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_1s_grad_vtag_b_rev.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_1s_grad_vtag_b_rev.zip",
+      "size": 345692,
+      "size_readable": "337.59 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.738233",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_2s_flat_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_2s_flat_vtag_b_pos.zip",
+      "size": 353062,
+      "size_readable": "344.79 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.747232",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_2s_grad_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_2s_grad_vtag_b_pos.zip",
+      "size": 354245,
+      "size_readable": "345.94 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.758532",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_4c_grad_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_4c_grad_vtag_b_pos.zip",
+      "size": 354233,
+      "size_readable": "345.93 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.768681",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_4c_grad_vtag_b_rev.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_4c_grad_vtag_b_rev.zip",
+      "size": 345527,
+      "size_readable": "337.43 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.779474",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_k_flat_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_k_flat_vtag_b_pos.zip",
+      "size": 350317,
+      "size_readable": "342.11 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.789538",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_k_flat_vtag_b_rev.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_k_flat_vtag_b_rev.zip",
+      "size": 340946,
+      "size_readable": "332.96 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.799901",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_k_grad_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_k_grad_vtag_b_pos.zip",
+      "size": 351258,
+      "size_readable": "343.03 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.809354",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_k_grad_vtag_b_rev.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_k_grad_vtag_b_rev.zip",
+      "size": 343556,
+      "size_readable": "335.50 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.819534",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_rgb_grad_vtag_b_pos.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_rgb_grad_vtag_b_pos.zip",
+      "size": 385060,
+      "size_readable": "376.04 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.829221",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_rgb_grad_vtag_b_rev.zip",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_rgb_grad_vtag_b_rev.zip",
+      "size": 378864,
+      "size_readable": "369.98 KB",
+      "modified": "2025-10-03 10:15:17",
+      "modified_iso": "2025-10-03T10:15:17.839814",
+      "type": "application/x-zip-compressed"
+    },
+    {
+      "name": "acm_k_flat_vtag_b_pos.eps",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_k_flat_vtag_b_pos/acm_k_flat_vtag_b_pos.eps",
+      "size": 635191,
+      "size_readable": "620.30 KB",
+      "modified": "2025-10-03 10:18:11",
+      "modified_iso": "2025-10-03T10:18:11.976342",
+      "type": "application/postscript"
+    },
+    {
+      "name": "acm_k_flat_vtag_b_rev.eps",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_k_flat_vtag_b_rev/acm_k_flat_vtag_b_rev.eps",
+      "size": 626259,
+      "size_readable": "611.58 KB",
+      "modified": "2025-10-03 10:18:42",
+      "modified_iso": "2025-10-03T10:18:42.103964",
+      "type": "application/postscript"
+    },
+    {
+      "name": "acm_rgb_grad_vtag_b_rev.ai",
+      "path": "assets/images/Logo-ACM-HighTagline/acm_rgb_grad_vtag_b_rev/acm_rgb_grad_vtag_b_rev.ai",
+      "size": 352714,
+      "size_readable": "344.45 KB",
+      "modified": "2025-10-03 10:16:13",
+      "modified_iso": "2025-10-03T10:16:13.269238",
+      "type": "application/postscript"
+    }
+  ],
+  "total_size": 131912131,
+  "file_count": 64,
+  "sitemap_pages": [
+    {
+      "loc": "",
+      "lastmod": "2025-10-03",
+      "changefreq": "monthly",
+      "priority": 1.0,
+      "title": "CAIS 2026 \u2014 ACM Conference on Agentic and AI Systems",
+      "description": "CAIS 2026 \u2014 the ACM Conference on Agentic and AI Systems. May 26\u201329, 2026 in San Francisco. The premier venue for architectures, optimization, engineering, and evaluation of compound AI."
+    },
+    {
+      "loc": "pages/cais-2026-accessibility.html",
+      "lastmod": "2025-10-01",
+      "changefreq": "weekly",
+      "priority": 0.6,
+      "title": "Accessibility \u2014 CAIS 2026",
+      "description": null
+    },
+    {
+      "loc": "pages/cais-2026-cfp.html",
+      "lastmod": "2025-10-03",
+      "changefreq": "weekly",
+      "priority": 0.9,
+      "title": "Call for Papers \u2014 CAIS 2026",
+      "description": "Call for Papers for CAIS 2026 \u2014 ACM Conference on Agentic and AI Systems."
+    },
+    {
+      "loc": "pages/cais-2026-code-of-conduct.html",
+      "lastmod": "2025-10-01",
+      "changefreq": "monthly",
+      "priority": 0.6,
+      "title": "Code of Conduct \u2014 CAIS 2026",
+      "description": null
+    },
+    {
+      "loc": "pages/cais-2026-diversity-inclusion.html",
+      "lastmod": "2025-10-01",
+      "changefreq": "monthly",
+      "priority": 0.6,
+      "title": "Diversity & Inclusion \u2014 CAIS 2026",
+      "description": null
+    },
+    {
+      "loc": "pages/cais-2026-recording-media.html",
+      "lastmod": "2025-10-05",
+      "changefreq": "monthly",
+      "priority": 0.5,
+      "title": "Recording & Media Policy \u2014 CAIS 2026",
+      "description": null
+    }
+  ],
+  "base_url": "https://caisconf.org",
+  "scan_date": "2025-10-05T12:39:10.665103"
+}

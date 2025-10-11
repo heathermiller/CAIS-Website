@@ -1,257 +1,203 @@
 :root {
-  --cais-blue: #1e4aa8;
-  --cais-blue-2: #183d8c;
-  --cais-ink: #333333;
-  --cais-accent: #29ba96;
+    --cais-blue: #1e4aa8;
+    --cais-blue-2: #183d8c;
+    --cais-ink: #333333;
+    --cais-accent: #29ba96;
 }
 
-body { 
-  color: var(--cais-ink); 
-  font-synthesis-weight: none; 
+body {
+    color: var(--cais-ink);
+    font-synthesis-weight: none;
 }
 
-h1, h2, h3, h4, h5, h6, p { 
-  color: #333333; 
+h1, h2, h3, h4, h5, h6, p {
+    color: #333333;
 }
 
 /* Skip link for accessibility */
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 .visually-hidden-focusable:focus,
 .visually-hidden-focusable:focus-within {
-  position: static !important;
-  width: auto !important;
-  height: auto !important;
-  overflow: visible !important;
-  clip: auto !important;
-  white-space: normal !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
 }
 
 /* Hero sections */
 .hero, .coc-hero, .cfp-hero {
-  position: relative;
-  background: url('../images/CAIS_hero1.png') center/cover no-repeat;
-  color: #fff;
-  padding: 4.5rem 0;
+    position: relative;
+    background: url('../images/CAIS_hero1.png') center/cover no-repeat;
+    color: #fff;
+    padding: 4.5rem 0;
 }
 
 .hero h1, .hero p,
 .coc-hero h1, .coc-hero p,
 .cfp-hero h1, .cfp-hero p {
-  color: #fff;
+    color: #fff;
 }
 
-/* ACM Mark */
+/* ACM Mark - Updated with responsive sizing */
 .acm-mark {
-  max-height: 90px;
-  width: auto;
-  opacity: 0.95;
-  display: block;
+    max-height: 80px;
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    opacity: 0.95;
+    display: block;
 }
 
 .acm-mark-link {
-  display: inline-block;
-  margin-bottom: 1.0rem;
-}
-
-/* Clear space enforcement - prevents other elements from crowdinng */
-.acm-mark-link {
-  padding: 12px;
-  margin: -24px;
-  margin-bottom: 0;
+    display: inline-block;
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
-  .acm-mark {
-    height: 12px;
-  }
-  
-  .acm-mark-link {
-    padding: 5px;
-    margin: -18px;
-    margin-bottom: 0;
-  }
+    .acm-mark {
+        max-height: 60px;
+        max-width: 150px;
+    }
 }
 
-.hero h1, .hero p,
-.coc-hero h1, .coc-hero p,
-.cfp-hero h1, .cfp-hero p {
-  color: #fff;
+/* CAIS Brand Logo - Added for crisp rendering */
+.brand-logo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
-.badge-cais { 
-  background: var(--cais-accent); 
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-height: 35px !important;
+        max-width: 200px !important;
+    }
 }
 
-/* ACM logo styling - CORRECTED: Filter removed */
-.hero .acm-mark-link {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-
-.hero .acm-mark-link img {
-  max-height: 75px;
-  height: auto;
-  width: auto;
-  /* Filter removed - using reversed logo that's already white */
+.badge-cais {
+    background: var(--cais-accent);
 }
 
 /* Shared elements */
-.section-title { 
-  font-weight: 700; 
-  letter-spacing: .2px; 
-  margin-top: 0; 
+.section-title {
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin-top: 0;
 }
 
-.anchor { 
-  scroll-margin-top: 84px; 
-}
-
-/* Remove any borders/strokes from logo images */
-.navbar-brand img,
-footer img {
-  border: none !important;
-  outline: none !important;
-}
-
-.navbar-brand:focus img,
-.navbar-brand:hover img {
-  outline: none !important;
-  border: none !important;
-}
-
-/* Navigation logo sizing - significantly larger with all restrictions removed */
-.navbar-brand img {
-  height: clamp(80px, 15vh, 120px) !important; /* Min 80px, scales to 15% viewport height, max 120px */
-  width: auto !important;
-  max-width: none !important; /* Remove any max-width restrictions */
-  max-height: none !important; /* Remove any max-height restrictions */
-  min-height: 80px !important; /* Enforce minimum */
-}
-
-/* Footer logo sizing */
-footer .d-flex img {
-  height: clamp(60px, 10vh, 80px) !important; /* Larger footer logo */
-  width: auto !important;
-  max-width: none !important;
-  max-height: none !important;
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-  .navbar-brand img {
-    height: clamp(70px, 12vh, 100px) !important; /* Still substantial on mobile */
-    min-height: 70px !important;
-  }
+.anchor {
+    scroll-margin-top: 84px;
 }
 
 /* Cards */
 .card-quiet, .info-card {
-  border: 1px solid #dee3ec;
-  border-radius: .5rem;
-  padding: 1.5rem;
-  background: #fff;
-  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    border: 1px solid #dee3ec;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    background: #fff;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 
 .card-quiet:hover, .info-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,.06);
-  border-color: #cfd7e6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    border-color: #cfd7e6;
 }
 
 .program-card .ratio {
-  background: #000;
-  border-radius: .5rem;
-  overflow: hidden;
+    background: #000;
+    border-radius: .5rem;
+    overflow: hidden;
 }
 
 .program-card img.program-img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .highlight-box {
-  background: #e9f2fb;
-  padding: 1.5rem;
-  border-radius: .5rem;
-  height: 100%;
+    background: #e9f2fb;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    height: 100%;
 }
 
 .quick-links-callout {
-  background: #f1f3f9;
-  border-radius: .5rem;
-  padding: 1.5rem;
+    background: #f1f3f9;
+    border-radius: .5rem;
+    padding: 1.5rem;
 }
 
 .banded {
-  background: #f8f9fb;
-  padding: 2rem;
-  border-radius: .5rem;
+    background: #f8f9fb;
+    padding: 2rem;
+    border-radius: .5rem;
 }
 
 /* CTA Band */
 .cta-band {
-  background: linear-gradient(135deg, var(--cais-blue) 0%, var(--cais-blue-2) 100%);
-  color: #fff;
-  border-radius: .5rem;
+    background: linear-gradient(135deg, var(--cais-blue) 0%, var(--cais-blue-2) 100%);
+    color: #fff;
+    border-radius: .5rem;
 }
 
 .cta-band h2, .cta-band p {
-  color: #fff;
+    color: #fff;
 }
 
 /* Dates card (CFP sidebar) */
 .dates-card {
-  border: 2px solid var(--cais-blue);
+    border: 2px solid var(--cais-blue);
 }
 
 /* Footer links */
 footer a {
-  color: var(--cais-ink);
-  text-decoration: none;
+    color: var(--cais-ink);
+    text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--cais-blue);
-  text-decoration: underline;
+    color: var(--cais-blue);
+    text-decoration: underline;
 }
 
 /* Improve focus visibility */
 a:focus, button:focus, .btn:focus {
-  outline: 2px solid var(--cais-blue);
-  outline-offset: 2px;
+    outline: 2px solid var(--cais-blue);
+    outline-offset: 2px;
 }
 
 /* Print styles */
 @media print {
-  .navbar, footer, .btn, .cta-band {
-    display: none;
-  }
-  
-  body {
-    color: #000;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  a[href^="http"]:after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-  }
+    .navbar, footer, .btn, .cta-band {
+        display: none;
+    }
+
+    body {
+        color: #000;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+    }
 }

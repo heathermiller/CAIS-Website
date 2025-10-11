@@ -51,38 +51,35 @@ h1, h2, h3, h4, h5, h6, p {
     color: #fff;
 }
 
-/* ACM Mark - Updated with responsive sizing */
+/* ACM Mark */
 .acm-mark {
-    max-height: 80px;
-    max-width: 200px;
+    max-height: 90px;
     width: auto;
-    height: auto;
     opacity: 0.95;
     display: block;
 }
 
 .acm-mark-link {
     display: inline-block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.0rem;
+}
+
+/* Clear space enforcement - prevents other elements from crowding */
+.acm-mark-link {
+    padding: 12px;
+    margin: -12px;
+    margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
     .acm-mark {
         max-height: 60px;
-        max-width: 150px;
     }
-}
 
-/* CAIS Brand Logo - Added for crisp rendering */
-.brand-logo {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-}
-
-@media (max-width: 576px) {
-    .navbar-brand img {
-        max-height: 35px !important;
-        max-width: 200px !important;
+    .acm-mark-link {
+        padding: 8px;
+        margin: -8px;
+        margin-bottom: 0.5rem;
     }
 }
 

@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Call for Papers — CAIS 2026</title>
+  <meta name="description" content="Submit your research to CAIS 2026. We welcome papers on architectural patterns, optimization, engineering, and evaluation of agentic and AI systems." />
+  
+  <link rel="canonical" href="https://caisconf.org/pages/cais-2026-cfp.html" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --white: #ffffff;
+      --gray-light: #f8f8f8;
+      --gray-mid: #6b6b6b;
+      --gray-dark: #2a2a2a;
+      --accent-purple: #B371DC;
+      --accent-teal: #60D8AE;
+      --accent-gradient: linear-gradient(90deg, #B371DC 0%, #60D8AE 100%);
+      --grid: 8px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.98);
+      border-bottom: 0.5px solid rgba(0,0,0,0.08);
+      z-index: 100;
+      padding: 16px 0;
+      backdrop-filter: blur(20px);
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-size: 13px;
+      font-weight: 450;
+    }
+
+    /* Links - Global Styling */
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0,0,0,0.4);
+      transition: all 0.2s;
+      padding-bottom: 1px;
+    }
+
+    a:hover {
+      border-bottom-color: var(--ink);
+      border-bottom-width: 2px;
+      padding-bottom: 0px;
+    }
+
+    /* Navigation links - minimal underline on hover only */
+    .nav-links a {
+      border-bottom: none;
+      color: var(--ink-light);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      transition: width 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Button links - no underline */
+    .btn {
+      border-bottom: none;
+      padding-bottom: 12px;
+    }
+
+    /* Brand link - no underline */
+    .brand {
+      border-bottom: none;
+    }
+
+    /* Footer links */
+    .footer-links-list a {
+      color: var(--ink-light);
+      border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+
+    .footer-links-list a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+      border-bottom-width: 2px;
+    }
+
+    .footer-col-content a {
+      color: var(--ink-light);
+      border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+
+    .footer-col-content a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+      border-bottom-width: 2px;
+    }
+
+    .footer-bottom a {
+      color: var(--ink-light);
+      border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+      border-bottom-width: 2px;
+    }
+
+    /* Sidebar links - visible underline */
+    .sidebar-links a {
+      color: var(--ink-light);
+      border-bottom: 1px solid rgba(0,0,0,0.25);
+      display: block;
+      padding-bottom: 2px;
+    }
+
+    .sidebar-links a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+      border-bottom-width: 2px;
+      padding-bottom: 1px;
+    }
+
+    /* Policy card links */
+    .policy-card a {
+      color: var(--ink);
+      border-bottom: 1px solid rgba(0,0,0,0.4);
+      font-weight: 500;
+    }
+
+    .policy-card a:hover {
+      border-bottom-color: var(--ink);
+      border-bottom-width: 2px;
+    }
+
+    .policy-card a::after {
+      content: '→';
+      margin-left: 6px;
+    }
+
+    /* Page Header */
+    .page-header {
+      margin-top: 112px;
+      padding: 64px 0 48px;
+      border-bottom: 0.5px solid rgba(0,0,0,0.08);
+      background: var(--gray-light);
+    }
+
+    .page-header-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .page-title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .page-subtitle {
+      font-size: 20px;
+      color: var(--ink-light);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .page-meta {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* Main Layout */
+    .main-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 64px;
+      padding: 64px 0;
+    }
+
+    @media (max-width: 1024px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .sidebar {
+        order: -1;
+      }
+    }
+
+    /* Typography */
+    .section {
+      margin-bottom: 64px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: var(--ink);
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      margin-top: 32px;
+      color: var(--ink);
+    }
+
+    .section p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink-light);
+      margin-bottom: 16px;
+    }
+
+    .section ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    .section li {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink-light);
+      margin-bottom: 8px;
+    }
+
+    /* Accent Line */
+    .accent-line {
+      height: 2px;
+      background: var(--accent-gradient);
+      width: 48px;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+
+    /* Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    @media (max-width: 768px) {
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pillar-card {
+      border: 0.5px solid rgba(0,0,0,0.1);
+      padding: 24px;
+      background: var(--white);
+      transition: all 0.2s;
+    }
+
+    .pillar-card:hover {
+      border-color: rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .pillar-card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .pillar-card ul {
+      font-size: 14px;
+      margin-left: 16px;
+    }
+
+    .pillar-card li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: var(--gray-light);
+      border: 0.5px solid rgba(0,0,0,0.08);
+      padding: 24px;
+      margin: 32px 0;
+    }
+
+    .info-box-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-mid);
+      margin-bottom: 12px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: sticky;
+      top: 112px;
+      align-self: start;
+    }
+
+    .sidebar-card {
+      background: var(--gray-light);
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .sidebar-card-title {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-mid);
+      margin-bottom: 12px;
+    }
+
+    .dates-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .date-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .date-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .date-label {
+      color: var(--ink-light);
+      font-weight: 500;
+    }
+
+    .date-value {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .sidebar-links {
+      list-style: none;
+      margin: 0;
+    }
+
+    .sidebar-links li {
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .sidebar-links a {
+      color: var(--ink-light);
+      text-decoration: none;
+      font-size: 12px;
+      transition: color 0.2s;
+      display: block;
+    }
+
+    .sidebar-links a:hover {
+      color: var(--ink);
+    }
+
+    .sidebar-note {
+      font-size: 10px;
+      color: var(--gray-mid);
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    .sidebar-tips {
+      font-size: 11px;
+      line-height: 1.4;
+      color: var(--ink-light);
+      list-style: none;
+      margin: 0;
+    }
+
+    .sidebar-tips li {
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .sidebar-tips li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid var(--ink);
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .btn:hover {
+      background: #000;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink-light);
+      border-color: rgba(0,0,0,0.2);
+    }
+
+    .btn-outline:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+      background: transparent;
+      transform: none;
+    }
+
+    /* Alert Box */
+    .alert {
+      background: #FFF9E6;
+      border-left: 3px solid #FFD700;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .alert strong {
+      color: var(--ink);
+    }
+
+    /* Policy Cards */
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 768px) {
+      .policy-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .policy-card {
+      border: 0.5px solid rgba(0,0,0,0.1);
+      padding: 20px;
+      background: var(--white);
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .policy-card:hover {
+      border-color: rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .policy-card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .policy-card p {
+      font-size: 13px;
+      margin-bottom: 12px;
+      color: var(--ink-light);
+    }
+
+    .policy-card a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .policy-card a::after {
+      content: '→';
+      margin-left: 6px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid rgba(0,0,0,0.15);
+      margin-top: 64px;
+    }
+
+    .footer-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      padding: 64px 0;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 960px) {
+      .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .footer-col-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 16px;
+    }
+
+    .footer-col-content {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--ink-light);
+    }
+
+    .footer-col-content p {
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-section img {
+      height: 28px;
+      width: auto;
+      margin-bottom: 16px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+    }
+
+    .footer-links-list li {
+      margin-bottom: 12px;
+    }
+
+    .footer-bottom a {
+      color: var(--ink-light);
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
+
+    .footer-bottom {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      padding: 24px 0;
+    }
+
+    .footer-copyright {
+      font-size: 11px;
+      color: var(--gray-mid);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/cais_logo_long.png" alt="CAIS 2026" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#pillars">Research</a></li>
+        <li><a href="../index.html#program">Program</a></li>
+        <li><a href="#">Submit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-content">
+      <div class="accent-line"></div>
+      <h1 class="page-title">Call for Papers</h1>
+      <p class="page-subtitle">ACM Conference on Agentic and AI Systems (CAIS 2026)</p>
+      <p class="page-meta">San Francisco • May 26–29, 2026</p>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="content-grid">
+      
+      <!-- Main Content -->
+      <div class="main-content">
+
+        <!-- Overview -->
+        <section id="overview" class="section">
+          <h2 class="section-title">Overview</h2>
+          <p>CAIS 2026 invites original research contributions on <strong>agentic and AI systems</strong>—architectures that advance the state of the art through:</p>
+          <ul>
+            <li>Principled composition of multiple system components</li>
+            <li>Smart inference-time scaling strategies</li>
+            <li>Systematic verification methods for reliable deployment</li>
+            <li>Novel evaluation frameworks for compound systems</li>
+          </ul>
+          <p>We welcome submissions from researchers and practitioners across academia and industry who are pushing the boundaries of what's possible with compound AI systems.</p>
+        </section>
+
+        <!-- Topics of Interest -->
+        <section id="topics" class="section">
+          <h2 class="section-title">Topics of Interest</h2>
+          <p>We welcome submissions across four key pillars:</p>
+          
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <h3 class="pillar-card-title">Architectural Patterns & Composition</h3>
+              <ul>
+                <li>Networks of Networks (NoNs) and inference-time scaling</li>
+                <li>Verifier-based systems and generation/verification asymmetry</li>
+                <li>Retrieval-augmented generation (RAG) architectures</li>
+                <li>Multi-agent systems and coordination mechanisms</li>
+                <li>Tool-augmented AI and API integration patterns</li>
+                <li>Modular system design and composability</li>
+              </ul>
+            </div>
+
+            <div class="pillar-card">
+              <h3 class="pillar-card-title">System Optimization & Efficiency</h3>
+              <ul>
+                <li>End-to-end optimization of non-differentiable pipelines</li>
+                <li>Cost-performance trade-offs in compound systems</li>
+                <li>Resource allocation across system components</li>
+                <li>Automated architecture search and hyperparameter tuning</li>
+                <li>Latency reduction and throughput optimization</li>
+                <li>Model selection and routing strategies</li>
+              </ul>
+            </div>
+
+            <div class="pillar-card">
+              <h3 class="pillar-card-title">Engineering & Operations</h3>
+              <ul>
+                <li>MLOps for compound AI systems</li>
+                <li>Monitoring, debugging, and observability tools</li>
+                <li>Specification languages and verification frameworks</li>
+                <li>Security and safety in multi-component systems</li>
+                <li>Testing and quality assurance methodologies</li>
+                <li>Production deployment case studies</li>
+              </ul>
+            </div>
+
+            <div class="pillar-card">
+              <h3 class="pillar-card-title">Evaluation & Benchmarking</h3>
+              <ul>
+                <li>Performance metrics for compound systems</li>
+                <li>Reproducibility frameworks and artifact standards</li>
+                <li>Comparative evaluation methodologies</li>
+                <li>Real-world impact assessment</li>
+                <li>Benchmark design for agentic systems</li>
+                <li>Human evaluation and user studies</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Submission Tracks -->
+        <section id="tracks" class="section">
+          <h2 class="section-title">Submission Tracks</h2>
+          
+          <h3 class="section-subtitle">Research Papers</h3>
+          <p>Original research contributions presenting novel architectures, algorithms, systems, or empirical studies.</p>
+          <ul>
+            <li><strong>Format:</strong> Double-blind review</li>
+            <li><strong>Page limit:</strong> <em>(to be announced)</em></li>
+            <li><strong>Template:</strong> ACM Primary Article Template (LaTeX or Word) — <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">Download templates</a></li>
+          </ul>
+
+          <h3 class="section-subtitle">System Demonstrations</h3>
+          <p>Working implementations of compound AI systems with accompanying technical description.</p>
+          <ul>
+            <li><strong>Format:</strong> Short paper (4 pages) + demonstration artifact</li>
+            <li><strong>Review:</strong> Evaluated on both technical contribution and demonstration quality</li>
+          </ul>
+
+          <div class="info-box">
+            <div class="info-box-title">Workshops & Tutorials</div>
+            <p>Separate calls for workshops and tutorials will be announced. Proposals welcome for hands-on sessions on tools, frameworks, and methodologies.</p>
+          </div>
+        </section>
+
+        <!-- Review Process -->
+        <section id="review" class="section">
+          <h2 class="section-title">Review Process & Reproducibility</h2>
+          
+          <h3 class="section-subtitle">Double-Blind Peer Review</h3>
+          <p>All research paper submissions undergo rigorous double-blind peer review. Authors must:</p>
+          <ul>
+            <li>Anonymize submissions (remove author names, affiliations, acknowledgments)</li>
+            <li>Avoid self-identifying citations (use "Previous work [X] showed..." not "Our prior work [X]...")</li>
+            <li>Declare conflicts of interest during submission</li>
+          </ul>
+
+          <h3 class="section-subtitle">Artifact Evaluation</h3>
+          <p>CAIS encourages (and may require) artifact submission to support reproducibility. We adopt ACM's artifact badging taxonomy:</p>
+          <ul>
+            <li><strong>Artifacts Available:</strong> Supporting materials publicly available</li>
+            <li><strong>Artifacts Evaluated - Functional:</strong> Artifacts documented, consistent, complete, and exercisable</li>
+            <li><strong>Results Reproduced:</strong> Main results independently obtained using author-provided artifacts</li>
+          </ul>
+
+          <h3 class="section-subtitle">Publication Ethics</h3>
+          <p>All submissions must follow <a href="https://www.acm.org/publications/policies" target="_blank" rel="noopener">ACM Publication Policies</a>, including:</p>
+          <ul>
+            <li>No concurrent submissions to other venues</li>
+            <li>No plagiarism or self-plagiarism</li>
+            <li>Proper attribution of prior work</li>
+            <li>Disclosure of potential conflicts of interest</li>
+          </ul>
+        </section>
+
+        <!-- Submission Instructions -->
+        <section id="submission" class="section">
+          <h2 class="section-title">How to Submit</h2>
+          
+          <div class="alert">
+            <strong>Submission portal opening soon</strong><br/>
+            The submission system will be available when the CFP officially opens. Check this page for updates or join our mailing list for notifications.
+          </div>
+
+          <h3 class="section-subtitle">Submission Platform</h3>
+          <p>Papers will be submitted through <strong>PCS (Precision Conference Solution)</strong>, ACM's standard conference management system.</p>
+
+          <h3 class="section-subtitle">Formatting Requirements</h3>
+          <ul>
+            <li>Use the official <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Primary Article Templates</a> (LaTeX or Word)</li>
+            <li>Page limits: <em>(to be announced)</em></li>
+            <li>References do not count toward page limit</li>
+            <li>Appendices permitted but may not be reviewed</li>
+          </ul>
+
+          <h3 class="section-subtitle">Before You Submit</h3>
+          <ul>
+            <li>Create your PCS account early to avoid last-minute issues</li>
+            <li>Complete your author profile (required for submission)</li>
+            <li>Prepare anonymized PDF (check for metadata)</li>
+            <li>Prepare artifact documentation if submitting early</li>
+            <li>Review ACM publication policies</li>
+          </ul>
+        </section>
+
+        <!-- Policies -->
+        <section id="policies" class="section">
+          <h2 class="section-title">Conference Policies</h2>
+          <p>All participants must adhere to conference policies:</p>
+          
+          <div class="policy-grid">
+            <div class="policy-card">
+              <h3 class="policy-card-title">Code of Conduct</h3>
+              <p>Professional, inclusive behavior expectations</p>
+              <a href="./cais-2026-code-of-conduct.html">Read policy</a>
+            </div>
+
+            <div class="policy-card">
+              <h3 class="policy-card-title">Accessibility</h3>
+              <p>Accommodations and inclusive practices</p>
+              <a href="./cais-2026-accessibility.html">Read policy</a>
+            </div>
+
+            <div class="policy-card">
+              <h3 class="policy-card-title">Diversity & Inclusion</h3>
+              <p>Commitment to equitable participation</p>
+              <a href="./cais-2026-diversity-inclusion.html">Read policy</a>
+            </div>
+
+            <div class="policy-card">
+              <h3 class="policy-card-title">Recording & Media</h3>
+              <p>Photography and recording guidelines</p>
+              <a href="./cais-2026-recording-media.html">Read policy</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+          <h2 class="section-title">Questions?</h2>
+          <div class="policy-grid">
+            <div class="info-box">
+              <div class="info-box-title">Program Chairs</div>
+              <p><em>To be announced</em></p>
+            </div>
+            <div class="info-box">
+              <div class="info-box-title">General Inquiries</div>
+              <p><a href="mailto:info@caisconf.org" style="color: var(--ink); text-decoration: none;">info@caisconf.org</a></p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Important Dates</div>
+          <div class="alert" style="margin: 0; padding: 10px; font-size: 11px; line-height: 1.4;">
+            <strong>Timeline pending</strong><br/>
+            Deadlines will be posted soon.
+          </div>
+          <ul class="dates-list" style="margin-top: 12px;">
+            <li class="date-item">
+              <span class="date-label">Conference</span>
+              <span class="date-value">May 26–29</span>
+            </li>
+          </ul>
+          <p class="sidebar-note">All deadlines 11:59 PM AoE</p>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Quick Links</div>
+          <ul class="sidebar-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#topics">Topics of Interest</a></li>
+            <li><a href="#tracks">Submission Tracks</a></li>
+            <li><a href="#review">Review Process</a></li>
+            <li><a href="#submission">How to Submit</a></li>
+            <li><a href="#policies">Policies</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="padding-top: 8px; border-top: 0.5px solid rgba(0,0,0,0.1); margin-top: 8px;"><a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Templates ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Author Tips</div>
+          <ul class="sidebar-tips">
+            <li>• Start early—artifact prep takes time</li>
+            <li>• Make work reproducible from day one</li>
+            <li>• Document system architecture clearly</li>
+            <li>• Include ablation studies when appropriate</li>
+            <li>• Consider workshops for early feedback</li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-main">
+        <div>
+          <div class="footer-col-title">Conference</div>
+          <div class="footer-col-content">
+            <div class="footer-brand-section">
+              <img src="../assets/images/cais_logo_long.png" alt="CAIS 2026"/>
+            </div>
+            <p>ACM Conference on Agentic and AI Systems</p>
+            <p>May 26–29, 2026<br/>San Francisco, California</p>
+            <p><a href="mailto:info@caisconf.org" style="color: var(--ink-light); text-decoration: none;">info@caisconf.org</a></p>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Participate</div>
+          <ul class="footer-links-list">
+            <li><a href="cais-2026-cfp.html">Call for Papers</a></li>
+            <li><a href="../index.html#submit">Submit Your Work</a></li>
+            <li><a href="../index.html#program">View Program</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Information</div>
+          <ul class="footer-links-list">
+            <li><a href="#venue">Venue & Travel</a></li>
+            <li><a href="#dates">Important Dates</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Policies</div>
+          <ul class="footer-links-list">
+            <li><a href="cais-2026-code-of-conduct.html">Code of Conduct</a></li>
+            <li><a href="cais-2026-accessibility.html">Accessibility</a></li>
+            <li><a href="cais-2026-diversity-inclusion.html">Diversity & Inclusion</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 CAIS Conference · All rights reserved
+        </div>
+        <div style="font-size: 11px; color: var(--gray-mid);">
+          In cooperation with <a href="https://www.acm.org" style="color: var(--ink-light); text-decoration: none;">ACM</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

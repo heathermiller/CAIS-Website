@@ -55,6 +55,19 @@ h1, h2, h3, h4, h5, h6, p {
   background: var(--cais-accent); 
 }
 
+/* ACM logo styling - CORRECTED: Filter removed */
+.hero .acm-mark-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero .acm-mark-link img {
+  max-height: 75px;
+  height: auto;
+  width: auto;
+  /* Filter removed - using reversed logo that's already white */
+}
+
 /* Shared elements */
 .section-title { 
   font-weight: 700; 
@@ -64,6 +77,44 @@ h1, h2, h3, h4, h5, h6, p {
 
 .anchor { 
   scroll-margin-top: 84px; 
+}
+
+/* Remove any borders/strokes from logo images */
+.navbar-brand img,
+footer img {
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-brand:focus img,
+.navbar-brand:hover img {
+  outline: none !important;
+  border: none !important;
+}
+
+/* Navigation logo sizing - significantly larger with all restrictions removed */
+.navbar-brand img {
+  height: clamp(80px, 15vh, 120px) !important; /* Min 80px, scales to 15% viewport height, max 120px */
+  width: auto !important;
+  max-width: none !important; /* Remove any max-width restrictions */
+  max-height: none !important; /* Remove any max-height restrictions */
+  min-height: 80px !important; /* Enforce minimum */
+}
+
+/* Footer logo sizing */
+footer .d-flex img {
+  height: clamp(60px, 10vh, 80px) !important; /* Larger footer logo */
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: clamp(70px, 12vh, 100px) !important; /* Still substantial on mobile */
+    min-height: 70px !important;
+  }
 }
 
 /* Cards */

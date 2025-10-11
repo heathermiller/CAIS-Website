@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CAIS 2026 — ACM Conference on Compound AI & Agentic Systems</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Icons (optional) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root{
+      /* ACM-blue-ish with a distinct hue shift */
+      --cais-blue: #1e4aa8;
+      --cais-blue-2: #183d8c;
+      --cais-ink: #0f172a;    /* deep slate */
+      --cais-gray: #e6e9ef;
+      --cais-accent: #29ba96; /* subtle industry-leaning accent you liked */
+    }
+
+    body{ color: var(--cais-ink); }
+
+    /* ===== Hero with animated modular grid ===== */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      background: linear-gradient(180deg, #0e1632, #0b1228 60%, #0a1023);
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px) 0 0/40px 40px,
+        linear-gradient(0deg, rgba(255,255,255,.06) 1px, transparent 1px) 0 0/40px 40px;
+      mask: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.5) 25%, rgba(0,0,0,.8) 100%);
+      z-index:0;
+      animation: drift 18s linear infinite;
+    }
+    .hero::after{
+      /* subtle moving blocks */
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(8px 8px at 10% 20%, rgba(41,186,150,.5), transparent 60%),
+        radial-gradient(8px 8px at 60% 35%, rgba(255,255,255,.25), transparent 60%),
+        radial-gradient(8px 8px at 80% 70%, rgba(41,186,150,.35), transparent 60%),
+        radial-gradient(8px 8px at 30% 75%, rgba(255,255,255,.18), transparent 60%);
+      filter: blur(1px);
+      mix-blend-mode: screen;
+      animation: float 24s ease-in-out infinite;
+      z-index:0;
+    }
+    @keyframes drift { 0%{transform: translateY(0)} 100%{transform: translateY(40px)} }
+    @keyframes float {
+      0%{ transform: translate(0,0) }
+      50%{ transform: translate(0,-14px) }
+      100%{ transform: translate(0,0) }
+    }
+    .hero .content { position: relative; z-index: 1; padding: 6rem 0; }
+    .hero h1 { letter-spacing:.2px; }
+    .badge-cais { background: var(--cais-accent); }
+
+    /* Section titles */
+    .section-title{
+      font-weight: 700;
+      letter-spacing:.2px;
+    }
+
+    /* Card styling (Why CAIS + Program Highlights) */
+    .card-quiet{
+      border:1px solid #dee3ec;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      height:100%;
+    }
+    .card-quiet:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 8px 26px rgba(0,0,0,.08);
+      border-color:#cfd7e6;
+    }
+
+    /* Mixed logos strip */
+    .logos-strip img{
+      height:42px;
+      width:auto;
+      opacity:.85;
+      filter: grayscale(100%);
+      transition: filter .2s ease, opacity .2s ease;
+    }
+    .logos-strip img:hover{ filter:none; opacity:1; }
+
+    /* CTA band */
+    .cta-band{
+      background: linear-gradient(90deg, var(--cais-blue), var(--cais-blue-2));
+      color:#fff;
+      border-radius: 16px;
+    }
+
+    /* Footer */
+    footer{
+      background:#0b1120;
+      color:#cdd7f0;
+    }
+    footer a{ color:#e7ecff; text-decoration: none; }
+    footer a:hover{ text-decoration: underline; }
+  
+    .program-card .ratio{background:#000;border-radius:.5rem;overflow:hidden;}
+    .program-card img.program-img{width:100%;height:100%;object-fit:cover;display:block;}
+</style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/CAIS%20Logo%20Long.png" alt="CAIS 2026 Logo Wordmark" class="brand-logo" loading="eager" decoding="async" style="max-height:6vh; height:auto; width:auto;" />
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#why">Why CAIS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rigor">Rigor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="#attend">Attend</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-dark" href="#register"><i class="bi bi-ticket-perforated me-1"></i> Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="container content">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <span class="badge badge-cais text-dark fw-semibold mb-3">ACM Conference</span>
+          <h1 class="display-5 fw-bold mb-3">
+            Building the Future of Compound AI & Agentic Systems — Together
+          </h1>
+          <p class="lead mb-4">ACM Conference on Compound AI & Agentic Systems (CAIS 2026)</p>
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <span class="fs-5"><i class="bi bi-geo-alt-fill me-1"></i> San Francisco</span>
+            <span class="fs-5"><i class="bi bi-calendar-event me-1"></i> May 26–29, 2026</span>
+          </div>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a href="#register" class="btn btn-primary btn-lg" style="background:var(--cais-blue); border:none;">
+              Register
+            </a>
+            <a href="#cfp" class="btn btn-outline-light btn-lg">Submit a Paper</a>
+            <a href="#sponsor" class="btn btn-outline-light btn-lg">Sponsor</a>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center d-none d-lg-block">
+          <!-- Placeholder hero visual -->
+          <img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/shutterstock_1091706191.jpg" alt="CAIS Hero" class="img-fluid rounded shadow" style="max-height:60vh; width:auto;" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== WHY CAIS (Pillars) ===== -->
+  <section id="why" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4">Why CAIS?</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-quiet p-3">
+            <img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/Pillars_composition.svg" class="rounded mb-3" alt="Architectures placeholder" />
+            <h3 class="h5 fw-bold">Architectural Patterns & Composition</h3>
+            <p class="mb-0">From networks-of-networks to multi-agent & tool-augmented designs—the blueprints of the next AI paradigm.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-quiet p-3">
+            <img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/Pillars_optimization.svg" class="rounded mb-3" alt="Optimization placeholder" />
+            <h3 class="h5 fw-bold">System Optimization & Efficiency</h3>
+            <p class="mb-0">End-to-end optimization of complex pipelines—push performance while managing real-world cost trade-offs.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-quiet p-3">
+            <img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/Pillars_EngOps.svg" class="rounded mb-3" alt="Operations placeholder" />
+            <h3 class="h5 fw-bold">Engineering & Operations</h3>
+            <p class="mb-0">MLOps, safety, observability, and deployment case studies—what it takes to run compound AI at scale.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-quiet p-3">
+            <img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/Pillars_evaluation.svg" class="rounded mb-3" alt="Evaluation placeholder" />
+            <h3 class="h5 fw-bold">Evaluation & Benchmarking</h3>
+            <p class="mb-0">Reproducible artifacts, clear metrics, and impact assessment—raising the bar for deployable AI research.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAM HIGHLIGHTS STRIP ===== -->
+  <section id="program" class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between mb-3">
+        <h2 class="section-title mb-0">Program Highlights</h2>
+        <a class="btn btn-outline-secondary" href="#full-program">View Full Program</a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Keynotes & Plenaries -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-quiet p-3 h-100">
+            <div class="ratio ratio-16x9 mb-3"><img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/iStock-519434822.jpg" class="program-img" alt="" /></div>
+            <h3 class="h5 fw-bold">Keynotes & Plenaries</h3>
+            <p class="mb-2">Thought leaders defining compound AI & agentic systems—vision, rigor, and what’s next.</p>
+            <a href="#keynotes" class="stretched-link">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Panels -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-quiet p-3 h-100">
+            <div class="ratio ratio-16x9 mb-3"><img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/shutterstock_381212158.jpg" class="program-img" alt="" /></div>
+            <h3 class="h5 fw-bold">Panels</h3>
+            <p class="mb-2">Cross-discipline debates on verification, trust & safety, and the economics of compound AI.</p>
+            <a href="#panels" class="stretched-link">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Tutorials & Workshops -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-quiet p-3 h-100">
+            <div class="ratio ratio-16x9 mb-3"><img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/shutterstock_230705539.jpg" class="program-img" alt="" /></div>
+            <h3 class="h5 fw-bold">Tutorials & Workshops</h3>
+            <p class="mb-2">Deep dives into practical methods—DSPy, LangChain, and more frameworks for system builders.</p>
+            <a href="#workshops" class="stretched-link">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Demos & Case Studies -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card card-quiet p-3 h-100">
+            <div class="ratio ratio-16x9 mb-3"><img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/shutterstock_387029653.jpg" class="program-img" alt="" /></div>
+            <h3 class="h5 fw-bold">System Demos & Case Studies</h3>
+            <p class="mb-2">Live showcases where theory meets deployment—battle-tested workflows and scaling patterns.</p>
+            <a href="#demos" class="stretched-link">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Posters -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card card-quiet p-3 h-100">
+            <div class="ratio ratio-16x9 mb-3"><img src="file:///C:/Users/jquicksa/Desktop/Job%20Search/Portfolio/CAIS%20Website/assets/iStock-523860874.jpg" class="program-img" alt="" /></div>
+            <h3 class="h5 fw-bold">Poster Sessions</h3>
+            <p class="mb-2">Visualizing architectures & results with a focus on clarity and reproducibility across the field.</p>
+            <a href="#posters" class="stretched-link">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RIGOR & RECOGNITION ===== -->
+  <section id="rigor" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="h-100 p-4 bg-white border rounded">
+            <h2 class="section-title mb-3">Rigor & Recognition</h2>
+            <p class="mb-2">Artifact-centric review with reproducibility badges and benchmarking standards. Visibility that carries credibility.</p>
+            <ul class="mb-3">
+              <li>Open artifacts & benchmarks</li>
+              <li>Transparent evaluation</li>
+              <li>Awards for research, artifacts, and deployment impact</li>
+            </ul>
+            <a href="#cfp" class="btn btn-outline-primary">Explore Call for Papers</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="h-100 p-4 bg-white border rounded">
+            <h3 class="h5 fw-bold">Accepted Papers (Preview)</h3>
+            <!-- Placeholder paper cards -->
+            <div class="d-flex gap-3 align-items-start mb-3">
+              <img src="https://via.placeholder.com/96x64.png?text=Fig" class="rounded" alt="Paper figure placeholder"/>
+              <div>
+                <div class="fw-semibold">Verifier-Augmented Networks of Networks</div>
+                <small class="text-muted">Artifact Badge: Functional • Pillar: Architectures</small>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-start mb-3">
+              <img src="https://via.placeholder.com/96x64.png?text=Fig" class="rounded" alt="Paper figure placeholder"/>
+              <div>
+                <div class="fw-semibold">Cost-Aware Inference-Time Scaling</div>
+                <small class="text-muted">Artifact Badge: Reproducible • Pillar: Optimization</small>
+              </div>
+            </div>
+            <a href="#papers" class="btn btn-sm btn-outline-secondary">See all accepted papers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUILD & CONNECT ===== -->
+  <section id="community" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h2 class="section-title">Build & Connect</h2>
+          <p class="lead">More than a conference—this is the foundation of a new community.</p>
+          <ul class="mb-4">
+            <li><strong>Mentorship Mixer:</strong> Junior researchers ↔ senior scholars & practitioners</li>
+            <li><strong>Recruitment Expo:</strong> Labs and companies hiring across boundaries</li>
+            <li><strong>Community Hub:</strong> Reading group, pattern library, leaderboards</li>
+          </ul>
+          <a href="#join" class="btn btn-primary" style="background:var(--cais-blue); border:none;">Join the Community</a>
+        </div>
+        <div class="col-lg-7">
+          <!-- Placeholder community visual -->
+          <img src="https://via.placeholder.com/900x420.png?text=Community+Hub+Preview" class="img-fluid rounded border" alt="Community hub placeholder"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO YOU'LL MEET (LOGOS STRIP) ===== -->
+  <section class="py-4 bg-light">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 logos-strip">
+        <!-- Mixed academia + industry + sponsors; placeholders for now -->
+        <img src="https://via.placeholder.com/200x60?text=University+A" alt="University A logo placeholder" />
+        <img src="https://via.placeholder.com/200x60?text=Lab+B" alt="Lab B logo placeholder" />
+        <img src="https://via.placeholder.com/200x60?text=Startup+C" alt="Startup C logo placeholder" />
+        <img src="https://via.placeholder.com/200x60?text=Industry+D" alt="Industry D logo placeholder" />
+        <img src="https://via.placeholder.com/200x60?text=Sponsor+E" alt="Sponsor E logo placeholder" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section id="attend" class="py-5">
+    <div class="container">
+      <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+        <div>
+          <h2 class="h3 fw-bold mb-1">Be part of the inaugural CAIS</h2>
+          <p class="mb-0">Paper submissions close January 2026 • Early-bird registration ends March 2026</p>
+        </div>
+        <div class="d-flex gap-2">
+          <a class="btn btn-light btn-lg text-dark" href="#cfp">Submit Your Work</a>
+          <a class="btn btn-outline-light btn-lg" href="#register">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">News & Updates</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-quiet p-3 h-100">
+            <img src="https://via.placeholder.com/640x360.png?text=Article" class="rounded mb-3" alt="Article placeholder" />
+            <h3 class="h5 fw-bold">From Models to Systems: Why Compound AI Matters</h3>
+            <p class="mb-2">A primer on the paradigm shift and how CAIS centers systems over monoliths.</p>
+            <a href="#news1" class="stretched-link">Read more</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-quiet p-3 h-100">
+            <img src="https://via.placeholder.com/640x360.png?text=Keynote" class="rounded mb-3" alt="Keynote placeholder" />
+            <h3 class="h5 fw-bold">Announcing Our First Keynote Speaker</h3>
+            <p class="mb-2">Hear from one of the field’s leading thinkers on compound AI & agentic systems.</p>
+            <a href="#news2" class="stretched-link">Read more</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-quiet p-3 h-100">
+            <img src="https://via.placeholder.com/640x360.png?text=Artifacts" class="rounded mb-3" alt="Artifacts placeholder" />
+            <h3 class="h5 fw-bold">Artifact Badging at CAIS 2026</h3>
+            <p class="mb-2">How reproducibility and benchmarks raise the bar for deployable AI research.</p>
+            <a href="#news3" class="stretched-link">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://via.placeholder.com/36x36.png?text=⧉" class="me-2 rounded" alt="CAIS logo" />
+            <strong>CAIS 2026</strong>
+          </div>
+          <p class="mb-1">ACM Conference on Compound AI & Agentic Systems</p>
+          <small>San Francisco · May 26–29, 2026</small>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-uppercase">Explore</h6>
+          <ul class="list-unstyled">
+            <li><a href="#program">Program</a></li>
+            <li><a href="#cfp">Call for Papers</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#attend">Attend</a></li>
+            <li><a href="#sponsor">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase">Policies</h6>
+          <ul class="list-unstyled">
+            <li><a href="#coc">Code of Conduct</a></li>
+            <li><a href="#di">Diversity & Inclusion</a></li>
+            <li><a href="#access">Accessibility</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase">Contact</h6>
+          <ul class="list-unstyled">
+            <li><a href="mailto:info@caisconf.example">info@caisconf.example</a></li>
+            <li><a href="#social">LinkedIn</a> · <a href="#social">X/Twitter</a> · <a href="#social">Slack/Discord</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top mt-4 pt-3 d-flex justify-content-between">
+        <small>© 2026 CAIS — ACM Conference on Compound AI & Agentic Systems</small>
+        <small><a href="#press">Press & Media Kit</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

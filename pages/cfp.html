@@ -1,1018 +1,585 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Call for Papers — CAIS 2026</title>
+  <meta name="description" content="Submit your research to CAIS 2026. We welcome papers on architectural patterns, optimization, engineering, and evaluation of agentic and AI systems." />
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://caisconf.org/pages/cais-2026-cfp.html" />
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     :root {
-      --ink: #1a1a1a;
-      --ink-light: #4a4a4a;
-      --white: #ffffff;
-      --gray-light: #f8f8f8;
-      --gray-mid: #6b6b6b;
-      --gray-dark: #2a2a2a;
-      --accent-purple: #B371DC;
-      --accent-teal: #60D8AE;
-      --grid: 8px;
+      --cais-accent: #ff5820;
+      --cais-text: #333A3F;
+      --cais-bg-white: #ffffff;
+      --cais-bg-light: #f8f9fa;
+      --cais-border: #e0e0e0;
+      --cais-border-light: #eeeeee;
     }
 
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      color: var(--ink);
-      background: var(--white);
-      line-height: 1.4;
-      -webkit-font-smoothing: antialiased;
+    body { 
+      color: var(--cais-text);
+      background-color: var(--cais-bg-white);
+      font-synthesis-weight: none; 
     }
 
-    /* Grid System - 12 columns */
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
+    h1, h2, h3, h4, h5, h6, p { 
+      color: var(--cais-text);
     }
 
-    .grid-12 {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 24px;
+    .visually-hidden-focusable:not(:focus):not(:focus-within) {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0,0,0,0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
 
-    /* Navigation */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255,255,255,0.98);
-      border-bottom: 0.5px solid rgba(0,0,0,0.08);
-      z-index: 100;
-      backdrop-filter: blur(20px);
+    .visually-hidden-focusable:focus,
+    .visually-hidden-focusable:focus-within {
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      overflow: visible !important;
+      clip: auto !important;
+      white-space: normal !important;
     }
 
-    .nav-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 16px 32px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 32px;
+    /* Hero - exact match to home page */
+    .cfp-hero {
+      position: relative;
+      background: url('../assets/images/hero ultralight gradient.png') center/cover no-repeat;
+      color: var(--cais-text);
+      padding: 4.5rem 0;
     }
 
-    .brand img {
-      height: 42px;
-      width: auto;
+    .cfp-hero h1, .cfp-hero p {
+      color: var(--cais-text);
     }
 
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-      font-size: 13px;
-      font-weight: 500;
-      justify-self: end;
+    .badge-cais {
+      background: var(--cais-accent);
+      color: var(--cais-bg-white);
     }
 
-    .nav-links a {
-      color: var(--ink-light);
+    .section-title { 
+      font-weight: 700; 
+      letter-spacing: .2px; 
+      margin-top: 0;
+      color: var(--cais-text);
+    }
+
+    .anchor { 
+      scroll-margin-top: 84px; 
+    }
+
+    /* Cards - match home page exactly */
+    .card-quiet {
+      border: 1px solid var(--cais-border);
+      border-radius: .5rem;
+      padding: 1.5rem;
+      background: var(--cais-bg-white);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .card-quiet:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(51, 58, 63, 0.08);
+      border-color: var(--cais-text);
+    }
+
+    .highlight-box {
+      background: var(--cais-bg-light);
+      padding: 1.5rem;
+      border-radius: .5rem;
+      height: 100%;
+      border: 1px solid var(--cais-border-light);
+    }
+
+    /* Notification banner - solid color, no gradient */
+    .alert-warning {
+      background: #fff5f0;
+      border: 1px solid var(--cais-accent);
+      color: var(--cais-text);
+    }
+
+    .alert-info {
+      background: var(--cais-bg-light);
+      border: 1px solid var(--cais-border);
+      color: var(--cais-text);
+    }
+
+    /* Dates card - match home page treatment */
+    .dates-card {
+      border: 2px solid var(--cais-accent);
+      border-radius: .5rem;
+    }
+
+    /* Topic borders - match home page pillar styling */
+    .border-start {
+      border-left-width: 3px !important;
+    }
+
+    .border-primary {
+      border-color: var(--cais-accent) !important;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--cais-bg-light);
+      border-top: 1px solid var(--cais-border-light);
+    }
+
+    footer a {
+      color: var(--cais-text);
       text-decoration: none;
-      border-bottom: none;
-      transition: color 0.2s;
     }
 
-    .nav-links a:hover {
-      color: var(--ink);
+    footer a:hover {
+      color: var(--cais-accent);
+      text-decoration: underline;
     }
 
-    .nav-cta {
-      background: var(--ink);
-      color: var(--white);
-      padding: 10px 20px;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    /* Focus states */
+    a:focus, button:focus, .btn:focus {
+      outline: 2px solid var(--cais-accent);
+      outline-offset: 2px;
+    }
+
+    /* Buttons - match home page exactly */
+    .btn-primary {
+      background: var(--cais-accent);
       border: none;
-      transition: all 0.2s;
+      color: var(--cais-bg-white);
+      transition: all .2s ease;
     }
 
-    .nav-cta:hover {
-      background: #000;
+    .btn-primary:hover {
+      background: #e64d1b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 88, 32, 0.3);
+    }
+
+    .btn-outline-primary {
+      color: var(--cais-accent);
+      border-color: var(--cais-accent);
+      transition: all .2s ease;
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--cais-accent);
+      border-color: var(--cais-accent);
+      color: var(--cais-bg-white);
       transform: translateY(-1px);
     }
 
-    /* Hero Section - Asymmetric */
-    .hero {
-      margin-top: 72px;
-      background: var(--gray-light);
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 64px;
-      padding: 80px 32px;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    .hero-main h1 {
-      font-size: 56px;
-      font-weight: 700;
-      line-height: 1;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
-    }
-
-    .hero-tagline {
-      font-size: 20px;
-      line-height: 1.4;
-      color: var(--ink-light);
-      margin-bottom: 32px;
-      max-width: 560px;
-    }
-
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      gap: 32px;
-      margin-bottom: 40px;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    .hero-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .hero-meta-label {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gray-mid);
-      font-weight: 600;
-    }
-
-    .hero-meta-value {
-      color: var(--ink);
-    }
-
-    .hero-sidebar {
-      background: var(--white);
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 32px;
-    }
-
-    .deadline-alert {
-      background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-teal) 100%);
-      color: var(--white);
-      padding: 24px;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    .deadline-alert-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      opacity: 0.9;
-      margin-bottom: 8px;
-    }
-
-    .deadline-alert-value {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .quick-facts {
-      list-style: none;
-    }
-
-    .quick-facts li {
-      padding: 12px 0;
-      border-bottom: 0.5px solid rgba(0,0,0,0.1);
-      font-size: 13px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .quick-facts li:last-child {
-      border-bottom: none;
-    }
-
-    /* Audience Pathways */
-    .pathways {
-      padding: 80px 0;
-      background: var(--white);
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .section-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gray-mid);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
-
-    .section-subtitle {
-      font-size: 18px;
-      color: var(--ink-light);
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .pathway-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .pathway-card {
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 40px 32px;
-      background: var(--white);
-      transition: all 0.2s;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .pathway-card:hover {
-      border-color: rgba(0,0,0,0.3);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      transform: translateY(-2px);
-    }
-
-    .pathway-number {
-      font-size: 72px;
-      font-weight: 200;
-      line-height: 1;
-      color: rgba(0,0,0,0.08);
-      margin-bottom: 16px;
-    }
-
-    .pathway-title {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: var(--ink);
-    }
-
-    .pathway-desc {
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--ink-light);
-      margin-bottom: 24px;
-    }
-
-    .pathway-link {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--ink);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-bottom: 2px solid var(--ink);
-      display: inline-block;
-      padding-bottom: 2px;
-    }
-
-    .pathway-card:hover .pathway-link {
-      border-bottom-color: var(--accent-purple);
-      color: var(--accent-purple);
-    }
-
-    /* Trust Signals Band */
-    .trust-band {
-      background: var(--gray-dark);
-      color: var(--white);
-      padding: 64px 0;
-      border-top: 1px solid rgba(0,0,0,0.2);
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 48px;
-    }
-
-    .trust-item {
-      text-align: center;
-    }
-
-    .trust-icon {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 16px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: 200;
-    }
-
-    .trust-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .trust-desc {
-      font-size: 13px;
-      line-height: 1.5;
-      color: rgba(255,255,255,0.7);
-    }
-
-    /* Content Sections */
-    .content-section {
-      padding: 80px 0;
-      border-bottom: 0.5px solid rgba(0,0,0,0.08);
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 64px;
-    }
-
-    .content-main h2 {
-      font-size: 36px;
-      font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-bottom: 24px;
-    }
-
-    .content-main h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin: 32px 0 16px;
-      color: var(--ink);
-    }
-
-    .content-main p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--ink-light);
-      margin-bottom: 16px;
-    }
-
-    .content-main ul {
-      margin-left: 20px;
-      margin-bottom: 24px;
-    }
-
-    .content-main li {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--ink-light);
-      margin-bottom: 8px;
-    }
-
-    .content-main strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
-
-    .content-sidebar {
-      position: sticky;
-      top: 104px;
-      align-self: start;
-    }
-
-    .sidebar-card {
-      background: var(--gray-light);
-      border: 1px solid rgba(0,0,0,0.08);
-      padding: 24px;
-      margin-bottom: 24px;
-    }
-
-    .sidebar-card-title {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gray-mid);
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .sidebar-list {
-      list-style: none;
-    }
-
-    .sidebar-list li {
-      padding: 10px 0;
-      border-bottom: 0.5px solid rgba(0,0,0,0.1);
-      font-size: 13px;
-    }
-
-    .sidebar-list li:last-child {
-      border-bottom: none;
-    }
-
-    .sidebar-list a {
-      color: var(--ink-light);
+    /* Links */
+    a {
+      color: var(--cais-accent);
       text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,0.2);
-      transition: all 0.2s;
-      padding-bottom: 1px;
     }
 
-    .sidebar-list a:hover {
-      color: var(--ink);
-      border-bottom-color: var(--ink);
+    a:hover {
+      color: #e64d1b;
+      text-decoration: underline;
     }
 
-    /* Pillars Grid */
-    .pillars-grid-2x2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin: 32px 0;
+    /* Navigation */
+    .nav-link {
+      color: var(--cais-text) !important;
     }
 
-    .pillar-mini {
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 24px;
-      background: var(--white);
+    .nav-link:hover {
+      color: var(--cais-accent) !important;
     }
 
-    .pillar-mini-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--ink);
+    .nav-link.active {
+      color: var(--cais-accent) !important;
     }
 
-    .pillar-mini ul {
-      font-size: 13px;
-      margin-left: 16px;
+    /* Badges */
+    .badge {
+      background-color: var(--cais-accent);
+      color: var(--cais-bg-white);
     }
 
-    .pillar-mini li {
-      font-size: 13px;
-      margin-bottom: 6px;
+    .bg-primary {
+      background-color: var(--cais-accent) !important;
     }
 
-    /* CTA Section */
-    .cta-section {
-      background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-teal) 100%);
-      color: var(--white);
-      padding: 80px 0;
-      text-align: center;
+    .text-muted {
+      color: #999999 !important;
     }
 
-    .cta-section h2 {
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 16px;
+    /* Quick Links - match body text color */
+    .card-body .list-unstyled li a {
+      color: var(--cais-text);
     }
 
-    .cta-section p {
-      font-size: 18px;
-      margin-bottom: 32px;
-      opacity: 0.95;
+    .card-body .list-unstyled li a:hover {
+      color: var(--cais-accent);
+      text-decoration: underline;
     }
 
-    .cta-buttons {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
+    /* Consistent spacing rhythm */
+    section {
+      margin-bottom: 3rem;
     }
 
-    .btn-white {
-      background: var(--white);
-      color: var(--ink);
-      padding: 16px 32px;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border: none;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.2s;
-    }
-
-    .btn-white:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    /* Footer - Same as before */
-    .footer {
-      background: var(--white);
-      border-top: 1px solid rgba(0,0,0,0.15);
-    }
-
-    .footer-content {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    .footer-main {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 48px;
-      padding: 64px 0;
-      border-bottom: 0.5px solid rgba(0,0,0,0.1);
-    }
-
-    .footer-col-title {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray-mid);
-      margin-bottom: 16px;
-    }
-
-    .footer-links-list {
-      list-style: none;
-    }
-
-    .footer-links-list li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links-list a {
-      color: var(--ink-light);
-      text-decoration: none;
-      font-size: 13px;
-      border-bottom: 1px solid rgba(0,0,0,0.2);
-      transition: all 0.2s;
-      padding-bottom: 1px;
-    }
-
-    .footer-links-list a:hover {
-      color: var(--ink);
-      border-bottom-color: var(--ink);
-    }
-
-    .footer-brand-section img {
-      height: 28px;
-      width: auto;
-      margin-bottom: 16px;
-    }
-
-    .footer-col-content {
-      font-size: 13px;
-      line-height: 1.6;
-      color: var(--ink-light);
-    }
-
-    .footer-col-content p {
-      margin-bottom: 12px;
-    }
-
-    .footer-bottom {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      padding: 24px 0;
-    }
-
-    .footer-copyright {
-      font-size: 11px;
-      color: var(--gray-mid);
-    }
-
-    @media (max-width: 1024px) {
-      .hero-grid,
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .pathway-grid,
-      .trust-grid,
-      .footer-main {
-        grid-template-columns: 1fr;
-      }
-
-      .pillars-grid-2x2 {
-        grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      .cfp-hero {
+        padding: 3rem 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="../index.html">
-        <img src="../assets/images/cais_logo_long.png" alt="CAIS 2026" />
+  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary navigation">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="CAIS 2026 Home">
+        <img src="../assets/images/CAIS Logo Long.svg" alt="CAIS 2026" class="brand-logo" loading="eager" decoding="async" style="max-height:6vh; height:auto; width:auto;" />
       </a>
-      <ul class="nav-links">
-        <li><a href="#pathways">For Authors</a></li>
-        <li><a href="#submit">Submit</a></li>
-        <li><a href="#review">Review Process</a></li>
-      </ul>
-      <button class="nav-cta">Submit Paper →</button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-main">
-        <h1>Call for Papers</h1>
-        <p class="hero-tagline">CAIS 2026 invites original research contributions on agentic and AI systems—architectures that advance the state of the art through principled composition, smart inference-time scaling, systematic verification, and novel evaluation frameworks.</p>
-        
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <div class="hero-meta-label">Conference</div>
-            <div class="hero-meta-value">May 26–29, 2026</div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-label">Location</div>
-            <div class="hero-meta-value">San Francisco, CA</div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-label">Partnership</div>
-            <div class="hero-meta-value">ACM Conference</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-sidebar">
-        <div class="deadline-alert">
-          <div class="deadline-alert-label">Submission Opens</div>
-          <div class="deadline-alert-value">Coming Soon</div>
-        </div>
-        <ul class="quick-facts">
-          <li>
-            <span style="color: var(--gray-mid); font-weight: 500;">Status</span>
-            <span style="font-weight: 600;">CFP Open</span>
-          </li>
-          <li>
-            <span style="color: var(--gray-mid); font-weight: 500;">Review Type</span>
-            <span style="font-weight: 600;">Double-Blind</span>
-          </li>
-          <li>
-            <span style="color: var(--gray-mid); font-weight: 500;">Artifacts</span>
-            <span style="font-weight: 600;">Encouraged</span>
-          </li>
-          <li>
-            <span style="color: var(--gray-mid); font-weight: 500;">Deadline</span>
-            <span style="font-weight: 600;">11:59 PM AoE</span>
-          </li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#why">Why CAIS</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#program">Program</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Call for Papers</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
         </ul>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <!-- Audience Pathways -->
-  <section id="pathways" class="pathways">
+  <header class="cfp-hero">
     <div class="container">
-      <div class="section-header">
-        <div class="section-label">Choose Your Path</div>
-        <h2 class="section-title">Who Are You?</h2>
-        <p class="section-subtitle">We welcome submissions from researchers and practitioners across academia and industry who are pushing the boundaries of what's possible with compound AI systems.</p>
-      </div>
-
-      <div class="pathway-grid">
-        <div class="pathway-card" onclick="location.href='#researchers'">
-          <div class="pathway-number">01</div>
-          <h3 class="pathway-title">Academic Researchers</h3>
-          <p class="pathway-desc">Original research contributions presenting novel architectures, algorithms, systems, or empirical studies. Rigorous double-blind review with artifact evaluation.</p>
-          <span class="pathway-link">Research Track →</span>
-        </div>
-
-        <div class="pathway-card" onclick="location.href='#industry'">
-          <div class="pathway-number">02</div>
-          <h3 class="pathway-title">Industry System Builders</h3>
-          <p class="pathway-desc">Working implementations with technical descriptions. Showcase deployment case studies and production systems. Sponsorship opportunities available.</p>
-          <span class="pathway-link">Demonstrations →</span>
-        </div>
-
-        <div class="pathway-card" onclick="location.href='#earlycareer'">
-          <div class="pathway-number">03</div>
-          <h3 class="pathway-title">Early-Career Researchers</h3>
-          <p class="pathway-desc">Hands-on workshops, mentorship programs, and networking opportunities. Submit to tutorials for early feedback and community engagement.</p>
-          <span class="pathway-link">Workshops →</span>
-        </div>
-      </div>
+      <h1 class="display-6 fw-bold">Call for Papers</h1>
+      <p class="lead mb-3">ACM Conference on Agentic and AI Systems (CAIS 2026)</p>
+      <p class="mb-0"><strong>San Francisco • May 26–29, 2026</strong></p>
     </div>
-  </section>
+  </header>
 
-  <!-- Trust Signals -->
-  <section class="trust-band">
+  <main id="main" class="py-5">
     <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item">
-          <div class="trust-icon">✓</div>
-          <div class="trust-title">Artifact Evaluation</div>
-          <div class="trust-desc">ACM badging taxonomy for reproducible research</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">⊕</div>
-          <div class="trust-title">Double-Blind Review</div>
-          <div class="trust-desc">Rigorous peer review with conflict management</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">◉</div>
-          <div class="trust-title">Open Artifacts</div>
-          <div class="trust-desc">Transparent evaluation and benchmarking</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">≡</div>
-          <div class="trust-title">ACM Standards</div>
-          <div class="trust-desc">Publication ethics and attribution</div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="row g-4">
+        <!-- Main Content Column -->
+        <div class="col-lg-8">
 
-  <!-- Topics Section -->
-  <section id="researchers" class="content-section">
-    <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Topics of Interest</h2>
-          <p>We welcome submissions across four key pillars:</p>
-
-          <div class="pillars-grid-2x2">
-            <div class="pillar-mini">
-              <h3 class="pillar-mini-title">Architectural Patterns & Composition</h3>
-              <ul>
-                <li>Networks of Networks (NoNs) and inference-time scaling</li>
-                <li>Verifier-based systems and generation/verification asymmetry</li>
-                <li>Retrieval-augmented generation (RAG) architectures</li>
-                <li>Multi-agent systems and coordination mechanisms</li>
-                <li>Tool-augmented AI and API integration patterns</li>
-                <li>Modular system design and composability</li>
-              </ul>
-            </div>
-
-            <div class="pillar-mini">
-              <h3 class="pillar-mini-title">System Optimization & Efficiency</h3>
-              <ul>
-                <li>End-to-end optimization of non-differentiable pipelines</li>
-                <li>Cost-performance trade-offs in compound systems</li>
-                <li>Resource allocation across system components</li>
-                <li>Automated architecture search and hyperparameter tuning</li>
-                <li>Latency reduction and throughput optimization</li>
-                <li>Model selection and routing strategies</li>
-              </ul>
-            </div>
-
-            <div class="pillar-mini">
-              <h3 class="pillar-mini-title">Engineering & Operations</h3>
-              <ul>
-                <li>MLOps for compound AI systems</li>
-                <li>Monitoring, debugging, and observability tools</li>
-                <li>Specification languages and verification frameworks</li>
-                <li>Security and safety in multi-component systems</li>
-                <li>Testing and quality assurance methodologies</li>
-                <li>Production deployment case studies</li>
-              </ul>
-            </div>
-
-            <div class="pillar-mini">
-              <h3 class="pillar-mini-title">Evaluation & Benchmarking</h3>
-              <ul>
-                <li>Performance metrics for compound systems</li>
-                <li>Reproducibility frameworks and artifact standards</li>
-                <li>Comparative evaluation methodologies</li>
-                <li>Real-world impact assessment</li>
-                <li>Benchmark design for agentic systems</li>
-                <li>Human evaluation and user studies</li>
-              </ul>
-            </div>
-          </div>
-
-          <h3>Research Papers</h3>
-          <p>Original research contributions presenting novel architectures, algorithms, systems, or empirical studies.</p>
-          <ul>
-            <li><strong>Format:</strong> Double-blind review</li>
-            <li><strong>Page limit:</strong> <em>(to be announced)</em></li>
-            <li><strong>Template:</strong> ACM Primary Article Template (LaTeX or Word)</li>
-          </ul>
-
-          <h3 id="industry">System Demonstrations</h3>
-          <p>Working implementations of compound AI systems with accompanying technical description.</p>
-          <ul>
-            <li><strong>Format:</strong> Short paper (4 pages) + demonstration artifact</li>
-            <li><strong>Review:</strong> Evaluated on both technical contribution and demonstration quality</li>
-          </ul>
-        </div>
-
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <div class="sidebar-card-title">Quick Links</div>
-            <ul class="sidebar-list">
-              <li><a href="#researchers">Research Track</a></li>
-              <li><a href="#industry">Demonstrations</a></li>
-              <li><a href="#review">Review Process</a></li>
-              <li><a href="#submit">How to Submit</a></li>
-              <li><a href="https://www.acm.org/publications/proceedings-template">ACM Templates</a></li>
+          <!-- Overview -->
+          <section id="overview" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Overview</h2>
+            <p>CAIS 2026 invites original research contributions on <strong>agentic and AI systems</strong>—architectures that advance the state of the art through:</p>
+            <ul>
+              <li>Principled composition of multiple system components</li>
+              <li>Smart inference-time scaling strategies</li>
+              <li>Systematic verification methods for reliable deployment</li>
+              <li>Novel evaluation frameworks for compound systems</li>
             </ul>
-          </div>
+            <p class="mb-0">We welcome submissions from researchers and practitioners across academia and industry who are pushing the boundaries of what's possible with compound AI systems.</p>
+          </section>
 
-          <div class="sidebar-card">
-            <div class="sidebar-card-title">Important Dates</div>
-            <ul class="sidebar-list">
-              <li>Submission: <strong>TBD</strong></li>
-              <li>Notification: <strong>TBD</strong></li>
-              <li>Camera Ready: <strong>TBD</strong></li>
-              <li>Conference: <strong>May 26–29</strong></li>
+          <!-- Scope & Topics -->
+          <section id="scope" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Topics of Interest</h2>
+            <p class="mb-3">We welcome submissions across four key pillars:</p>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <div class="border-start border-3 border-primary ps-3">
+                  <h3 class="h6 fw-bold mb-1">Architectural Patterns & Composition</h3>
+                  <ul class="small mb-0">
+                    <li>Networks of Networks (NoNs) and inference-time scaling</li>
+                    <li>Verifier-based systems and generation/verification asymmetry</li>
+                    <li>Retrieval-augmented generation (RAG) architectures</li>
+                    <li>Multi-agent systems and coordination mechanisms</li>
+                    <li>Tool-augmented AI and API integration patterns</li>
+                    <li>Modular system design and composability</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="border-start border-3 border-primary ps-3">
+                  <h3 class="h6 fw-bold mb-1">System Optimization & Efficiency</h3>
+                  <ul class="small mb-0">
+                    <li>End-to-end optimization of non-differentiable pipelines</li>
+                    <li>Cost-performance trade-offs in compound systems</li>
+                    <li>Resource allocation across system components</li>
+                    <li>Automated architecture search and hyperparameter tuning</li>
+                    <li>Latency reduction and throughput optimization</li>
+                    <li>Model selection and routing strategies</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="border-start border-3 border-primary ps-3">
+                  <h3 class="h6 fw-bold mb-1">Engineering & Operations</h3>
+                  <ul class="small mb-0">
+                    <li>MLOps for compound AI systems</li>
+                    <li>Monitoring, debugging, and observability tools</li>
+                    <li>Specification languages and verification frameworks</li>
+                    <li>Security and safety in multi-component systems</li>
+                    <li>Testing and quality assurance methodologies</li>
+                    <li>Production deployment case studies</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="border-start border-3 border-primary ps-3">
+                  <h3 class="h6 fw-bold mb-1">Evaluation & Benchmarking</h3>
+                  <ul class="small mb-0">
+                    <li>Performance metrics for compound systems</li>
+                    <li>Reproducibility frameworks and artifact standards</li>
+                    <li>Comparative evaluation methodologies</li>
+                    <li>Real-world impact assessment</li>
+                    <li>Benchmark design for agentic systems</li>
+                    <li>Human evaluation and user studies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tracks & Formats -->
+          <section id="tracks" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Submission Tracks</h2>
+            
+            <div class="mb-4">
+              <h3 class="h6 fw-bold">Research Papers</h3>
+              <p>Original research contributions presenting novel architectures, algorithms, systems, or empirical studies.</p>
+              <ul>
+                <li><strong>Format:</strong> Double-blind review</li>
+                <li><strong>Page limit:</strong> <em class="text-muted">(to be announced)</em></li>
+                <li><strong>Template:</strong> ACM Primary Article Template (LaTeX or Word) — <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">Download templates</a></li>
+              </ul>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="h6 fw-bold">System Demonstrations</h3>
+              <p>Working implementations of compound AI systems with accompanying technical description.</p>
+              <ul>
+                <li><strong>Format:</strong> Short paper (4 pages) + demonstration artifact</li>
+                <li><strong>Review:</strong> Evaluated on both technical contribution and demonstration quality</li>
+              </ul>
+              <p class="small text-muted mb-0">Detailed demo submission instructions coming soon.</p>
+            </div>
+
+            <div class="alert alert-info">
+              <strong><i class="bi bi-info-circle me-2"></i>Workshops & Tutorials:</strong> Separate calls for workshops and tutorials will be announced. Proposals welcome for hands-on sessions on tools, frameworks, and methodologies.
+            </div>
+          </section>
+
+          <!-- Review Process -->
+          <section id="review" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Review Process & Reproducibility</h2>
+            
+            <h3 class="h6 fw-bold">Double-Blind Peer Review</h3>
+            <p>All research paper submissions undergo rigorous double-blind peer review. Authors must:</p>
+            <ul>
+              <li>Anonymize submissions (remove author names, affiliations, acknowledgments)</li>
+              <li>Avoid self-identifying citations (use "Previous work [X] showed..." not "Our prior work [X]...")</li>
+              <li>Declare conflicts of interest during submission</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Review Process -->
-  <section id="review" class="content-section" style="background: var(--gray-light);">
-    <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Review Process & Reproducibility</h2>
-          
-          <h3>Double-Blind Peer Review</h3>
-          <p>All research paper submissions undergo rigorous double-blind peer review. Authors must:</p>
-          <ul>
-            <li>Anonymize submissions (remove author names, affiliations, acknowledgments)</li>
-            <li>Avoid self-identifying citations (use "Previous work [X] showed..." not "Our prior work [X]...")</li>
-            <li>Declare conflicts of interest during submission</li>
-          </ul>
-
-          <h3>Artifact Evaluation</h3>
-          <p>CAIS encourages (and may require) artifact submission to support reproducibility. We adopt ACM's artifact badging taxonomy:</p>
-          <ul>
-            <li><strong>Artifacts Available:</strong> Supporting materials publicly available</li>
-            <li><strong>Artifacts Evaluated - Functional:</strong> Artifacts documented, consistent, complete, and exercisable</li>
-            <li><strong>Results Reproduced:</strong> Main results independently obtained using author-provided artifacts</li>
-          </ul>
-
-          <h3>Publication Ethics</h3>
-          <p>All submissions must follow ACM Publication Policies, including:</p>
-          <ul>
-            <li>No concurrent submissions to other venues</li>
-            <li>No plagiarism or self-plagiarism</li>
-            <li>Proper attribution of prior work</li>
-            <li>Disclosure of potential conflicts of interest</li>
-          </ul>
-        </div>
-
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <div class="sidebar-card-title">Submission Tips</div>
-            <ul class="sidebar-list">
-              <li>Start early—artifact prep takes time</li>
-              <li>Make work reproducible from day one</li>
-              <li>Document system architecture clearly</li>
-              <li>Include ablation studies when appropriate</li>
+            <h3 class="h6 fw-bold mt-4">Artifact Evaluation</h3>
+            <p>CAIS encourages (and may require) artifact submission to support reproducibility. We adopt ACM's artifact badging taxonomy:</p>
+            <ul>
+              <li><strong>Artifacts Available:</strong> Supporting materials publicly available</li>
+              <li><strong>Artifacts Evaluated - Functional:</strong> Artifacts documented, consistent, complete, and exercisable</li>
+              <li><strong>Results Reproduced:</strong> Main results independently obtained using author-provided artifacts</li>
             </ul>
-          </div>
+            <p class="small text-muted mb-0">Artifact evaluation timeline and requirements will be announced with paper acceptance notifications.</p>
+
+            <h3 class="h6 fw-bold mt-4">Publication Ethics</h3>
+            <p class="mb-0">All submissions must follow <a href="https://www.acm.org/publications/policies" target="_blank" rel="noopener">ACM Publication Policies</a>, including:</p>
+            <ul>
+              <li>No concurrent submissions to other venues</li>
+              <li>No plagiarism or self-plagiarism</li>
+              <li>Proper attribution of prior work</li>
+              <li>Disclosure of potential conflicts of interest</li>
+            </ul>
+          </section>
+
+          <!-- Submission Instructions -->
+          <section id="submission" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">How to Submit</h2>
+            
+            <div class="alert alert-warning mb-4">
+              <strong><i class="bi bi-clock-history me-2"></i>Submission portal opening soon</strong>
+              <p class="mb-0">The submission system will be available when the CFP officially opens. Check this page for updates or join our mailing list for notifications.</p>
+            </div>
+
+            <h3 class="h6 fw-bold">Submission Platform</h3>
+            <p>Papers will be submitted through <strong>PCS (Precision Conference Solution)</strong>, ACM's standard conference management system.</p>
+            <p><em class="text-muted">Portal URL will be posted here when available.</em></p>
+
+            <h3 class="h6 fw-bold mt-4">Formatting Requirements</h3>
+            <ul>
+              <li>Use the official <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Primary Article Templates</a> (LaTeX or Word)</li>
+              <li>Page limits: <em class="text-muted">(to be announced)</em></li>
+              <li>References do not count toward page limit</li>
+              <li>Appendices permitted but may not be reviewed</li>
+            </ul>
+
+            <h3 class="h6 fw-bold mt-4">Before You Submit</h3>
+            <ul>
+              <li>Create your PCS account early to avoid last-minute issues</li>
+              <li>Complete your author profile (required for submission)</li>
+              <li>Prepare anonymized PDF (check for metadata)</li>
+              <li>Prepare artifact documentation if submitting early</li>
+              <li>Review ACM publication policies</li>
+            </ul>
+          </section>
+
+          <!-- Policies -->
+          <section id="policies" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Conference Policies</h2>
+            <p>All participants must adhere to conference policies:</p>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card card-quiet p-3 h-100">
+                  <h3 class="h6 fw-bold mb-2"><i class="bi bi-shield-check me-2"></i>Code of Conduct</h3>
+                  <p class="small mb-2">Professional, inclusive behavior expectations</p>
+                  <a href="./cais-2026-code-of-conduct.html" class="stretched-link">Read policy</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card card-quiet p-3 h-100">
+                  <h3 class="h6 fw-bold mb-2"><i class="bi bi-universal-access me-2"></i>Accessibility</h3>
+                  <p class="small mb-2">Accommodations and inclusive practices</p>
+                  <a href="./cais-2026-accessibility.html" class="stretched-link">Read policy</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card card-quiet p-3 h-100">
+                  <h3 class="h6 fw-bold mb-2"><i class="bi bi-people me-2"></i>Diversity & Inclusion</h3>
+                  <p class="small mb-2">Commitment to equitable participation</p>
+                  <a href="./cais-2026-diversity-inclusion.html" class="stretched-link">Read policy</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card card-quiet p-3 h-100">
+                  <h3 class="h6 fw-bold mb-2"><i class="bi bi-camera-video me-2"></i>Recording & Media</h3>
+                  <p class="small mb-2">Photography and recording guidelines</p>
+                  <a href="./cais-2026-recording-media.html" class="stretched-link">Read policy</a>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 mb-0 small">See also: <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener">ACM Code of Ethics</a> | <a href="https://www.acm.org/publications/policies" target="_blank" rel="noopener">ACM Publication Policies</a></p>
+          </section>
+
+          <!-- Contact -->
+          <section id="contact" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Questions?</h2>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="highlight-box p-3">
+                  <h3 class="h6 fw-bold mb-2">Program Chairs</h3>
+                  <p class="mb-0"><em class="text-muted">To be announced</em></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="highlight-box p-3">
+                  <h3 class="h6 fw-bold mb-2">General Inquiries</h3>
+                  <p class="mb-0"><a href="mailto:info@caisconf.org">info@caisconf.org</a></p>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 mb-0 small text-muted">Program Committee and Artifact Evaluation Chairs will be announced when the CFP officially opens.</p>
+          </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <aside>
+            <!-- Important Dates -->
+            <div class="card dates-card mb-4">
+              <div class="card-body">
+                <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Important Dates</h3>
+                
+                <div class="alert alert-info mb-3 small">
+                  <strong>Submission timeline announcement pending</strong>
+                  <p class="mb-0">Paper submission deadlines will be posted here soon. Subscribe to updates or check back regularly.</p>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-start border-top pt-3">
+                    <div>
+                      <div class="fw-bold">Conference</div>
+                      <small class="text-muted">San Francisco, CA</small>
+                    </div>
+                    <span class="badge bg-primary rounded-pill">May 26–29</span>
+                  </li>
+                </ul>
+                
+                <p class="mt-3 mb-0 text-muted small"><i class="bi bi-clock me-1"></i>All deadlines will be 11:59 PM Anywhere on Earth (AoE)</p>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2"><a href="#overview">Overview</a></li>
+                  <li class="mb-2"><a href="#scope">Topics of Interest</a></li>
+                  <li class="mb-2"><a href="#tracks">Submission Tracks</a></li>
+                  <li class="mb-2"><a href="#review">Review Process</a></li>
+                  <li class="mb-2"><a href="#submission">How to Submit</a></li>
+                  <li class="mb-2"><a href="#policies">Policies</a></li>
+                  <li class="mb-2"><a href="#contact">Contact</a></li>
+                  <li class="mb-2 pt-2 border-top"><a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Templates <i class="bi bi-box-arrow-up-right small"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Author Tips -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="h6 fw-bold mb-3"><i class="bi bi-lightbulb me-2"></i>Author Tips</h3>
+                <ul class="small mb-0">
+                  <li class="mb-2">Start early—artifact preparation takes time</li>
+                  <li class="mb-2">Make your work reproducible from day one</li>
+                  <li class="mb-2">Document your system architecture clearly</li>
+                  <li class="mb-2">Include ablation studies where appropriate</li>
+                  <li class="mb-2">Consider submitting to workshops for early feedback</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- How to Submit -->
-  <section id="submit" class="content-section">
+  <footer class="py-4 border-top">
     <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>How to Submit</h2>
-          
-          <p style="background: #FFF9E6; border-left: 3px solid #FFD700; padding: 16px; margin: 24px 0; font-size: 14px;">
-            <strong>Submission portal opening soon</strong><br/>
-            The submission system will be available when the CFP officially opens. Check this page for updates or join our mailing list for notifications.
-          </p>
-
-          <h3>Submission Platform</h3>
-          <p>Papers will be submitted through <strong>PCS (Precision Conference Solution)</strong>, ACM's standard conference management system.</p>
-
-          <h3>Formatting Requirements</h3>
-          <ul>
-            <li>Use the official ACM Primary Article Templates (LaTeX or Word)</li>
-            <li>Page limits: <em>(to be announced)</em></li>
-            <li>References do not count toward page limit</li>
-            <li>Appendices permitted but may not be reviewed</li>
-          </ul>
-
-          <h3>Before You Submit</h3>
-          <ul>
-            <li>Create your PCS account early to avoid last-minute issues</li>
-            <li>Complete your author profile (required for submission)</li>
-            <li>Prepare anonymized PDF (check for metadata)</li>
-            <li>Prepare artifact documentation if submitting early</li>
-            <li>Review ACM publication policies</li>
-          </ul>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <small>© 2026 CAIS — In cooperation with ACM</small>
         </div>
-
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <div class="sidebar-card-title">Contact</div>
-            <p style="font-size: 13px; color: var(--ink-light); margin-bottom: 16px;">Program Chairs<br/><em>To be announced</em></p>
-            <p style="font-size: 13px; color: var(--ink-light);">General Inquiries<br/><a href="mailto:info@caisconf.org" style="color: var(--ink); border-bottom: 1px solid rgba(0,0,0,0.3);">info@caisconf.org</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Be Part of the Inaugural CAIS</h2>
-      <p>Submission timeline and important dates available soon. Early submissions encouraged.</p>
-      <div class="cta-buttons">
-        <a href="#submit" class="btn-white">Submit Your Work</a>
-        <a href="../index.html" class="btn-white" style="background: transparent; color: var(--white); border: 2px solid var(--white);">Back to Home</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-main">
-        <div>
-          <div class="footer-col-title">Conference</div>
-          <div class="footer-brand-section">
-            <img src="../assets/images/cais_logo_long.png" alt="CAIS 2026"/>
-          </div>
-          <div class="footer-col-content">
-            <p>ACM Conference on Agentic and AI Systems</p>
-            <p>May 26–29, 2026<br/>San Francisco, California</p>
-            <p><a href="mailto:info@caisconf.org" style="border-bottom: 1px solid rgba(0,0,0,0.3);">info@caisconf.org</a></p>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-col-title">Participate</div>
-          <ul class="footer-links-list">
-            <li><a href="#submit">Submit Your Work</a></li>
-            <li><a href="#researchers">Research Track</a></li>
-            <li><a href="#industry">Demonstrations</a></li>
-            <li><a href="#earlycareer">Workshops</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-col-title">Information</div>
-          <ul class="footer-links-list">
-            <li><a href="#pathways">Topics</a></li>
-            <li><a href="#review">Review Process</a></li>
-            <li><a href="../index.html#program">Program</a></li>
-            <li><a href="../index.html">Conference Home</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-col-title">Policies</div>
-          <ul class="footer-links-list">
-            <li><a href="cais-2026-code-of-conduct.html">Code of Conduct</a></li>
-            <li><a href="cais-2026-accessibility.html">Accessibility</a></li>
-            <li><a href="https://www.acm.org/publications/policies">ACM Policies</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-copyright">
-          © 2026 CAIS Conference · All rights reserved
-        </div>
-        <div style="font-size: 11px; color: var(--gray-mid);">
-          In cooperation with <a href="https://www.acm.org" style="color: var(--ink-light); text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.2);">ACM</a>
+        <div class="col-md-6 text-md-end">
+          <small>
+            <a href="../index.html">Home</a> · 
+            <a href="mailto:info@caisconf.org">Contact</a>
+          </small>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

@@ -1,17 +1,20 @@
 :root {
-    --cais-blue: #1e4aa8;
-    --cais-blue-2: #183d8c;
-    --cais-ink: #333333;
-    --cais-accent: #29ba96;
+    --cais-accent: #ff5820;
+    --cais-text: #333A3F;
+    --cais-bg-white: #ffffff;
+    --cais-bg-light: #f8f9fa;
+    --cais-border: #e0e0e0;
+    --cais-border-light: #eeeeee;
 }
 
 body {
-    color: var(--cais-ink);
+    color: var(--cais-text);
+    background-color: var(--cais-bg-white);
     font-synthesis-weight: none;
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    color: #333333;
+    color: var(--cais-text);
 }
 
 /* Skip link for accessibility */
@@ -40,23 +43,24 @@ h1, h2, h3, h4, h5, h6, p {
 /* Hero sections */
 .hero, .coc-hero, .cfp-hero {
     position: relative;
-    background: url('../images/CAIS_hero1.png') center/cover no-repeat;
-    color: #fff;
+    background: url('../images/hero ultralight gradient.png') center/cover no-repeat;
+    color: var(--cais-text);
     padding: 4.5rem 0;
 }
 
 .hero h1, .hero p,
 .coc-hero h1, .coc-hero p,
 .cfp-hero h1, .cfp-hero p {
-    color: #fff;
+    color: var(--cais-text);
 }
 
 /* ACM Mark */
 .acm-mark {
     max-height: 90px;
     width: auto;
-    opacity: 0.95;
+    opacity: 0.7;
     display: block;
+    filter: grayscale(100%);
 }
 
 .acm-mark-link {
@@ -64,7 +68,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 1.0rem;
 }
 
-/* Clear space enforcement - prevents other elements from crowdinng */
+/* Clear space enforcement - prevents other elements from crowding */
 .acm-mark-link {
     padding: 12px;
     margin: -24px;
@@ -83,14 +87,9 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
-.hero h1, .hero p,
-.coc-hero h1, .coc-hero p,
-.cfp-hero h1, .cfp-hero p {
-    color: #fff;
-}
-
 .badge-cais {
     background: var(--cais-accent);
+    color: var(--cais-bg-white);
 }
 
 /* Shared elements */
@@ -98,6 +97,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 700;
     letter-spacing: .2px;
     margin-top: 0;
+    color: var(--cais-text);
 }
 
 .anchor {
@@ -106,21 +106,21 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* Cards */
 .card-quiet, .info-card {
-    border: 1px solid #dee3ec;
+    border: 1px solid var(--cais-border);
     border-radius: .5rem;
     padding: 1.5rem;
-    background: #fff;
+    background: var(--cais-bg-white);
     transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 
 .card-quiet:hover, .info-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,.06);
-    border-color: #cfd7e6;
+    box-shadow: 0 6px 20px rgba(51, 58, 63, 0.08);
+    border-color: var(--cais-text);
 }
 
 .program-card .ratio {
-    background: #000;
+    background: var(--cais-bg-light);
     border-radius: .5rem;
     overflow: hidden;
 }
@@ -130,72 +130,211 @@ h1, h2, h3, h4, h5, h6, p {
     height: 100%;
     object-fit: cover;
     display: block;
+    filter: grayscale(100%);
+    opacity: 0.85;
+}
+
+.program-card img.program-img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 .highlight-box {
-    background: #e9f2fb;
+    background: var(--cais-bg-light);
     padding: 1.5rem;
     border-radius: .5rem;
     height: 100%;
+    border: 1px solid var(--cais-border-light);
 }
 
 .quick-links-callout {
-    background: #f1f3f9;
+    background: var(--cais-bg-light);
     border-radius: .5rem;
     padding: 1.5rem;
+    border: 1px solid var(--cais-border-light);
 }
 
 .banded {
-    background: #f8f9fb;
+    background: var(--cais-bg-light);
     padding: 2rem;
     border-radius: .5rem;
 }
 
-/* CTA Band */
+/* CTA Band - Accent color for high importance */
 .cta-band {
-    background: linear-gradient(135deg, var(--cais-blue) 0%, var(--cais-blue-2) 100%);
-    color: #fff;
+    background: var(--cais-accent);
+    color: var(--cais-bg-white);
     border-radius: .5rem;
 }
 
 .cta-band h2, .cta-band p {
-    color: #fff;
+    color: var(--cais-bg-white);
 }
 
-/* Dates card (CFP sidebar) */
+/* Dates card (CFP sidebar) - Accent border for importance */
 .dates-card {
-    border: 2px solid var(--cais-blue);
+    border: 2px solid var(--cais-accent);
+}
+
+/* Remove sticky positioning from sidebar */
+.sticky-top {
+    position: static !important;
+}
+
+/* Buttons - Accent color for primary actions */
+.btn-primary {
+    background-color: var(--cais-accent);
+    border-color: var(--cais-accent);
+    color: var(--cais-bg-white);
+}
+
+.btn-primary:hover {
+    background-color: #e64d1b;
+    border-color: #e64d1b;
+}
+
+.btn-outline-primary {
+    color: var(--cais-accent);
+    border-color: var(--cais-accent);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--cais-accent);
+    border-color: var(--cais-accent);
+    color: var(--cais-bg-white);
+}
+
+/* Links - Accent color for important links */
+a {
+    color: var(--cais-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e64d1b;
+    text-decoration: underline;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--cais-bg-white) !important;
+    border-bottom: 1px solid var(--cais-border-light);
+}
+
+.nav-link {
+    color: var(--cais-text) !important;
+}
+
+.nav-link:hover {
+    color: var(--cais-accent) !important;
+}
+
+.nav-link.active {
+    color: var(--cais-accent) !important;
 }
 
 /* Footer */
+footer {
+    background-color: var(--cais-bg-light);
+    color: var(--cais-text);
+    border-top: 1px solid var(--cais-border-light);
+}
+
 footer a {
-    color: var(--cais-ink);
+    color: var(--cais-text);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: var(--cais-blue);
+    color: var(--cais-accent);
     text-decoration: underline;
 }
 
-/* Footer logo styling */
-footer .col-md-5 img {
-    display: block;
-    float: left;
-    clear: left;
-    max-height: 40px;
-    width: auto;
+/* Badges and Pills - Accent color for emphasis */
+.badge {
+    background-color: var(--cais-accent);
+    color: var(--cais-bg-white);
 }
 
-footer .col-md-5 > div:first-child {
-    overflow: auto;
-    margin-bottom: 1rem;
+.bg-primary {
+    background-color: var(--cais-accent) !important;
 }
 
-/* Improve focus visibility */
+.bg-light {
+    background-color: var(--cais-bg-light) !important;
+}
+
+.text-primary {
+    color: var(--cais-accent) !important;
+}
+
+.text-muted {
+    color: #999999 !important;
+}
+
+.border-primary {
+    border-color: var(--cais-accent) !important;
+}
+
+.border-top {
+    border-top: 1px solid var(--cais-border-light) !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--cais-border-light) !important;
+}
+
+/* Alerts - Using accent for important notices */
+.alert-info {
+    background-color: var(--cais-bg-light);
+    border-color: var(--cais-border);
+    color: var(--cais-text);
+}
+
+.alert-warning {
+    background-color: #fff5f0;
+    border-color: var(--cais-accent);
+    color: var(--cais-text);
+}
+
+/* Icons - Accent color for important icons */
+.bi[style*="color"] {
+    color: var(--cais-accent) !important;
+}
+
+/* Improve focus visibility - Using accent */
 a:focus, button:focus, .btn:focus {
-    outline: 2px solid var(--cais-blue);
+    outline: 2px solid var(--cais-accent);
     outline-offset: 2px;
+}
+
+/* List groups */
+.list-group-item {
+    background-color: var(--cais-bg-white);
+    border-color: var(--cais-border-light);
+    color: var(--cais-text);
+}
+
+/* Tables */
+table {
+    color: var(--cais-text);
+}
+
+th {
+    color: var(--cais-text);
+    background-color: var(--cais-bg-light);
+}
+
+/* Forms */
+.form-control {
+    background-color: var(--cais-bg-white);
+    border-color: var(--cais-border);
+    color: var(--cais-text);
+}
+
+.form-control:focus {
+    border-color: var(--cais-accent);
+    box-shadow: 0 0 0 0.2rem rgba(255, 88, 32, 0.25);
 }
 
 /* Print styles */
@@ -205,12 +344,13 @@ a:focus, button:focus, .btn:focus {
     }
 
     body {
-        color: #000;
+        color: var(--cais-text);
+        background: var(--cais-bg-white);
     }
 
     a {
         text-decoration: none;
-        color: #000;
+        color: var(--cais-text);
     }
 
     a[href^="http"]:after {

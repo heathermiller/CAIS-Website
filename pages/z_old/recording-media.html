@@ -10,250 +10,19 @@
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  
+  <!-- Custom Styles -->
+  <link href="../assets/css/styles.css" rel="stylesheet" />
   <style>
-    /* PHASE 1: Design System Foundation */
-    :root {
-      --cais-accent: #ff5820;
-      --cais-text: #333A3F;
-      --cais-bg-white: #ffffff;
-      --cais-bg-light: #f8f9fa;
-      --cais-border: #e0e0e0;
-      --cais-border-light: #eeeeee;
-    }
-
-    body { 
-      color: var(--cais-text);
-      background-color: var(--cais-bg-white);
-      font-synthesis-weight: none;
-    }
-
-    h1, h2, h3, h4, h5, h6, p { 
-      color: var(--cais-text);
-    }
-
-    /* PHASE 2: Hero Section */
-    .coc-hero {
-      position: relative;
-      background: url('../assets/images/hero ultralight gradient.png') center/cover no-repeat;
-      color: var(--cais-text);
-      padding: 4.5rem 0;
-    }
-
-    .coc-hero h1, .coc-hero p {
-      color: var(--cais-text);
-    }
-
-    /* PHASE 3: Navigation */
-    .navbar-brand {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-
-    .nav-link {
-      color: var(--cais-text) !important;
-    }
-
-    .nav-link:hover {
-      color: var(--cais-accent) !important;
-    }
-
-    .nav-link.active {
-      color: var(--cais-accent) !important;
-    }
-
-    /* PHASE 4: Component Styles */
-    .section-title { 
-      font-weight: 700; 
-      letter-spacing: .2px; 
-      margin-top: 0;
-      color: var(--cais-text);
-    }
-
-    .card-quiet, .info-card {
-      border: 1px solid var(--cais-border);
-      border-radius: .5rem;
-      padding: 1.5rem;
-      background: var(--cais-bg-white);
-      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-      height: 100%;
-    }
-
-    .card-quiet:hover, .info-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(51, 58, 63, 0.08);
-      border-color: var(--cais-text);
-    }
-
-    .highlight-box {
-      background: var(--cais-bg-light);
-      padding: 1.5rem;
-      border-radius: .5rem;
-      height: 100%;
-      border: 1px solid var(--cais-border-light);
-    }
-
-    .quick-links-callout {
-      background: var(--cais-bg-light);
-      border-radius: .5rem;
-      padding: 1.5rem;
-      border: 1px solid var(--cais-border-light);
-    }
-
-    .banded {
-      background: var(--cais-bg-light);
-      padding: 2rem;
-      border-radius: .5rem;
-      border: 1px solid var(--cais-border-light);
-    }
-
-    /* PHASE 5: Interactive Elements */
-    .btn-primary {
-      background: var(--cais-accent);
-      border: none;
-      color: var(--cais-bg-white);
-      transition: all .2s ease;
-    }
-
-    .btn-primary:hover {
-      background: #e64d1b;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(255, 88, 32, 0.3);
-    }
-
-    .btn-outline-primary {
-      color: var(--cais-accent);
-      border-color: var(--cais-accent);
-      transition: all .2s ease;
-    }
-
-    .btn-outline-primary:hover {
-      background: var(--cais-accent);
-      border-color: var(--cais-accent);
-      color: var(--cais-bg-white);
-      transform: translateY(-1px);
-    }
-
-    a {
-      color: var(--cais-accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #e64d1b;
-      text-decoration: underline;
-    }
-
-    a:focus, button:focus, .btn:focus {
-      outline: 2px solid var(--cais-accent);
-      outline-offset: 2px;
-    }
-
-    /* PHASE 6: Utility Classes */
-    .border-primary {
-      border-color: var(--cais-accent) !important;
-    }
-
-    .bg-primary {
-      background-color: var(--cais-accent) !important;
-    }
-
-    .bg-light {
-      background-color: var(--cais-bg-light) !important;
-    }
-
-    .text-primary {
-      color: var(--cais-accent) !important;
-    }
-
-    .text-muted {
-      color: #999999 !important;
-    }
-
-    /* PHASE 7: Footer */
-    footer {
-      background-color: var(--cais-bg-light);
-      color: var(--cais-text);
-      border-top: 1px solid var(--cais-border-light);
-    }
-
-    footer a {
-      color: var(--cais-text);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: var(--cais-accent);
-      text-decoration: underline;
-    }
-
-    /* Additional Styles */
-    .intro-text { 
-      font-size: 14pt; 
-    }
-
-    /* Accessibility */
-    .visually-hidden-focusable:not(:focus):not(:focus-within) {
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      clip: rect(0,0,0,0) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
-    }
-
-    .visually-hidden-focusable:focus,
-    .visually-hidden-focusable:focus-within {
-      position: static !important;
-      width: auto !important;
-      height: auto !important;
-      overflow: visible !important;
-      clip: auto !important;
-      white-space: normal !important;
-    }
-
-    /* Print Styles */
-    @media print {
-      .navbar, footer, .btn {
-        display: none;
-      }
-      
-      body {
-        color: #000;
-      }
-      
-      a {
-        text-decoration: none;
-        color: #000;
-      }
-      
-      a[href^="http"]:after {
-        content: " (" attr(href) ")";
-        font-size: 90%;
-      }
-    }
+    .intro-text { font-size: 14pt; }
   </style>
 </head>
 <body>
-  <!-- Skip to main content -->
-  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
-
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary navigation">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="CAIS 2026 Home">
-        <img src="../assets/images/CAIS Logo Long.svg" 
-             alt="CAIS 2026" 
-             class="brand-logo" 
-             loading="eager" 
-             decoding="async" 
-             style="max-height:6vh; height:auto; width:auto;" />
+      <a class="navbar-brand" href="../index.html">
+        <img src="../assets/images/cais LOGO wordmark lockup _ short w 2026.png" alt="CAIS 2026 Wordmark" style="max-height:45px; height:auto; width:auto;" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
       <div id="navMain" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="../index.html#why">Why CAIS</a></li>
@@ -271,7 +40,7 @@
     </div>
   </header>
 
-  <main id="main" class="container py-5">
+  <main class="container py-5">
     <!-- Intro -->
     <div class="row mb-5">
       <div class="col-lg-10 mx-auto">
@@ -430,14 +199,14 @@
           <div class="card card-quiet p-3">
             <h3 class="h6 fw-bold mb-2">ACM Publications Policy</h3>
             <p class="mb-2 small">Copyright and intellectual property guidance</p>
-            <a href="https://www.acm.org/publications/policies" class="stretched-link" target="_blank" rel="noopener">Visit ACM site</a>
+            <a href="https://www.acm.org/publications/policies" class="stretched-link">Visit ACM site</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="pt-5 pb-4">
+  <footer class="pt-5 pb-4 border-top">
     <div class="container d-flex justify-content-between align-items-center">
       <small>© 2026 CAIS — ACM Conference on Agentic and AI Systems</small>
       <a class="small" href="../index.html">Back to Home</a>

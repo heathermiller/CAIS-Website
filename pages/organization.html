@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- DEV GATE - Remove this line at launch -->
+    <script src="../assets/js/dev-gate.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Committee — CAIS 2026</title>
+    <meta name="description" content="Meet the Steering Committee and Organizing Committee for CAIS 2026 — the ACM Conference on Agentic and AI Systems." />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://caisconf.org/pages/organization.html" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+
+    <style>
+        /* Committee-specific styles */
+        .committee-photo {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            filter: grayscale(100%);
+            opacity: 0.9;
+            transition: filter 300ms ease, opacity 300ms ease;
+        }
+
+        .committee-card:hover .committee-photo {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .committee-card {
+            border: 1px solid var(--silver);
+            background: var(--seasalt);
+            transition: border-color 200ms linear;
+        }
+
+        .committee-card:hover {
+            border-color: var(--olive-moss);
+        }
+
+        .committee-name {
+            font-weight: 700;
+            color: var(--eerie-black);
+            margin-bottom: 0.25rem;
+        }
+
+        .committee-affiliation {
+            color: var(--davys-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .committee-bio {
+            font-size: 0.9rem;
+            color: var(--eerie-black);
+            line-height: 1.5;
+        }
+
+        .role-badge {
+            display: inline-block;
+            background: var(--terracotta-deep);
+            color: var(--seasalt);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .organizing-card {
+            border: 2px solid var(--terracotta-deep);
+            background: linear-gradient(to bottom, rgba(216, 147, 128, 0.06), transparent 40%);
+        }
+
+        .organizing-card:hover {
+            border-color: var(--terracotta-medium);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Skip to main content (accessibility) -->
+<a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+<!-- ===== NAV ===== -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary navigation">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="CAIS 2026 Home">
+            <img src="../assets/images/CAIS Logo Long.svg" alt="CAIS 2026" class="brand-logo" loading="eager" decoding="async" style="max-height:6vh; height:auto; width:auto;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navMain" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="../index.html#why">Why CAIS</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#program">Program</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./organization.html">Committee</a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true">Call for Papers</a></li>
+                <li class="nav-item"><a class="nav-link" href="mailto:contact@caisconf.org">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main">
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="display-5 fw-bold mb-3">Conference Committee</h1>
+            <p class="lead mb-0">The leadership team behind CAIS 2026 — scholars and practitioners shaping the future of compound AI systems research.</p>
+        </div>
+    </header>
+
+    <!-- ===== STEERING COMMITTEE ===== -->
+    <section id="steering" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-2">CAIS 2026 Organizing Committee</h2>
+            <p class="lead mb-5">The team responsible for delivering the inaugural ACM Conference on Agentic and AI Systems.</p>
+
+            <div class="row g-4">
+                <!-- Heather Miller -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="committee-card h-100 p-3">
+                        <img src="../assets/images/Miller_Heather.png" alt="Heather Miller" class="committee-photo mb-3" loading="lazy" />
+                        <h3 class="committee-name h5">Heather Miller</h3>
+                        <p class="committee-affiliation">CMU &amp; Two Sigma</p>
+                        <p class="committee-role" style="color: var(--terracotta-deep); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.75rem;">General Co-Chair</p>
+                        <p class="committee-bio">Assistant Professor at Carnegie Mellon and VP at Two Sigma. Recipient of the Dahl-Nygaard Prize and ACM SIGPLAN Software Award for her work on Scala. Her research bridges distributed systems and AI infrastructure, including work on DSPy and the Language Model System Interface Model.</p>
+                    </div>
+                </div>
+
+                <!-- Matei Zaharia -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="committee-card h-100 p-3">
+                        <img src="../assets/images/Zaharia_Matei.png" alt="Matei Zaharia" class="committee-photo mb-3" loading="lazy" />
+                        <h3 class="committee-name h5">Matei Zaharia</h3>
+                        <p class="committee-affiliation">UC Berkeley &amp; Databricks</p>
+                        <p class="committee-role" style="color: var(--terracotta-deep); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.75rem;">General Co-Chair</p>
+                        <p class="committee-bio">Associate Professor at UC Berkeley and Co-founder/CTO of Databricks. Creator of Apache Spark, MLflow, and Delta Lake. Lead author of "The Shift from Models to Compound AI Systems" and co-creator of DSPy. Winner of the ACM Doctoral Dissertation Award.</p>
+                    </div>
+                </div>
+
+                <!-- Deepti Raghavan -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="committee-card h-100 p-3">
+                        <img src="../assets/images/Raghavan_Deepti.png" alt="Deepti Raghavan" class="committee-photo mb-3" loading="lazy" />
+                        <h3 class="committee-name h5">Deepti Raghavan</h3>
+                        <p class="committee-affiliation">Brown University</p>
+                        <p class="committee-role" style="color: var(--terracotta-deep); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.75rem;">Workshop Co-Chair</p>
+                        <p class="committee-bio">Assistant Professor at Brown CS. Her ALTO system provides network orchestration for compound AI pipelines, achieving 3× throughput improvements. PhD from Stanford under Matei Zaharia. NSF Graduate Research Fellow with expertise spanning ML systems and networking.</p>
+                    </div>
+                </div>
+
+                <!-- Lingjiao (LJ) Chen -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="committee-card h-100 p-3">
+                        <img src="../assets/images/Chen_LJ.png" alt="Lingjiao Chen" class="committee-photo mb-3" loading="lazy" />
+                        <h3 class="committee-name h5">Lingjiao (LJ) Chen</h3>
+                        <p class="committee-affiliation">Microsoft Research</p>
+                        <p class="committee-role" style="color: var(--terracotta-deep); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.75rem;">Workshop Co-Chair</p>
+                        <p class="committee-bio">Senior Researcher at Microsoft Research AI Frontiers. Co-author of the foundational compound AI systems blog post and co-organizer of the inaugural Compound AI Systems Workshop. His FrugalML work (NeurIPS 2020 Oral) enables 90% cost reduction in ML deployments.</p>
+                    </div>
+                </div>
+
+                <!-- Jared Quincy Davis -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="committee-card h-100 p-3">
+                        <img src="../assets/images/Davis_Jared.png" alt="Jared Quincy Davis" class="committee-photo mb-3" loading="lazy" />
+                        <h3 class="committee-name h5">Jared Quincy Davis</h3>
+                        <p class="committee-affiliation">Mithril</p>
+                        <p class="committee-role" style="color: var(--terracotta-deep); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.75rem;">Steering Committee</p>
+                        <p class="committee-bio">Founder and CEO of Mithril, building AI infrastructure for compound and agentic systems. Stanford PhD under Matei Zaharia and Jure Leskovec. Former Google DeepMind researcher; co-author of "Rethinking Attention with Performers" (11,000+ citations).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GET INVOLVED CTA ===== -->
+    <section class="py-5">
+        <div class="container">
+            <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3" style="background: var(--terracotta-medium); border: none;">
+                <div>
+                    <h2 class="h3 fw-bold mb-1" style="color: var(--seasalt);">Interested in getting involved?</h2>
+                    <p class="mb-0" style="color: var(--seasalt);">We're looking for reviewers, volunteers, and sponsors to help make CAIS 2026 a success.</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@caisconf.org" class="btn btn-lg px-4" style="background: transparent; border: 2px solid var(--seasalt); color: var(--seasalt);">
+                        <i class="bi bi-envelope me-2"></i>Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact" class="pt-5 pb-4 border-top">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="../assets/images/CAIS Logo Long.png" alt="CAIS 2026" style="max-height:40px; width:auto;" />
+                </div>
+                <p class="mb-2"><strong>ACM Conference on Agentic and AI Systems</strong></p>
+                <p class="mb-1">May 26–29, 2026</p>
+                <p class="mb-3">San Jose, California</p>
+                <p class="mb-0">
+                    <a href="mailto:contact@caisconf.org" class="text-decoration-none">
+                        <i class="bi bi-envelope me-2"></i>contact@caisconf.org
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-uppercase fw-bold mb-3">For Authors</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><span style="color: var(--silver); cursor: default;">Call for Papers</span></li>
+                    <li class="mb-2"><span style="color: var(--silver); cursor: default;">How to Submit</span></li>
+                    <li class="mb-2"><a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Templates</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 class="text-uppercase fw-bold mb-3">Policies</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="./codeofconduct.html">Code of Conduct</a></li>
+                    <li class="mb-2"><a href="./accessibility.html">Accessibility</a></li>
+                    <li class="mb-2"><a href="./inclusion.html">Diversity &amp; Inclusion</a></li>
+                    <li class="mb-2"><a href="./recording-media.html">Recording &amp; Media</a></li>
+                    <li class="mb-2"><a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener">ACM Code of Ethics</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-top mt-4 pt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <small class="text-muted">© 2026 CAIS — In cooperation with ACM</small>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small><a href="./cfp.html#policies">View All Policies</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+
+<!-- Navigation helpers -->
+<script>
+    // Close mobile nav on link click
+    window.addEventListener('DOMContentLoaded', function(){
+        const navMain = document.getElementById('navMain');
+        navMain.querySelectorAll('a.nav-link').forEach(function(link){
+            link.addEventListener('click', function(){
+                const bsCollapse = bootstrap.Collapse.getInstance(navMain);
+                if (bsCollapse) bsCollapse.hide();
+            });
+        });
+    });
+</script>
+</body>
+</html>

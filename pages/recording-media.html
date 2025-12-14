@@ -4,13 +4,47 @@
   <!-- DEV GATE - Remove this line at launch -->
   <script src="../assets/js/dev-gate.js"></script>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) with Consent Mode and URL Sanitization -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WL02FPN13W"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WL02FPN13W');
+    (function() {
+      // Sanitize URL: allowlist UTM parameters only, strip everything else
+      var allowedParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+      var originalUrl = new URL(window.location.href);
+      var sanitizedUrl = new URL(originalUrl.origin + originalUrl.pathname);
+      
+      // Preserve only allowlisted parameters
+      allowedParams.forEach(function(param) {
+        if (originalUrl.searchParams.has(param)) {
+          sanitizedUrl.searchParams.set(param, originalUrl.searchParams.get(param));
+        }
+      });
+      
+      // Preserve hash if present
+      if (originalUrl.hash) {
+        sanitizedUrl.hash = originalUrl.hash;
+      }
+      
+      // Update browser address bar to remove stripped parameters
+      if (originalUrl.href !== sanitizedUrl.href) {
+        history.replaceState(null, '', sanitizedUrl.href);
+      }
+      
+      // Initialize GA4 with sanitized URL
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      
+      // Default to denied until user consents (GDPR)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+      
+      gtag('js', new Date());
+      gtag('config', 'G-WL02FPN13W', {
+        'page_location': sanitizedUrl.href
+      });
+    })();
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -486,10 +520,16 @@
   <footer class="pt-5 pb-4">
     <div class="container d-flex justify-content-between align-items-center">
       <small>© 2026 CAIS — ACM Conference on AI and Agentic Systems</small>
-      <a class="small" href="../index.html">Back to Home</a>
+      <div>
+        <a class="small" href="./privacy.html">Privacy</a>
+        <span class="small text-muted mx-2">·</span>
+        <a class="small" href="../index.html">Back to Home</a>
+      </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<!-- Cookie Consent -->
+<script src="../assets/js/cookie-consent.js" defer></script>
 </body>
 </html>

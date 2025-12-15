@@ -324,6 +324,24 @@
       </div>
     </div>
 
+    <!-- Data Controller -->
+    <section class="banded mb-5">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="section-title h4 mb-3">Data Controller</h2>
+          <p>The data controller responsible for your personal data is:</p>
+          <p class="mb-0">
+            <strong>Association for Computing Machinery (ACM)</strong><br>
+            1601 Broadway, 10th Floor<br>
+            New York, NY 10019-7434<br>
+            United States<br><br>
+            For privacy inquiries related to this conference, contact: <a href="mailto:contact@caisconf.org">contact@caisconf.org</a><br>
+            For ACM privacy matters: <a href="mailto:privacy@acm.org">privacy@acm.org</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Information We Collect -->
     <section class="mb-5">
       <div class="row">
@@ -364,6 +382,40 @@
       </div>
     </section>
 
+    <!-- Legal Basis for Processing -->
+    <section class="mb-5">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="section-title h4 mb-3">Legal Basis for Processing</h2>
+          <p>Under the General Data Protection Regulation (GDPR) and similar laws, we process your personal data based on the following legal grounds:</p>
+          
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <div class="info-card">
+                <h3 class="h6 fw-bold">Analytics Data</h3>
+                <p class="small mb-1"><strong>Legal basis:</strong> Consent (GDPR Article 6(1)(a))</p>
+                <p class="small mb-0">We only collect analytics data after you explicitly accept cookies via our consent banner.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info-card">
+                <h3 class="h6 fw-bold">Contact Inquiries</h3>
+                <p class="small mb-1"><strong>Legal basis:</strong> Legitimate Interest (GDPR Article 6(1)(f))</p>
+                <p class="small mb-0">Processing your inquiries is necessary for our legitimate interest in responding to your questions and requests.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info-card">
+                <h3 class="h6 fw-bold">Server Logs</h3>
+                <p class="small mb-1"><strong>Legal basis:</strong> Legitimate Interest (GDPR Article 6(1)(f))</p>
+                <p class="small mb-0">Our hosting provider collects logs necessary for security, performance monitoring, and abuse prevention.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Cookies -->
     <section class="mb-5">
       <div class="row">
@@ -380,7 +432,7 @@
                 <h4 class="h6 fw-bold">Essential Cookies</h4>
                 <p class="small mb-2">Required for basic site functionality.</p>
                 <ul class="small mb-0">
-                  <li><code>cais_cookie_consent</code> — Stores your cookie preference</li>
+                  <li><code>cais_cookie_consent</code> — Stores your cookie preference (1 year)</li>
                 </ul>
               </div>
             </div>
@@ -389,7 +441,8 @@
                 <h4 class="h6 fw-bold">Analytics Cookies (Optional)</h4>
                 <p class="small mb-2">Set only if you accept. Provided by Google Analytics.</p>
                 <ul class="small mb-0">
-                  <li><code>_ga</code>, <code>_ga_*</code> — Distinguish users and sessions</li>
+                  <li><code>_ga</code> — Distinguishes users (2 years)</li>
+                  <li><code>_ga_*</code> — Maintains session state (2 years)</li>
                 </ul>
               </div>
             </div>
@@ -401,7 +454,7 @@
             <li><strong>Accept:</strong> Analytics cookies will be set</li>
             <li><strong>Decline:</strong> No analytics cookies will be set; we won't track your visit</li>
           </ul>
-          <p>To change your choice later, clear your browser's cookies for this site and refresh the page.</p>
+          <p>To change your choice later, click the <a href="#" class="cookie-preferences-link">Cookie Preferences</a> link in the page footer. This will reset your choice and display the consent banner again.</p>
         </div>
       </div>
     </section>
@@ -413,11 +466,14 @@
           <h2 class="section-title h4 mb-3">Third-Party Services</h2>
           
           <h3 class="h6 fw-bold mt-4">Google Analytics</h3>
-          <p>We use Google Analytics 4, provided by Google LLC, to analyze site traffic. If you consent to analytics cookies, data is processed by Google under their privacy policy. Google may transfer data to servers in the United States.</p>
-          <p>Learn more: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> | <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></p>
+          <p>We use Google Analytics 4, provided by Google LLC, to analyze site traffic. If you consent to analytics cookies, data is processed by Google under their privacy policy. Google may transfer data to servers in the United States under Standard Contractual Clauses (SCCs) approved by the European Commission.</p>
+          <p>Learn more: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> | <a href="https://business.safety.google/gdpr/" target="_blank" rel="noopener">Google's Data Transfer Framework</a> | <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></p>
 
           <h3 class="h6 fw-bold mt-4">Hosting</h3>
-          <p>This site is hosted on Vercel. Vercel may collect standard server logs (IP address, browser type, pages requested) for security and performance purposes. See <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's Privacy Policy</a>.</p>
+          <p>This site is hosted on Vercel. Vercel may collect standard server logs (IP address, browser type, pages requested) for security and performance purposes, processed under their legitimate interest in maintaining service security. See <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's Privacy Policy</a>.</p>
+
+          <h3 class="h6 fw-bold mt-4">Content Delivery Networks</h3>
+          <p>This site uses jsDelivr CDN to deliver CSS and font files (Bootstrap framework). When you load pages, your browser connects to jsDelivr servers, which may receive your IP address and browser information. jsDelivr operates servers globally. See <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsDelivr's Privacy Policy</a>.</p>
         </div>
       </div>
     </section>
@@ -434,6 +490,8 @@
             <li><strong>Erasure:</strong> Request deletion of your data</li>
             <li><strong>Objection:</strong> Object to certain processing activities</li>
             <li><strong>Portability:</strong> Receive your data in a portable format</li>
+            <li><strong>Withdraw consent:</strong> Withdraw consent at any time via the <a href="#" class="cookie-preferences-link">Cookie Preferences</a> link</li>
+            <li><strong>Lodge a complaint:</strong> If you believe your data protection rights have been violated, you have the right to lodge a complaint with a supervisory authority in the EU Member State of your habitual residence, place of work, or place of the alleged infringement</li>
           </ul>
           <p class="mb-0">To exercise these rights, contact us at <a href="mailto:contact@caisconf.org">contact@caisconf.org</a>.</p>
         </div>
@@ -520,9 +578,12 @@
   </main>
 
   <footer class="pt-5 pb-4">
-    <div class="container d-flex justify-content-between align-items-center">
-      <small>© 2026 CAIS — ACM Conference on AI and Agentic Systems</small>
-      <a class="small" href="../index.html">Back to Home</a>
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <small>© 2026 CAIS — In cooperation with ACM</small>
+      <div class="d-flex gap-3">
+        <a href="#" class="small cookie-preferences-link">Cookie Preferences</a>
+        <a class="small" href="../index.html">Back to Home</a>
+      </div>
     </div>
   </footer>
 

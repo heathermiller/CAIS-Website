@@ -222,10 +222,38 @@
     }
   }
 
+  // Reset consent and show banner again (for Cookie Preferences link)
+  function resetConsent() {
+    try {
+      localStorage.removeItem(CONSENT_KEY);
+    } catch (e) {
+      // localStorage not available
+    }
+    // Update GA to denied state
+    updateGtagConsent(false);
+    // Show banner again
+    showBanner();
+  }
+
+  // Attach Cookie Preferences link handler
+  function attachPreferencesLink() {
+    const prefLinks = document.querySelectorAll('.cookie-preferences-link');
+    prefLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        resetConsent();
+      });
+    });
+  }
+
   // Run when DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function() {
+      init();
+      attachPreferencesLink();
+    });
   } else {
     init();
+    attachPreferencesLink();
   }
 })();

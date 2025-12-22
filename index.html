@@ -1,52 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) with Consent Mode and URL Sanitization -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WL02FPN13W"></script>
-    <script>
-      (function() {
-        // Sanitize URL: allowlist UTM parameters only, strip everything else
-        var allowedParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-        var originalUrl = new URL(window.location.href);
-        var sanitizedUrl = new URL(originalUrl.origin + originalUrl.pathname);
-        
-        // Preserve only allowlisted parameters
-        allowedParams.forEach(function(param) {
-          if (originalUrl.searchParams.has(param)) {
-            sanitizedUrl.searchParams.set(param, originalUrl.searchParams.get(param));
-          }
-        });
-        
-        // Preserve hash if present
-        if (originalUrl.hash) {
-          sanitizedUrl.hash = originalUrl.hash;
-        }
-        
-        // Update browser address bar to remove stripped parameters
-        if (originalUrl.href !== sanitizedUrl.href) {
-          history.replaceState(null, '', sanitizedUrl.href);
-        }
-        
-        // Initialize GA4 with sanitized URL
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = gtag;
-        
-        // Default to denied until user consents (GDPR)
-        gtag('consent', 'default', {
-          'analytics_storage': 'denied'
-        });
-        
-        gtag('js', new Date());
-        gtag('config', 'G-WL02FPN13W', {
-          'page_location': sanitizedUrl.href
-        });
-      })();
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CAIS 2026 — ACM Conference on AI and Agentic Systems | Call for Papers</title>
-    <meta name="description" content="Call for Papers now open for CAIS 2026 — the ACM Conference on AI and Agentic Systems. Submit your research on compound AI architectures, optimization, and deployment. May 26–29, 2026 in San Jose, CA." />
+    <title>CAIS 2026 — ACM Conference on Agentic and AI Systems | Call for Papers</title>
+    <meta name="description" content="Call for Papers now open for CAIS 2026 — the ACM Conference on Agentic and AI Systems. Submit your research on compound AI architectures, optimization, and deployment. May 26–29, 2026 in San Francisco." />
 
     <!-- Canon URL -->
     <link rel="canonical" href="https://caisconf.org/" />
@@ -54,7 +12,7 @@
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CAIS 2026 — Call for Papers" />
-    <meta property="og:description" content="Submit your research on AI and Agentic systems. May 26–29, 2026 in San Jose, CA." />
+    <meta property="og:description" content="Submit your research on agentic and AI systems. May 26–29, 2026 in San Francisco." />
     <meta property="og:image" content="https://caisconf.org/assets/images/hero ultralight gradient.png" />
     <meta property="og:url" content="https://caisconf.org/" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -76,7 +34,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Event",
-            "name": "CAIS 2026 — ACM Conference on AI and Agentic Systems",
+            "name": "CAIS 2026 — ACM Conference on Agentic and AI Systems",
             "description": "The premier venue for rigorous research on compound AI systems, optimization, and deployment.",
             "startDate": "2026-05-26",
             "endDate": "2026-05-29",
@@ -84,13 +42,11 @@
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "location": {
                 "@type": "Place",
-                "name": "DoubleTree by Hilton San Jose",
+                "name": "San Francisco, CA",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "2050 Gateway Place",
-                    "addressLocality": "San Jose",
+                    "addressLocality": "San Francisco",
                     "addressRegion": "CA",
-                    "postalCode": "95110",
                     "addressCountry": "US"
                 }
             },
@@ -115,7 +71,7 @@
 <!-- ===== NAV ===== -->
 <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary navigation">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="./index.html" aria-label="CAIS 2026 Home">
+        <a class="navbar-brand d-flex align-items-center" href="/" aria-label="CAIS 2026 Home">
             <img src="./assets/images/CAIS Logo Long.svg" alt="CAIS 2026" class="brand-logo" loading="eager" decoding="async" style="max-height:6vh; height:auto; width:auto;" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,10 +81,10 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="#why">Why CAIS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/organization.html">Committee</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/committee.html">Committee</a></li>
                 <li class="nav-item"><a class="nav-link" href="./pages/workshops.html">Workshops</a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true">Call for Papers</a></li>
-                <li class="nav-item"><a class="nav-link btn btn-primary btn-sm ms-lg-2" href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener" style="background:var(--terracotta-deep); border:none; color:#fff !important; font-size:0.85rem;">Updates</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/cfp.html">Call for Papers</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-sm ms-lg-2" href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener">Updates</a></li>
             </ul>
         </div>
     </div>
@@ -145,51 +101,27 @@
                     <a href="https://www.acm.org" target="_blank" rel="noopener" aria-label="ACM — Association for Computing Machinery" class="acm-mark-link">
                         <img src="./assets/images/acm_k_flat_pos.png" alt="ACM — Association for Computing Machinery" class="acm-mark" loading="eager" decoding="async" />
                     </a>
-                    <h1 class="display-5 fw-bold mb-3">Building the Future of AI &amp; Agentic Systems</h1>
+                    <h1 class="display-5 fw-bold mb-3">Building the Future of Agentic &amp; AI Systems</h1>
                     <p class="lead mb-4">Submit your research to CAIS 2026 — the premier venue for rigorous, reproducible work on compound AI architectures, optimization, and deployment.</p>
                     <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
-                        <span class="fs-5"><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> San Jose, CA</span>
+                        <span class="fs-5"><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> San Francisco, CA</span>
                         <span class="fs-5"><i class="bi bi-calendar-event me-1" aria-hidden="true"></i> May 26–29, 2026</span>
                     </div>
-                    <div class="alert alert-info d-inline-flex align-items-center mb-4" role="alert" style="font-size: 0.9rem; background: rgba(250, 250, 248, 0.7); border: 1px solid var(--silver);">
-                        <i class="bi bi-info-circle me-2"></i>
-                        <small>Conference begins Tuesday, May 27 (day after U.S. Memorial Day). Plan travel accordingly.</small>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="./pages/cfp.html" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
+                            <i class="bi bi-file-earmark-text me-2"></i>Read the Call for Papers
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- ===== VENUE DETAILS ===== -->
-    <section class="py-4 bg-white border-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="h5 fw-bold mb-2">
-                        <i class="bi bi-building me-2" style="color:var(--terracotta-deep);"></i>
-                        DoubleTree by Hilton San Jose
-                    </h2>
-                    <p class="mb-2">2050 Gateway Place, San Jose, CA 95110</p>
-                    <p class="mb-0 text-muted small">
-                        <i class="bi bi-airplane me-1"></i>
-                        Complimentary shuttle to/from San Jose International Airport (SJC) • 
-                        <i class="bi bi-p-circle ms-2 me-1"></i>
-                        Discounted parking $10/day
-                    </p>
-                </div>
-                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                    <p class="mb-1"><strong>Group Rate: $159/night + tax</strong></p>
-                    <p class="text-muted small mb-0">Booking details coming soon</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ===== WHY CAIS (Pillars) ===== -->
-    <section id="why" class="py-5" style="background: rgba(232, 231, 231, 0.3);">
+    <section id="why" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title mb-3">Why CAIS?</h2>
-            <p class="lead mb-5">A high-signal forum for rigorous, reproducible research on AI and Agentic systems—architectures that shift the Pareto frontier through principled composition of multiple system components, smart inference-time scaling strategies, and systematic verification methods for reliable deployment.</p>
+            <p class="lead mb-5">A high-signal forum for rigorous, reproducible research on agentic and AI systems—architectures that shift the Pareto frontier through principled composition of multiple system components, smart inference-time scaling strategies, and systematic verification methods for reliable deployment.</p>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="card card-quiet p-3 h-100">
@@ -227,97 +159,107 @@
     <section id="leadership" class="py-5">
         <div class="container">
             <h2 class="section-title mb-2">Conference Leadership</h2>
+            <p class="lead mb-5">CAIS is guided by leading researchers who defined the compound AI systems paradigm—scholars and practitioners from MIT, Stanford, Google DeepMind, Microsoft Research, and beyond.</p>
 
             <!-- Steering Committee -->
             <p class="text-uppercase small fw-bold text-muted mb-3" style="letter-spacing: 1px;">Steering Committee</p>
             <div class="row g-4 justify-content-center mb-5">
-                <!-- Chris Potts -->
+                <!-- Michele Catasta -->
                 <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/potts_chris.png" alt="Chris Potts" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Chris Potts</h3>
-                        <p class="small text-muted mb-0">Stanford</p>
-                    </a>
-                </div>
-
-                <!-- Naveen Rao -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/rao_naveen.png" alt="Naveen Rao" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Naveen Rao</h3>
-                        <p class="small text-muted mb-0">Unconventional AI</p>
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/catasta_michele.png" alt="Michele Catasta" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Michele Catasta</h3>
+                        <p class="small text-muted mb-0">Replit</p>
                     </a>
                 </div>
 
                 <!-- Lingjiao Chen -->
                 <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/Chen_LJ.png" alt="Lingjiao Chen" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Lingjiao Chen</h3>
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/chen_lingjiao.png" alt="Lingjiao Chen" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Lingjiao Chen</h3>
                         <p class="small text-muted mb-0">Microsoft Research</p>
                     </a>
                 </div>
 
                 <!-- Jeff Dean -->
                 <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
                         <img src="./assets/images/dean_jeff.png" alt="Jeff Dean" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Jeff Dean</h3>
-                        <p class="small text-muted mb-0">Google DeepMind</p>
-                    </a>
-                </div>
-
-                <!-- Monica Lam -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/lam_monica.png" alt="Monica Lam" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Monica Lam</h3>
-                        <p class="small text-muted mb-0">Stanford</p>
-                    </a>
-                </div>
-
-                <!-- Graham Neubig -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/neubig_graham.png" alt="Graham Neubig" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Graham Neubig</h3>
-                        <p class="small text-muted mb-0">CMU &amp; All Hands AI</p>
-                    </a>
-                </div>
-
-                <!-- Michele Catasta -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/catasta_michele.png" alt="Michele Catasta" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Michele Catasta</h3>
-                        <p class="small text-muted mb-0">Replit</p>
-                    </a>
-                </div>
-
-                <!-- Thang Luong -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/luong_thang.png" alt="Thang Luong" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Thang Luong</h3>
+                        <h3 class="h6 fw-bold mb-0">Jeff Dean</h3>
                         <p class="small text-muted mb-0">Google DeepMind</p>
                     </a>
                 </div>
 
                 <!-- Omar Khattab -->
                 <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
                         <img src="./assets/images/khattab_omar.png" alt="Omar Khattab" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Omar Khattab</h3>
+                        <h3 class="h6 fw-bold mb-0">Omar Khattab</h3>
                         <p class="small text-muted mb-0">MIT</p>
                     </a>
                 </div>
 
-                <!-- Jared Quincy Davis -->
+                <!-- Monica Lam -->
                 <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#steering" class="text-decoration-none">
-                        <img src="./assets/images/Davis_Jared.png" alt="Jared Quincy Davis" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Jared Quincy Davis</h3>
-                        <p class="small text-muted mb-0">Mithril &amp; Stanford</p>
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/lam_monica.png" alt="Monica Lam" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Monica Lam</h3>
+                        <p class="small text-muted mb-0">Stanford</p>
+                    </a>
+                </div>
+
+                <!-- Thang Luong -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/luong_thang.png" alt="Thang Luong" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Thang Luong</h3>
+                        <p class="small text-muted mb-0">Google DeepMind</p>
+                    </a>
+                </div>
+
+                <!-- Graham Neubig -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/neubig_graham.png" alt="Graham Neubig" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Graham Neubig</h3>
+                        <p class="small text-muted mb-0">Carnegie Mellon</p>
+                    </a>
+                </div>
+
+                <!-- Chris Potts -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/potts_chris.png" alt="Chris Potts" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Chris Potts</h3>
+                        <p class="small text-muted mb-0">Stanford</p>
+                    </a>
+                </div>
+
+                <!-- Naveen Rao -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/rao_naveen.png" alt="Naveen Rao" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Naveen Rao</h3>
+                        <p class="small text-muted mb-0">Unconventional AI</p>
+                    </a>
+                </div>
+
+                <!-- Dawn Song -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/song_dawn.png" alt="Dawn Song" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Dawn Song</h3>
+                        <p class="small text-muted mb-0">UC Berkeley</p>
+                    </a>
+                </div>
+
+                <!-- Ion Stoica -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#steering" class="text-decoration-none">
+                        <img src="./assets/images/stoica_ion.png" alt="Ion Stoica" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Ion Stoica</h3>
+                        <p class="small text-muted mb-0">UC Berkeley</p>
                     </a>
                 </div>
             </div>
@@ -325,75 +267,75 @@
             <!-- Organizing Committee -->
             <p class="text-uppercase small fw-bold text-muted mb-3" style="letter-spacing: 1px;">Organizing Committee</p>
             <div class="row g-4 justify-content-center">
-                <!-- Heather Miller -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#organizing" class="text-decoration-none">
-                        <img src="./assets/images/Miller_Heather.png" alt="Heather Miller" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Heather Miller</h3>
-                        <p class="small text-muted mb-0">CMU &amp; Two Sigma</p>
-                    </a>
-                </div>
-
-                <!-- Matei Zaharia -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#organizing" class="text-decoration-none">
-                        <img src="./assets/images/Zaharia_Matei.png" alt="Matei Zaharia" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Matei Zaharia</h3>
-                        <p class="small text-muted mb-0">Berkeley &amp; Databricks</p>
-                    </a>
-                </div>
-
-                <!-- Deepti Raghavan -->
-                <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#organizing" class="text-decoration-none">
-                        <img src="./assets/images/Raghavan_Deepti.png" alt="Deepti Raghavan" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Deepti Raghavan</h3>
-                        <p class="small text-muted mb-0">Brown University</p>
-                    </a>
-                </div>
-
                 <!-- Lingjiao Chen -->
                 <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#organizing" class="text-decoration-none">
+                    <a href="./pages/committee.html#organizing" class="text-decoration-none">
                         <img src="./assets/images/Chen_LJ.png" alt="Lingjiao Chen" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Lingjiao Chen</h3>
+                        <h3 class="h6 fw-bold mb-0">Lingjiao Chen</h3>
                         <p class="small text-muted mb-0">Microsoft Research</p>
                     </a>
                 </div>
 
                 <!-- Jared Quincy Davis -->
                 <div class="col-6 col-md-4 col-lg-2 text-center">
-                    <a href="./pages/organization.html#organizing" class="text-decoration-none">
+                    <a href="./pages/committee.html#organizing" class="text-decoration-none">
                         <img src="./assets/images/Davis_Jared.png" alt="Jared Quincy Davis" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Jared Quincy Davis</h3>
-                        <p class="small text-muted mb-0">Mithril &amp; Stanford</p>
+                        <h3 class="h6 fw-bold mb-0">Jared Quincy Davis</h3>
+                        <p class="small text-muted mb-0">Mithril</p>
+                    </a>
+                </div>
+
+                <!-- Heather Miller -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#organizing" class="text-decoration-none">
+                        <img src="./assets/images/Miller_Heather.png" alt="Heather Miller" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Heather Miller</h3>
+                        <p class="small text-muted mb-0">CMU &amp; Two Sigma</p>
+                    </a>
+                </div>
+
+                <!-- Deepti Raghavan -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#organizing" class="text-decoration-none">
+                        <img src="./assets/images/Raghavan_Deepti.png" alt="Deepti Raghavan" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Deepti Raghavan</h3>
+                        <p class="small text-muted mb-0">Brown University</p>
+                    </a>
+                </div>
+
+                <!-- Matei Zaharia -->
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <a href="./pages/committee.html#organizing" class="text-decoration-none">
+                        <img src="./assets/images/Zaharia_Matei.png" alt="Matei Zaharia" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
+                        <h3 class="h6 fw-bold mb-0">Matei Zaharia</h3>
+                        <p class="small text-muted mb-0">UC Berkeley &amp; Databricks</p>
                     </a>
                 </div>
             </div>
 
             <div class="text-center mt-4">
-                <a href="./pages/organization.html" class="btn btn-outline-primary">View Full Committee <i class="bi bi-arrow-right ms-1"></i></a>
+                <a href="./pages/committee.html" class="btn btn-outline-primary">View Full Committee <i class="bi bi-arrow-right ms-1"></i></a>
             </div>
         </div>
     </section>
 
     <!-- ===== PROGRAM PREVIEW ===== -->
-    <section id="program" class="py-5" style="background: rgba(232, 231, 231, 0.3);">
+    <section id="program" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title mb-3">Conference Program</h2>
-            <p class="lead mb-4">Four days of cutting-edge research presentations, hands-on tutorials, and community building—May 26–29, 2026 in San Jose.</p>
+            <p class="lead mb-4">Four days of cutting-edge research presentations, hands-on tutorials, and community building—May 26–29, 2026 in San Francisco.</p>
 
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card card-quiet p-4 h-100">
                         <div class="d-flex align-items-start gap-3 mb-3">
                             <div class="flex-shrink-0">
-                                <i class="bi bi-file-earmark-text fs-1" style="color:var(--terracotta-deep);" aria-hidden="true"></i>
+                                <i class="bi bi-file-earmark-text fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h3 class="h5 fw-bold mb-2">Research Track</h3>
                                 <p class="mb-3">Peer-reviewed papers on architectural patterns, optimization, engineering, and evaluation of agentic AI systems. Includes keynotes, plenaries, and poster sessions.</p>
-                                <span class="badge bg-secondary">CFP Coming Soon</span>
+                                <a href="./pages/cfp.html" class="btn btn-outline-primary">Submit a Paper</a>
                             </div>
                         </div>
                     </div>
@@ -402,12 +344,12 @@
                     <div class="card card-quiet p-4 h-100">
                         <div class="d-flex align-items-start gap-3 mb-3">
                             <div class="flex-shrink-0">
-                                <i class="bi bi-code-slash fs-1" style="color:var(--terracotta-deep);" aria-hidden="true"></i>
+                                <i class="bi bi-code-slash fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h3 class="h5 fw-bold mb-2">Tutorials &amp; Workshops</h3>
                                 <p class="mb-3">Deep dives into practical methods and frameworks—DSPy, LangChain, and more tools for building compound AI systems at scale.</p>
-                                <a href="./pages/workshops.html" class="btn btn-outline-primary btn-sm">Submit a Proposal <i class="bi bi-arrow-right ms-1"></i></a>
+                                <a href="./pages/workshops.html" class="btn btn-outline-primary">View Workshop Details</a>
                             </div>
                         </div>
                     </div>
@@ -424,7 +366,7 @@
                                 <p class="mb-0">CAIS emphasizes open artifacts, transparent evaluation, and benchmarking standards. We adopt ACM's reproducibility badging taxonomy to recognize high-quality, deployable research.</p>
                             </div>
                             <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                                <span class="btn btn-outline-secondary disabled" style="opacity: 0.6; cursor: default;">Review Process Details</span>
+                                <a href="./pages/cfp.html#review" class="btn btn-outline-primary">Review Process Details</a>
                             </div>
                         </div>
                     </div>
@@ -434,17 +376,32 @@
     </section>
 
     <!-- ===== CTA BAND ===== -->
-    <section class="py-5">
+    <section class="py-5 bg-light">
         <div class="container">
-            <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3" style="background: var(--terracotta-medium); border: none;">
+            <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
                 <div>
-                    <h2 class="h3 fw-bold mb-1" style="color: var(--seasalt);">Be part of the inaugural CAIS</h2>
-                    <p class="mb-0" style="color: var(--seasalt);">Submission timeline and important dates available in the Call for Papers. Early submissions encouraged.</p>
+                    <h2 class="h3 fw-bold mb-1">Be part of the inaugural CAIS</h2>
+                    <p class="mb-0">Submission timeline and important dates available in the Call for Papers. Early submissions encouraged.</p>
                 </div>
                 <div>
-                    <span class="btn btn-lg px-4" style="background: transparent; border: 2px solid var(--seasalt); color: var(--seasalt); opacity: 0.8;">
-                        <i class="bi bi-hourglass-split me-2"></i>CFP Coming Soon
-                    </span>
+                    <a class="btn btn-light btn-lg text-dark px-4" href="./pages/cfp.html">
+                        <i class="bi bi-file-earmark-text me-2"></i>View Full CFP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STAY UPDATED ===== -->
+    <section id="subscribe" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="h4 fw-bold mb-3">Stay Updated</h2>
+                    <p class="mb-4">Get notified when the Call for Papers opens, submission deadlines approach, and keynote speakers are announced. We'll only email you for major conference updates.</p>
+                    <a href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
+                        <i class="bi bi-envelope me-2"></i>Subscribe to Updates
+                    </a>
                 </div>
             </div>
         </div>
@@ -460,9 +417,9 @@
                 <div class="d-flex align-items-center mb-3">
                     <img src="assets/images/CAIS Logo Long.png" alt="CAIS 2026" style="max-height:40px; width:auto;" />
                 </div>
-                <p class="mb-2"><strong>ACM Conference on AI and Agentic Systems</strong></p>
+                <p class="mb-2"><strong>ACM Conference on Agentic and AI Systems</strong></p>
                 <p class="mb-1">May 26–29, 2026</p>
-                <p class="mb-3">San Jose, California</p>
+                <p class="mb-3">San Francisco, California</p>
                 <p class="mb-0">
                     <a href="mailto:contact@caisconf.org" class="text-decoration-none">
                         <i class="bi bi-envelope me-2"></i>contact@caisconf.org
@@ -472,16 +429,15 @@
             <div class="col-md-3">
                 <h6 class="text-uppercase fw-bold mb-3">For Authors</h6>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><span style="color: var(--silver); cursor: default;">Call for Papers</span></li>
-                    <li class="mb-2"><a href="./pages/workshops.html">Workshops &amp; Tutorials</a></li>
+                    <li class="mb-2"><a href="./pages/cfp.html">Call for Papers</a></li>
+                    <li class="mb-2"><a href="./pages/cfp.html#submission">How to Submit</a></li>
+                    <li class="mb-2"><a href="./pages/cfp.html#dates">Important Dates</a></li>
                     <li class="mb-2"><a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Templates</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <h6 class="text-uppercase fw-bold mb-3">Policies</h6>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="./pages/privacy.html">Privacy Policy</a></li>
-                    <li class="mb-2"><a href="#" class="cookie-preferences-link">Cookie Preferences</a></li>
                     <li class="mb-2"><a href="./pages/codeofconduct.html">Code of Conduct</a></li>
                     <li class="mb-2"><a href="./pages/accessibility.html">Accessibility</a></li>
                     <li class="mb-2"><a href="./pages/inclusion.html">Diversity &amp; Inclusion</a></li>
@@ -535,7 +491,5 @@
         }));
     })();
 </script>
-<!-- Cookie Consent -->
-<script src="./assets/js/cookie-consent.js" defer></script>
 </body>
 </html>

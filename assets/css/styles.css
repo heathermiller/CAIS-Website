@@ -95,11 +95,31 @@ h1, h2, h3, h4, h5, h6, p {
 .nav-link:hover {
     color: var(--eerie-black) !important;
     border-bottom: 2px solid var(--terracotta-deep);
+    text-decoration: none !important;
 }
 
 .nav-link.active {
     color: var(--eerie-black) !important;
     border-bottom: 2px solid var(--terracotta-deep);
+    text-decoration: none !important;
+}
+
+/* Nav button (Updates) - charcoal default, terracotta hover */
+.nav-link.btn {
+    background-color: var(--eerie-black) !important;
+    color: var(--seasalt) !important;
+    border: none !important;
+    border-bottom: none !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem;
+    transition: background-color 200ms linear;
+}
+
+.nav-link.btn:hover {
+    background-color: var(--terracotta-deep) !important;
+    color: var(--seasalt) !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
 }
 
 .nav-link.disabled {
@@ -128,9 +148,7 @@ h1, h2, h3, h4, h5, h6, p {
 .acm-mark {
     max-height: 90px;
     width: auto;
-    opacity: 0.7;
     display: block;
-    filter: grayscale(100%);
 }
 
 .acm-mark-link {
@@ -143,7 +161,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (max-width: 768px) {
     .acm-mark {
-        height: 12px;
+        max-height: 50px;
+        height: auto;
     }
 
     .acm-mark-link {

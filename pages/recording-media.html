@@ -1,264 +1,189 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) with Consent Mode and URL Sanitization -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WL02FPN13W"></script>
-  <script>
-    (function() {
-      // Sanitize URL: allowlist UTM parameters only, strip everything else
-      var allowedParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-      var originalUrl = new URL(window.location.href);
-      var sanitizedUrl = new URL(originalUrl.origin + originalUrl.pathname);
-      
-      // Preserve only allowlisted parameters
-      allowedParams.forEach(function(param) {
-        if (originalUrl.searchParams.has(param)) {
-          sanitizedUrl.searchParams.set(param, originalUrl.searchParams.get(param));
-        }
-      });
-      
-      // Preserve hash if present
-      if (originalUrl.hash) {
-        sanitizedUrl.hash = originalUrl.hash;
-      }
-      
-      // Update browser address bar to remove stripped parameters
-      if (originalUrl.href !== sanitizedUrl.href) {
-        history.replaceState(null, '', sanitizedUrl.href);
-      }
-      
-      // Initialize GA4 with sanitized URL
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-      
-      // Default to denied until user consents (GDPR)
-      gtag('consent', 'default', {
-        'analytics_storage': 'denied'
-      });
-      
-      gtag('js', new Date());
-      gtag('config', 'G-WL02FPN13W', {
-        'page_location': sanitizedUrl.href
-      });
-    })();
-  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Recording & Media Policy — ACM CAIS 2026</title>
+  <title>Recording & Media Policy — CAIS 2026</title>
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://caisconf.org/pages/recording-media.html" />
+  <link rel="canonical" href="https://caisconf.org/pages/cais-2026-recording-media.html" />
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   
   <style>
-    /* ============================================
-       CAIS 2026 - Design System
-       Color Palette: Terracotta + Olive + Warm Monochrome
-       ============================================ */
-
+    /* PHASE 1: Design System Foundation */
     :root {
-      /* Terracotta System (Primary Accent - 20-25% max) */
-      --terracotta-deep: #B8593E;
-      --terracotta-medium: #C4735A;
-      --terracotta-light: #D89380;
-
-      /* Olive System (CMPND Connection - 10-15%) */
-      --olive-moss: #6B7F5A;
-      --olive-clay: #956C58;
-      --olive-sage: #8A9E78;
-
-      /* Warm Monochrome Foundation (60-70%) */
-      --seasalt: #FAFAF8;
-      --eerie-black: #252523;
-      --davys-gray: #5E5D59;
-      --silver: #C7C6C5;
-      --platinum: #e8e7e7;
+      --cais-accent: #ff5820;
+      --cais-text: #333A3F;
+      --cais-bg-white: #ffffff;
+      --cais-bg-light: #f8f9fa;
+      --cais-border: #e0e0e0;
+      --cais-border-light: #eeeeee;
     }
 
     body { 
-      color: var(--eerie-black);
-      background-color: var(--seasalt);
+      color: var(--cais-text);
+      background-color: var(--cais-bg-white);
       font-synthesis-weight: none;
     }
 
     h1, h2, h3, h4, h5, h6, p { 
-      color: var(--eerie-black);
+      color: var(--cais-text);
     }
 
-    /* Hero Section */
+    /* PHASE 2: Hero Section */
     .coc-hero {
       position: relative;
       background: url('../assets/images/hero ultralight gradient.png') center/cover no-repeat;
-      color: var(--eerie-black);
+      color: var(--cais-text);
       padding: 4.5rem 0;
     }
 
     .coc-hero h1, .coc-hero p {
-      color: var(--eerie-black);
+      color: var(--cais-text);
     }
 
-    /* Navigation */
-    .navbar {
-      background-color: var(--seasalt) !important;
-      border-bottom: 1px solid var(--platinum);
-    }
-
+    /* PHASE 3: Navigation */
     .navbar-brand {
-      padding: 0;
-      padding-top: 2px; /* Offset nav-link border-bottom */
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
 
     .nav-link {
-      color: var(--eerie-black) !important;
-      font-weight: 500;
-      border-bottom: 2px solid transparent;
-      transition: border-color 200ms linear;
+      color: var(--cais-text) !important;
     }
 
     .nav-link:hover {
-      color: var(--eerie-black) !important;
-      border-bottom: 2px solid var(--terracotta-deep);
+      color: var(--cais-accent) !important;
     }
 
     .nav-link.active {
-      color: var(--eerie-black) !important;
-      border-bottom: 2px solid var(--terracotta-deep);
+      color: var(--cais-accent) !important;
     }
 
-    .nav-link.disabled {
-      color: var(--silver) !important;
-      border-bottom: 2px solid transparent;
-    }
-
-    /* Component Styles */
+    /* PHASE 4: Component Styles */
     .section-title { 
       font-weight: 700; 
       letter-spacing: .2px; 
       margin-top: 0;
-      color: var(--eerie-black);
+      color: var(--cais-text);
     }
 
-    .card, .card-quiet, .info-card {
-      border: 1px solid var(--silver);
-      border-radius: 4px;
+    .card-quiet, .info-card {
+      border: 1px solid var(--cais-border);
+      border-radius: .5rem;
       padding: 1.5rem;
-      background: var(--seasalt);
-      transition: border-color 200ms linear;
+      background: var(--cais-bg-white);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
       height: 100%;
     }
 
-    .card:hover, .card-quiet:hover, .info-card:hover {
-      border-color: var(--olive-moss);
+    .card-quiet:hover, .info-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(51, 58, 63, 0.08);
+      border-color: var(--cais-text);
     }
 
     .highlight-box {
-      background: rgba(149, 108, 88, 0.05);
+      background: var(--cais-bg-light);
       padding: 1.5rem;
-      border-radius: 4px;
+      border-radius: .5rem;
       height: 100%;
-      border: 1px solid var(--platinum);
+      border: 1px solid var(--cais-border-light);
     }
 
     .quick-links-callout {
-      background: rgba(149, 108, 88, 0.05);
-      border-radius: 4px;
+      background: var(--cais-bg-light);
+      border-radius: .5rem;
       padding: 1.5rem;
-      border: 1px solid var(--platinum);
+      border: 1px solid var(--cais-border-light);
     }
 
     .banded {
-      background: rgba(232, 231, 231, 0.3);
+      background: var(--cais-bg-light);
       padding: 2rem;
-      border-radius: 4px;
-      border: 1px solid var(--platinum);
+      border-radius: .5rem;
+      border: 1px solid var(--cais-border-light);
     }
 
-    /* Buttons */
+    /* PHASE 5: Interactive Elements */
     .btn-primary {
-      background: transparent;
-      border: 2px solid var(--terracotta-deep);
-      color: var(--terracotta-deep);
-      border-radius: 4px;
-      font-weight: 600;
-      transition: background-color 200ms linear, color 200ms linear;
+      background: var(--cais-accent);
+      border: none;
+      color: var(--cais-bg-white);
+      transition: all .2s ease;
     }
 
     .btn-primary:hover {
-      background: var(--terracotta-deep);
-      border-color: var(--terracotta-deep);
-      color: var(--seasalt);
+      background: #e64d1b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 88, 32, 0.3);
     }
 
     .btn-outline-primary {
-      background: transparent;
-      border: 2px solid var(--terracotta-deep);
-      color: var(--terracotta-deep);
-      border-radius: 4px;
-      font-weight: 600;
-      transition: background-color 200ms linear, color 200ms linear;
+      color: var(--cais-accent);
+      border-color: var(--cais-accent);
+      transition: all .2s ease;
     }
 
     .btn-outline-primary:hover {
-      background: var(--terracotta-deep);
-      border-color: var(--terracotta-deep);
-      color: var(--seasalt);
+      background: var(--cais-accent);
+      border-color: var(--cais-accent);
+      color: var(--cais-bg-white);
+      transform: translateY(-1px);
     }
 
-    /* Links */
     a {
-      color: var(--terracotta-deep);
+      color: var(--cais-accent);
       text-decoration: none;
-      transition: color 200ms linear;
     }
 
     a:hover {
-      color: var(--terracotta-medium);
+      color: #e64d1b;
       text-decoration: underline;
     }
 
     a:focus, button:focus, .btn:focus {
-      outline: 2px solid var(--terracotta-deep);
+      outline: 2px solid var(--cais-accent);
       outline-offset: 2px;
     }
 
-    /* Utility Classes */
+    /* PHASE 6: Utility Classes */
     .border-primary {
-      border-color: var(--terracotta-deep) !important;
+      border-color: var(--cais-accent) !important;
     }
 
     .bg-primary {
-      background-color: var(--terracotta-deep) !important;
+      background-color: var(--cais-accent) !important;
     }
 
     .bg-light {
-      background-color: var(--platinum) !important;
+      background-color: var(--cais-bg-light) !important;
     }
 
     .text-primary {
-      color: var(--terracotta-deep) !important;
+      color: var(--cais-accent) !important;
     }
 
     .text-muted {
-      color: var(--davys-gray) !important;
+      color: #999999 !important;
     }
 
-    /* Footer */
+    /* PHASE 7: Footer */
     footer {
-      background-color: var(--platinum);
-      color: var(--eerie-black);
-      border-top: 1px solid var(--silver);
+      background-color: var(--cais-bg-light);
+      color: var(--cais-text);
+      border-top: 1px solid var(--cais-border-light);
     }
 
     footer a {
-      color: var(--eerie-black);
+      color: var(--cais-text);
       text-decoration: none;
     }
 
     footer a:hover {
-      color: var(--olive-moss);
+      color: var(--cais-accent);
       text-decoration: underline;
     }
 
@@ -332,11 +257,8 @@
       <div id="navMain" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="../index.html#why">Why CAIS</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#program">Program</a></li>
-          <li class="nav-item"><a class="nav-link" href="./organization.html">Committee</a></li>
-          <li class="nav-item"><a class="nav-link" href="./workshops.html">Workshops</a></li>
-          <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true">Call for Papers</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-sm ms-lg-2" href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener">Updates</a></li>
+          <li class="nav-item"><a class="nav-link" href="./cais-2026-cfp.html">CFP</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Recording & Media</a></li>
         </ul>
       </div>
     </div>
@@ -349,12 +271,13 @@
     </div>
   </header>
 
+  <!-- HOLD NOTICE -->
+  <div class="alert alert-warning m-0 rounded-0 text-center" role="alert">
+    <strong><i class="bi bi-exclamation-triangle me-2"></i>Draft Policy — Under Review</strong><br>
+    This page is currently under review and has not been finalized. Please check back later.
+  </div>
+
   <main id="main" class="container py-5">
-    <!-- HOLD NOTICE - Per Donna Cappo (ACM) 12/18/2025 - Do not publish until reviewed -->
-    <div class="alert" style="background-color: #fff3cd; border: 2px solid #B8593E; border-radius: 4px; padding: 1.5rem; margin-bottom: 2rem;">
-      <h2 class="h5 fw-bold" style="color: #B8593E; margin-bottom: 0.5rem;"><i class="bi bi-exclamation-triangle-fill"></i> Page Under Review</h2>
-      <p class="mb-0">This policy is currently under review by ACM and should not be published until approved. Content below is draft only.</p>
-    </div>
     <!-- Intro -->
     <div class="row mb-5">
       <div class="col-lg-10 mx-auto">
@@ -476,7 +399,7 @@
               <li>Email <a href="mailto:contact@caisconf.org">contact@caisconf.org</a></li>
               <li>Speak with a session chair or organizer</li>
             </ul>
-            <p class="mb-0">Violations may result in removal of recording privileges, ejection from sessions, or other consequences per our <a href="./codeofconduct.html">Code of Conduct</a>.</p>
+            <p class="mb-0">Violations may result in removal of recording privileges, ejection from sessions, or other consequences per our <a href="./cais-2026-code-of-conduct.html">Code of Conduct</a>.</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -499,14 +422,14 @@
           <div class="card card-quiet p-3">
             <h3 class="h6 fw-bold mb-2">Code of Conduct</h3>
             <p class="mb-2 small">Professional behavior expectations and reporting</p>
-            <a href="./codeofconduct.html" class="stretched-link">Read policy</a>
+            <a href="./cais-2026-code-of-conduct.html" class="stretched-link">Read policy</a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card card-quiet p-3">
             <h3 class="h6 fw-bold mb-2">Accessibility</h3>
             <p class="mb-2 small">Accommodations and inclusive practices</p>
-            <a href="./accessibility.html" class="stretched-link">Read policy</a>
+            <a href="./cais-2026-accessibility.html" class="stretched-link">Read policy</a>
           </div>
         </div>
         <div class="col-md-4">
@@ -521,20 +444,16 @@
   </main>
 
   <footer class="pt-5 pb-4">
-    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
-      <small>© 2026 CAIS — In cooperation with ACM</small>
-      <div>
-        <a class="small" href="./privacy.html">Privacy</a>
-        <span class="small text-muted mx-2">·</span>
-        <a href="#" class="small cookie-preferences-link">Cookie Preferences</a>
-        <span class="small text-muted mx-2">·</span>
-        <a class="small" href="../index.html">Back to Home</a>
-      </div>
+    <div class="container d-flex justify-content-between align-items-center">
+      <small>© 2026 CAIS — ACM Conference on Agentic and AI Systems</small>
+      <small>
+        <a href="../index.html">Home</a> · 
+        <a href="https://x.com/CAISConf" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a> · 
+        <a href="https://bsky.app/profile/caisconf.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="bi bi-cloud"></i></a>
+      </small>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-<!-- Cookie Consent -->
-<script src="../assets/js/cookie-consent.js" defer></script>
 </body>
 </html>

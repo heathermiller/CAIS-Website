@@ -1,461 +1,423 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) with Consent Mode and URL Sanitization -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WL02FPN13W"></script>
-    <script>
-      (function() {
-        // Sanitize URL: allowlist UTM parameters only, strip everything else
-        var allowedParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-        var originalUrl = new URL(window.location.href);
-        var sanitizedUrl = new URL(originalUrl.origin + originalUrl.pathname);
-        
-        // Preserve only allowlisted parameters
-        allowedParams.forEach(function(param) {
-          if (originalUrl.searchParams.has(param)) {
-            sanitizedUrl.searchParams.set(param, originalUrl.searchParams.get(param));
-          }
-        });
-        
-        // Preserve hash if present
-        if (originalUrl.hash) {
-          sanitizedUrl.hash = originalUrl.hash;
-        }
-        
-        // Update browser address bar to remove stripped parameters
-        if (originalUrl.href !== sanitizedUrl.href) {
-          history.replaceState(null, '', sanitizedUrl.href);
-        }
-        
-        // Initialize GA4 with sanitized URL
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = gtag;
-        
-        // Default to denied until user consents (GDPR)
-        gtag('consent', 'default', {
-          'analytics_storage': 'denied'
-        });
-        
-        gtag('js', new Date());
-        gtag('config', 'G-WL02FPN13W', {
-          'page_location': sanitizedUrl.href
-        });
-      })();
-    </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Workshops & Tutorials — ACM CAIS 2026</title>
-    <meta name="description" content="Submit proposals for workshops and tutorials at CAIS 2026 — the ACM Conference on AI and Agentic Systems. May 26, 2026 in San Jose, CA." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workshops & Tutorials — CAIS 2026</title>
+  <meta name="description" content="CAIS 2026 workshops and tutorials. Deep dives into practical methods and frameworks for building compound AI systems." />
+  
+  <link rel="canonical" href="https://caisconf.org/pages/workshops.html" />
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --cais-accent: #ff5820;
+      --cais-text: #333A3F;
+      --cais-bg-white: #ffffff;
+      --cais-bg-light: #f8f9fa;
+      --cais-border: #e0e0e0;
+      --cais-border-light: #eeeeee;
+    }
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://caisconf.org/pages/workshops.html" />
+    body { 
+      color: var(--cais-text);
+      background-color: var(--cais-bg-white);
+      font-synthesis-weight: none; 
+    }
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    h1, h2, h3, h4, h5, h6, p { 
+      color: var(--cais-text);
+    }
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    .visually-hidden-focusable:not(:focus):not(:focus-within) {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0,0,0,0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
 
-    <!-- Custom Styles -->
-    <link href="../assets/css/styles.css" rel="stylesheet" />
+    .visually-hidden-focusable:focus,
+    .visually-hidden-focusable:focus-within {
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      overflow: visible !important;
+      clip: auto !important;
+      white-space: normal !important;
+    }
+
+    /* Hero */
+    .workshops-hero {
+      position: relative;
+      background: url('../assets/images/hero ultralight gradient.png') center/cover no-repeat;
+      color: var(--cais-text);
+      padding: 4.5rem 0;
+    }
+
+    .workshops-hero h1, .workshops-hero p {
+      color: var(--cais-text);
+    }
+
+    .section-title { 
+      font-weight: 700; 
+      letter-spacing: .2px; 
+      margin-top: 0;
+      color: var(--cais-text);
+    }
+
+    .anchor { 
+      scroll-margin-top: 84px; 
+    }
+
+    /* Cards */
+    .card-quiet {
+      border: 1px solid var(--cais-border);
+      border-radius: .5rem;
+      padding: 1.5rem;
+      background: var(--cais-bg-white);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .card-quiet:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(51, 58, 63, 0.08);
+      border-color: var(--cais-text);
+    }
+
+    .highlight-box {
+      background: var(--cais-bg-light);
+      padding: 1.5rem;
+      border-radius: .5rem;
+      height: 100%;
+      border: 1px solid var(--cais-border-light);
+    }
+
+    .alert-warning {
+      background: #fff5f0;
+      border: 1px solid var(--cais-accent);
+      color: var(--cais-text);
+    }
+
+    .alert-info {
+      background: var(--cais-bg-light);
+      border: 1px solid var(--cais-border);
+      color: var(--cais-text);
+    }
+
+    /* Dates card */
+    .dates-card {
+      border: 2px solid var(--cais-accent);
+      border-radius: .5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--cais-bg-light);
+      border-top: 1px solid var(--cais-border-light);
+    }
+
+    footer a {
+      color: var(--cais-text);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--cais-accent);
+      text-decoration: underline;
+    }
+
+    /* Focus states */
+    a:focus, button:focus, .btn:focus {
+      outline: 2px solid var(--cais-accent);
+      outline-offset: 2px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: var(--cais-accent);
+      border: none;
+      color: var(--cais-bg-white);
+      transition: all .2s ease;
+    }
+
+    .btn-primary:hover {
+      background: #e64d1b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 88, 32, 0.3);
+    }
+
+    .btn-outline-primary {
+      color: var(--cais-accent);
+      border-color: var(--cais-accent);
+      transition: all .2s ease;
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--cais-accent);
+      border-color: var(--cais-accent);
+      color: var(--cais-bg-white);
+      transform: translateY(-1px);
+    }
+
+    /* Links */
+    a {
+      color: var(--cais-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #e64d1b;
+      text-decoration: underline;
+    }
+
+    /* Navigation */
+    .nav-link {
+      color: var(--cais-text) !important;
+    }
+
+    .nav-link:hover {
+      color: var(--cais-accent) !important;
+    }
+
+    .nav-link.active {
+      color: var(--cais-accent) !important;
+    }
+
+    .text-muted {
+      color: #999999 !important;
+    }
+
+    /* Navbar logo spacing */
+    .navbar-brand {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .workshops-hero {
+        padding: 3rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Skip to main content (accessibility) -->
-<a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
 
-<!-- ===== NAV ===== -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary navigation">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary navigation">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="CAIS 2026 Home">
-            <img src="../assets/images/CAIS Logo Long.svg" alt="CAIS 2026" class="brand-logo" loading="eager" decoding="async" style="max-height:6vh; height:auto; width:auto;" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navMain" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                <li class="nav-item"><a class="nav-link" href="../index.html#why">Why CAIS</a></li>
-                <li class="nav-item"><a class="nav-link" href="../index.html#program">Program</a></li>
-                <li class="nav-item"><a class="nav-link" href="./organization.html">Committee</a></li>
-                <li class="nav-item"><a class="nav-link active" href="./workshops.html">Workshops</a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true">Call for Papers</a></li>
-                <li class="nav-item"><a class="nav-link btn btn-sm ms-lg-2" href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener">Updates</a></li>
-            </ul>
-        </div>
+      <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="CAIS 2026 Home">
+        <img src="../assets/images/CAIS Logo Long.svg" alt="CAIS 2026" class="brand-logo" loading="eager" decoding="async" style="max-height:6vh; height:auto; width:auto;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#why">Why CAIS</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#program">Program</a></li>
+          <li class="nav-item"><a class="nav-link" href="./committee.html">Committee</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Workshops</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary btn-sm ms-lg-2" href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener" style="background:var(--cais-accent); border:none; color:#fff;">Updates</a></li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main">
+  <header class="workshops-hero">
+    <div class="container">
+      <h1 class="display-6 fw-bold">Workshops &amp; Tutorials</h1>
+      <p class="lead mb-3">ACM Conference on Agentic and AI Systems (CAIS 2026)</p>
+      <p class="mb-0"><strong>San Francisco • May 26, 2026</strong></p>
+    </div>
+  </header>
 
-    <!-- ===== HERO ===== -->
-    <header class="hero">
-        <div class="container">
-            <span class="badge mb-3" style="background: var(--terracotta-deep); font-size: 0.85rem;">Proposals Opening Soon</span>
-            <h1 class="display-5 fw-bold mb-3">Workshops &amp; Tutorials</h1>
-            <p class="lead mb-0">Join us on <strong>Tuesday, May 26, 2026</strong>—the day before the main conference—for focused sessions on compound AI systems research and practice.</p>
-        </div>
-    </header>
+  <main id="main" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Main Content Column -->
+        <div class="col-lg-8">
 
-    <!-- ===== OVERVIEW ===== -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="section-title mb-3">Call for Proposals</h2>
-                    <p class="lead">Researchers and practitioners are invited to submit proposals for workshops and tutorials in conjunction with the 1st ACM Conference on AI and Agentic Systems (CAIS 2026).</p>
-                    <p>The workshops and tutorials aim to provide a forum for exchanging opinions, presenting ideas, and discussing preliminary results with a diverse group of conference attendees.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+          <!-- Overview -->
+          <section id="overview" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Overview</h2>
+            <p>CAIS 2026 will host workshops and tutorials on <strong>Tuesday, May 26, 2026</strong>, the day before the main conference begins. These sessions provide deep dives into practical methods, frameworks, and emerging research directions in compound AI systems.</p>
+            <p class="mb-0">We invite proposals for half-day or full-day workshops that bring together researchers and practitioners to explore focused topics within the CAIS scope.</p>
+          </section>
 
-    <!-- ===== GOALS ===== -->
-    <section class="py-5" style="background: rgba(232, 231, 231, 0.3);">
-        <div class="container">
-            <h2 class="section-title mb-4">Topics of Interest</h2>
-            <p class="mb-4">We welcome proposals covering topics including, but not limited to:</p>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-quiet p-3 h-100">
-                        <h3 class="h5 fw-bold mb-2"><i class="bi bi-diagram-3 me-2" style="color: var(--terracotta-deep);"></i>System Design</h3>
-                        <p class="mb-0">Design and optimization of compound AI systems, multi-agent architectures, and inference-time scaling strategies.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-quiet p-3 h-100">
-                        <h3 class="h5 fw-bold mb-2"><i class="bi bi-gear me-2" style="color: var(--terracotta-deep);"></i>Infrastructure</h3>
-                        <p class="mb-0">Systems and infrastructure for building, deploying, and operating compound AI systems at scale.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-quiet p-3 h-100">
-                        <h3 class="h5 fw-bold mb-2"><i class="bi bi-code-slash me-2" style="color: var(--terracotta-deep);"></i>Frameworks</h3>
-                        <p class="mb-0">Tutorials on frameworks like DSPy, LangChain, and other tools for building compound AI systems.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PROPOSAL REQUIREMENTS ===== -->
-    <section id="requirements" class="py-5">
-        <div class="container">
-            <h2 class="section-title mb-4">Proposal Requirements</h2>
+          <!-- Workshop Timeline -->
+          <section id="timeline" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Workshop Proposal Timeline</h2>
             
-            <!-- Format -->
-            <div class="highlight-box p-4 mb-4">
-                <h3 class="h5 fw-bold mb-3"><i class="bi bi-file-earmark-text me-2" style="color: var(--terracotta-deep);"></i>Submission Format</h3>
-                <p>Proposals should be <strong>no more than 2 pages</strong>, plus references. The 2 pages should encompass the workshop/tutorial description and information about the organizers.</p>
-                <p class="mb-3">Submissions must follow the <strong>ACM SIGPLAN template</strong>:</p>
-                <a href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sigplan-proceedings-template/rfvsrhgmghtc" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-box-arrow-up-right me-1"></i>ACM SIGPLAN Template on Overleaf
-                </a>
-                <div class="mt-3 p-3" style="background: #f8f9fa; border-radius: 6px; font-family: monospace; font-size: 0.85rem;">
-                    <code>\documentclass[sigplan,10pt]{acmart}<br>
-                    \renewcommand\footnotetextcopyrightpermission[1]{}<br>
-                    \pagestyle{plain}<br>
-                    ...<br>
-                    \settopmatter{printfolios=true}<br>
-                    \maketitle</code>
-                </div>
+            <div class="alert alert-warning mb-4">
+              <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> These dates are subject to change. Subscribe for updates to receive notifications of any changes.
             </div>
 
-            <!-- Content Requirements -->
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="card card-quiet p-4 h-100">
-                        <h3 class="h5 fw-bold mb-3">All Proposals Must Include</h3>
-                        <ul class="mb-0">
-                            <li class="mb-2">Workshop/tutorial name and a <strong>150–200 word abstract</strong> suitable for the conference website</li>
-                            <li class="mb-2">Summary of topic, scope, and significance, including relevance to CAIS themes</li>
-                            <li class="mb-2">Information about past iterations (if any)</li>
-                            <li class="mb-2">Whether the event is <strong>half-day or full-day</strong></li>
-                            <li class="mb-2">Efforts to include diverse participants (mentoring, subsidies, inclusive topic framing)</li>
-                            <li class="mb-0">Brief CV/bio of each organizer with contact info and a <strong>single primary contact</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="card card-quiet p-4">
-                                <h3 class="h5 fw-bold mb-3"><i class="bi bi-people me-2" style="color: var(--olive-moss);"></i>For Workshops</h3>
-                                <ul class="mb-0">
-                                    <li class="mb-2">Paper/presentation selection procedure</li>
-                                    <li class="mb-2">Expected number of participants and planned format</li>
-                                    <li class="mb-2">Tentative schedule (submission, notification, camera-ready dates)</li>
-                                    <li class="mb-0">Program committee members already chosen</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="card card-quiet p-4">
-                                <h3 class="h5 fw-bold mb-3"><i class="bi bi-mortarboard me-2" style="color: var(--olive-moss);"></i>For Tutorials</h3>
-                                <ul class="mb-0">
-                                    <li class="mb-2">Detailed schedule and planned activities</li>
-                                    <li class="mb-0">What the tutorial will cover and what participants need to follow along</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <table class="table table-sm mb-4">
+              <tbody>
+                <tr>
+                  <td>Workshop Application Open</td>
+                  <td class="text-end"><strong>Mon, February 9, 2026</strong></td>
+                </tr>
+                <tr>
+                  <td>Workshop Application Deadline</td>
+                  <td class="text-end"><strong>Mon, March 9, 2026</strong> (11:59 PM AoE)</td>
+                </tr>
+                <tr>
+                  <td>Workshop Acceptance Notification</td>
+                  <td class="text-end"><strong>Mon, March 23, 2026</strong></td>
+                </tr>
+                <tr>
+                  <td>Suggested Submission Date for Workshop Contributions</td>
+                  <td class="text-end"><strong>Sun, April 26, 2026</strong></td>
+                </tr>
+                <tr class="table-active">
+                  <td><strong>Workshops &amp; Tutorials Day</strong></td>
+                  <td class="text-end"><strong>Tue, May 26, 2026</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
 
-    <!-- ===== SELECTION CRITERIA ===== -->
-    <section class="py-5" style="background: rgba(232, 231, 231, 0.3);">
-        <div class="container">
-            <h2 class="section-title mb-4">Selection Criteria</h2>
-            <p class="mb-4">All proposals will be judged on their merits using the following criteria. Note that workshops/tutorials organized at previous conferences (NeurIPS, ICLR, SOSP, ICML, etc.) will not be automatically accepted.</p>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-star fs-1" style="color: var(--terracotta-deep);"></i>
-                        </div>
-                        <h3 class="h6 fw-bold">Topic Importance</h3>
-                        <p class="small mb-0">Is the workshop focused on a clear, topical problem the community will find interesting and useful?</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-chat-dots fs-1" style="color: var(--terracotta-deep);"></i>
-                        </div>
-                        <h3 class="h6 fw-bold">Discussion &amp; Community</h3>
-                        <p class="small mb-0">Does the program offer opportunities for discussion and community building?</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-globe fs-1" style="color: var(--terracotta-deep);"></i>
-                        </div>
-                        <h3 class="h6 fw-bold">Diversity &amp; Inclusion</h3>
-                        <p class="small mb-0">Commitment to diversity and inclusion in all forms.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-award fs-1" style="color: var(--terracotta-deep);"></i>
-                        </div>
-                        <h3 class="h6 fw-bold">Organizer Experience</h3>
-                        <p class="small mb-0">Organizational experience, potential, and ability of the team.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== IMPORTANT DATES ===== -->
-    <section id="dates" class="py-5">
-        <div class="container">
-            <h2 class="section-title mb-4">Important Dates</h2>
-            <div class="highlight-box p-4">
-                <div class="row">
-                    <div class="col-md-6">
-                        <table class="table table-borderless mb-0">
-                            <tbody>
-                                <tr>
-                                    <td class="fw-bold" style="width: 60%;">Workshop Application Opens</td>
-                                    <td class="text-muted">TBD</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold">Workshop Application Deadline</td>
-                                    <td class="text-muted">TBD</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold">Acceptance Notification</td>
-                                    <td class="text-muted">TBD</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-md-6">
-                        <table class="table table-borderless mb-0">
-                            <tbody>
-                                <tr>
-                                    <td class="fw-bold" style="width: 60%;">Workshop Contribution Submissions</td>
-                                    <td class="text-muted">TBD</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold">Accept/Reject Notification</td>
-                                    <td class="text-muted">TBD</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold">Workshop Day</td>
-                                    <td><strong>May 26, 2026</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ORGANIZER SUPPORT ===== -->
-    <section class="py-5" style="background: rgba(232, 231, 231, 0.3);">
-        <div class="container">
-            <h2 class="section-title mb-4">What CAIS Provides</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-quiet p-3 h-100 text-center">
-                        <i class="bi bi-person-badge fs-2 mb-2" style="color: var(--olive-moss);"></i>
-                        <h3 class="h6 fw-bold">Registration</h3>
-                        <p class="small mb-0">Unified registration—no separate workshop fees</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-quiet p-3 h-100 text-center">
-                        <i class="bi bi-building fs-2 mb-2" style="color: var(--olive-moss);"></i>
-                        <h3 class="h6 fw-bold">Meeting Space</h3>
-                        <p class="small mb-0">Setup of meeting space and equipment at the venue</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-quiet p-3 h-100 text-center">
-                        <i class="bi bi-cup-hot fs-2 mb-2" style="color: var(--olive-moss);"></i>
-                        <h3 class="h6 fw-bold">Catering</h3>
-                        <p class="small mb-0">Coffee breaks and lunch arrangements</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-quiet p-3 h-100 text-center">
-                        <i class="bi bi-easel fs-2 mb-2" style="color: var(--olive-moss);"></i>
-                        <h3 class="h6 fw-bold">Poster Session</h3>
-                        <p class="small mb-0">Common poster and demo session during extended break</p>
-                    </div>
-                </div>
-            </div>
-            <div class="alert alert-secondary mt-4 mb-0" role="alert">
-                <i class="bi bi-info-circle me-2"></i>
-                <strong>Note:</strong> CAIS does not provide support for official workshop proceedings. Workshop organizers are responsible for creating their own website and publishing workshop papers. Websites can be linked from the CAIS conference site.
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CTA ===== -->
-    <section class="py-5">
-        <div class="container">
-            <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3" style="background: var(--terracotta-medium); border: none;">
-                <div>
-                    <h2 class="h3 fw-bold mb-1" style="color: var(--seasalt);">Ready to Submit a Proposal?</h2>
-                    <p class="mb-0" style="color: var(--seasalt);">Submission portal and detailed timeline coming soon.</p>
-                </div>
-                <div>
-                    <span class="btn btn-lg px-4" style="background: transparent; border: 2px solid var(--seasalt); color: var(--seasalt); opacity: 0.8;">
-                        <i class="bi bi-hourglass-split me-2"></i>Submissions Opening Soon
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== WORKSHOP CHAIRS ===== -->
-    <section class="py-5" style="background: rgba(232, 231, 231, 0.3);">
-        <div class="container">
-            <h2 class="section-title mb-4">Workshop Chairs</h2>
-            <p class="mb-4">For questions about workshop and tutorial proposals, contact the Workshop Chairs:</p>
-            <div class="row g-4 justify-content-center">
-                <div class="col-6 col-md-4 col-lg-3 text-center">
-                    <a href="./organization.html#organizing" class="text-decoration-none">
-                        <img src="../assets/images/Raghavan_Deepti.png" alt="Deepti Raghavan" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Deepti Raghavan</h3>
-                        <p class="small text-muted mb-0">Brown University</p>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 text-center">
-                    <a href="./organization.html#organizing" class="text-decoration-none">
-                        <img src="../assets/images/Chen_LJ.png" alt="Lingjiao Chen" class="rounded-circle mb-2" style="width: 110px; height: 110px; object-fit: cover; filter: grayscale(100%); opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.9';" loading="lazy" />
-                        <h3 class="h6 fw-bold mb-0" style="color: var(--eerie-black);">Lingjiao Chen</h3>
-                        <p class="small text-muted mb-0">Microsoft Research</p>
-                    </a>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="mailto:contact@caisconf.org" class="btn btn-outline-primary">
-                    <i class="bi bi-envelope me-2"></i>Contact Workshop Chairs
-                </a>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer id="contact" class="pt-5 pb-4 border-top">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-5">
-                <div class="d-flex align-items-center mb-3">
-                    <img src="../assets/images/CAIS Logo Long.png" alt="CAIS 2026" style="max-height:40px; width:auto;" />
-                </div>
-                <p class="mb-2"><strong>ACM Conference on AI and Agentic Systems</strong></p>
-                <p class="mb-1">May 26–29, 2026</p>
-                <p class="mb-3">San Jose, California</p>
-                <p class="mb-0">
-                    <a href="mailto:contact@caisconf.org" class="text-decoration-none">
-                        <i class="bi bi-envelope me-2"></i>contact@caisconf.org
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-3">
-                <h6 class="text-uppercase fw-bold mb-3">For Authors</h6>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><span style="color: var(--silver); cursor: default;">Call for Papers</span></li>
-                    <li class="mb-2"><a href="./workshops.html">Workshops &amp; Tutorials</a></li>
-                    <li class="mb-2"><a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Templates</a></li>
+          <!-- Topics of Interest -->
+          <section id="topics" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Topics of Interest</h2>
+            <p>We welcome workshop proposals on topics including but not limited to:</p>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <ul>
+                  <li>DSPy and programmatic prompt optimization</li>
+                  <li>Multi-agent system architectures</li>
+                  <li>RAG systems and retrieval optimization</li>
+                  <li>Tool-augmented language models</li>
+                  <li>Evaluation frameworks for compound AI</li>
                 </ul>
-            </div>
-            <div class="col-md-4">
-                <h6 class="text-uppercase fw-bold mb-3">Policies</h6>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="./privacy.html">Privacy Policy</a></li>
-                    <li class="mb-2"><a href="#" class="cookie-preferences-link">Cookie Preferences</a></li>
-                    <li class="mb-2"><a href="./codeofconduct.html">Code of Conduct</a></li>
-                    <li class="mb-2"><a href="./accessibility.html">Accessibility</a></li>
-                    <li class="mb-2"><a href="./inclusion.html">Diversity &amp; Inclusion</a></li>
-                    <li class="mb-2"><a href="./recording-media.html">Recording &amp; Media</a></li>
-                    <li class="mb-2"><a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener">ACM Code of Ethics</a></li>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li>MLOps for compound AI systems</li>
+                  <li>Safety and alignment in agentic systems</li>
+                  <li>Debugging and observability tools</li>
+                  <li>Production deployment case studies</li>
+                  <li>Emerging research directions</li>
                 </ul>
+              </div>
             </div>
+          </section>
+
+          <!-- Proposal Guidelines -->
+          <section id="proposals" class="anchor mb-5">
+            <h2 class="section-title h4 mb-3">Proposal Guidelines</h2>
+            <p>Workshop proposals should include:</p>
+            <ul>
+              <li><strong>Title and abstract:</strong> Clear description of the workshop focus</li>
+              <li><strong>Organizers:</strong> Names, affiliations, and brief bios of organizers</li>
+              <li><strong>Format:</strong> Half-day or full-day, with tentative schedule</li>
+              <li><strong>Audience:</strong> Expected attendance and target participants</li>
+              <li><strong>History:</strong> Previous editions (if applicable) with attendance numbers</li>
+            </ul>
+            <p class="text-muted small mb-0">Detailed submission instructions will be posted when the application opens on February 9, 2026.</p>
+          </section>
+
         </div>
-        <div class="border-top mt-4 pt-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <small class="text-muted">© 2026 CAIS — In cooperation with ACM</small>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <small><a href="./cfp.html#policies">View All Policies</a></small>
-                </div>
-            </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="dates-card p-4 mb-4">
+            <h3 class="h5 fw-bold mb-3"><i class="bi bi-calendar-event me-2" style="color: var(--cais-accent);"></i>Key Dates</h3>
+            <p class="mb-2"><strong>Application Opens:</strong><br>February 9, 2026</p>
+            <p class="mb-2"><strong>Deadline:</strong><br>March 9, 2026</p>
+            <p class="mb-2"><strong>Notification:</strong><br>March 23, 2026</p>
+            <p class="mb-0"><strong>Workshops Day:</strong><br>May 26, 2026</p>
+            <hr>
+            <p class="small text-muted mb-0"><i class="bi bi-info-circle me-1"></i>Dates subject to change</p>
+          </div>
+
+          <div class="highlight-box mb-4">
+            <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
+            <p class="small mb-3">Get notified when workshop applications open and when deadlines approach.</p>
+            <a href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100">
+              <i class="bi bi-envelope me-2"></i>Subscribe for Updates
+            </a>
+          </div>
+
+          <div class="highlight-box">
+            <h3 class="h6 fw-bold mb-3">Questions?</h3>
+            <p class="small mb-0">Contact us at <a href="mailto:contact@caisconf.org">contact@caisconf.org</a></p>
+          </div>
         </div>
+
+      </div>
     </div>
-</footer>
+  </main>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+  <!-- Footer -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="d-flex align-items-center mb-3">
+            <img src="../assets/images/CAIS Logo Long.png" alt="CAIS 2026" style="max-height:40px; width:auto;" />
+          </div>
+          <p class="mb-2"><strong>ACM Conference on Agentic and AI Systems</strong></p>
+          <p class="mb-1">May 26–29, 2026</p>
+          <p class="mb-3">San Francisco, California</p>
+          <p class="mb-3">
+            <a href="mailto:contact@caisconf.org" class="text-decoration-none">
+              <i class="bi bi-envelope me-2"></i>contact@caisconf.org
+            </a>
+          </p>
+          <div class="d-flex gap-3">
+            <a href="https://x.com/CAISConf" target="_blank" rel="noopener" aria-label="Follow CAIS on X (Twitter)" class="text-decoration-none fs-5">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://bsky.app/profile/caisconf.bsky.social" target="_blank" rel="noopener" aria-label="Follow CAIS on Bluesky" class="text-decoration-none fs-5">
+              <i class="bi bi-cloud"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold mb-3">For Authors</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://forms.gle/gxUDUQZ7KKtEnYYA9" target="_blank" rel="noopener">Subscribe for CFP Updates</a></li>
+            <li class="mb-2"><strong>Deadline:</strong> Feb 27, 2026</li>
+            <li class="mb-2"><a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM Templates</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase fw-bold mb-3">Policies</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./codeofconduct.html">Code of Conduct</a></li>
+            <li class="mb-2"><a href="./accessibility.html">Accessibility</a></li>
+            <li class="mb-2"><a href="./inclusion.html">Diversity &amp; Inclusion</a></li>
+            <li class="mb-2"><a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener">ACM Code of Ethics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top mt-4 pt-3">
+        <div class="row">
+          <div class="col-md-6">
+            <small class="text-muted">© 2026 CAIS — In cooperation with ACM</small>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <small><a href="./codeofconduct.html">View All Policies</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<!-- Navigation helpers -->
-<script>
-    // Close mobile nav on link click
-    window.addEventListener('DOMContentLoaded', function(){
-        const navMain = document.getElementById('navMain');
-        navMain.querySelectorAll('a.nav-link').forEach(function(link){
-            link.addEventListener('click', function(){
-                const bsCollapse = bootstrap.Collapse.getInstance(navMain);
-                if (bsCollapse) bsCollapse.hide();
-            });
-        });
-    });
-</script>
-<!-- Cookie Consent -->
-<script src="../assets/js/cookie-consent.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

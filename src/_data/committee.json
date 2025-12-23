@@ -8,7 +8,7 @@
     },
     {
       "name": "Lingjiao Chen",
-      "affiliation": "Microsoft Research & Stanford",
+      "affiliation": "Microsoft Research",
       "photo": "chen_lingjiao.png",
       "bio": "Senior Researcher at Microsoft Research, AI Frontiers Group. PhD from Stanford advised by Matei Zaharia and James Zou. Co-author of \"The Shift from Models to Compound AI Systems\" and co-organizer of the inaugural Compound AI Systems Workshop. Creator of FrugalML/FrugalGPT for cost-efficient AI. Google PhD Fellow. Work cited in White House 2024 Economic Report."
     },
@@ -44,7 +44,7 @@
     },
     {
       "name": "Chris Potts",
-      "affiliation": "Stanford & Amazon",
+      "affiliation": "Stanford & Bigspin AI",
       "photo": "potts_chris.png",
       "bio": "Professor and Chair of Linguistics at Stanford University. Amazon Scholar. Senior researcher on DSPy and co-author of \"The Shift from Models to Compound AI Systems.\" Creator of the Stanford Sentiment Treebank, winner of the ACL Test-of-Time Award. Faculty member of Stanford NLP Group, AI Lab, and HAI. Winner of ACL Best Paper Award 2024. 55,000+ citations."
     },
@@ -62,7 +62,7 @@
     },
     {
       "name": "Ion Stoica",
-      "affiliation": "UC Berkeley & Databricks",
+      "affiliation": "UC Berkeley",
       "photo": "stoica_ion.png",
       "bio": "Professor at UC Berkeley EECS and Director of SkyLab. Co-creator of Ray, the distributed computing framework powering compound AI infrastructure at OpenAI, Netflix, and Uber. Co-founder of Databricks ($62B) and Anyscale. Creator of Apache Spark and Apache Mesos. His lab produced vLLM (high-throughput LLM serving) and Chatbot Arena (crowdsourced LLM evaluation). Member of the National Academy of Engineering. ACM Fellow. Winner of the ACM SIGOPS Mark Weiser Award. PhD from Carnegie Mellon University."
     }
@@ -77,7 +77,7 @@
     },
     {
       "name": "Jared Quincy Davis",
-      "affiliation": "Mithril & Stanford",
+      "affiliation": "Mithril AI",
       "photo": "Davis_Jared.png",
       "bio": "Founder and CEO of Mithril, building AI infrastructure for compound and agentic systems. Co-author of compound AI systems scaling laws and networks-of-networks theory. Jared conducted his PhD in Computer Science at Stanford University and was formerly a research scientist at DeepMind where he worked on mathematical and systems methods for scalable deep learning, including early work on linear attention, transformer scaling, and neural diffusion techniques."
     },

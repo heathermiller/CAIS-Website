@@ -1,10 +1,10 @@
 {
   "steering": [
     {
-      "name": "Michele Catasta",
-      "affiliation": "Replit",
-      "photo": "catasta_michele_1.png",
-      "bio": "President and Head of AI at Replit, where he architected and launched Replit Agent. Previously Head of Applied Research at Google X and Google Labs, contributing to PaLM and PaLM 2 coding capabilities. Research Scientist and Instructor at Stanford University, pioneering Transformer architectures for source code. PhD in Computer Science from EPFL. Research positions at MIT Media Lab, Google, and Yahoo Labs."
+      "name": "Graham Neubig",
+      "affiliation": "Carnegie Mellon University & All Hands AI",
+      "photo": "neubig_graham.png",
+      "bio": "Associate Professor in the Language Technologies Institute at Carnegie Mellon University and Chief Scientist at All Hands AI. Creator of OpenHands, the open-source AI agent platform achieving state-of-the-art results on SWE-Bench for agentic code generation. Built TheAgentCompany benchmark for evaluating AI agents on real-world workplace tasks. Area Chair at ACL and NeurIPS. PhD from Kyoto University. 52,000+ citations."
     },
     {
       "name": "Lingjiao Chen",
@@ -37,10 +37,10 @@
       "bio": "Principal Scientist and Director of Research at Google DeepMind, leading the Superhuman Reasoning team. Co-founder of Project Meena, which evolved into LaMDA and Bard. Principal Investigator on AlphaGeometry (Nature, 2024) and leader of the first AI to achieve gold-medal standard at the International Mathematical Olympiad (2025). Inventor of LuongAttention, key to upgrading Google Translate. ACL 2025 Test-of-Time Award winner. PhD from Stanford University. 52,000+ citations."
     },
     {
-      "name": "Graham Neubig",
-      "affiliation": "Carnegie Mellon University & All Hands AI",
-      "photo": "neubig_graham.png",
-      "bio": "Associate Professor in the Language Technologies Institute at Carnegie Mellon University and Chief Scientist at All Hands AI. Creator of OpenHands, the open-source AI agent platform achieving state-of-the-art results on SWE-Bench for agentic code generation. Built TheAgentCompany benchmark for evaluating AI agents on real-world workplace tasks. Area Chair at ACL and NeurIPS. PhD from Kyoto University. 52,000+ citations."
+      "name": "Michele Catasta",
+      "affiliation": "Replit",
+      "photo": "catasta_michele_1.png",
+      "bio": "President and Head of AI at Replit, where he architected and launched Replit Agent. Previously Head of Applied Research at Google X and Google Labs, contributing to PaLM and PaLM 2 coding capabilities. Research Scientist and Instructor at Stanford University, pioneering Transformer architectures for source code. PhD in Computer Science from EPFL. Research positions at MIT Media Lab, Google, and Yahoo Labs."
     },
     {
       "name": "Chris Potts",

@@ -1,0 +1,13 @@
+{
+  "name": "cais-website",
+  "version": "1.0.0",
+  "description": "CAIS 2026 - ACM Conference on Agentic and AI Systems",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

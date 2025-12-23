@@ -1,0 +1,135 @@
+---
+layout: base.njk
+title: Committee
+description: Meet the Steering Committee and Organizing Committee for CAIS 2026 — the ACM Conference on Agentic and AI Systems.
+permalink: /pages/committee/
+extraStyles: |
+    /* Committee-specific styles */
+    .committee-photo {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        filter: grayscale(100%);
+        opacity: 0.9;
+        transition: filter 300ms ease, opacity 300ms ease;
+    }
+
+    .committee-card:hover .committee-photo {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .committee-card {
+        border: 1px solid var(--cais-border);
+        background: var(--cais-bg-white);
+        transition: border-color 200ms linear, transform 150ms ease, box-shadow 150ms ease;
+    }
+
+    .committee-card:hover {
+        border-color: var(--cais-text);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(51, 58, 63, 0.08);
+    }
+
+    .committee-name {
+        font-weight: 700;
+        color: var(--cais-text);
+        margin-bottom: 0.25rem;
+    }
+
+    .committee-affiliation {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .committee-bio {
+        font-size: 0.875rem;
+        color: var(--cais-text);
+        line-height: 1.6;
+    }
+
+    .role-badge {
+        display: inline-block;
+        background: var(--cais-accent);
+        color: var(--cais-bg-white);
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 2px;
+    }
+
+    .steering-card {
+        border: 2px solid var(--cais-accent);
+        background: linear-gradient(to bottom, rgba(255, 88, 32, 0.03), transparent 50%);
+    }
+
+    .steering-card:hover {
+        border-color: #e64d1b;
+    }
+
+    .section-divider {
+        border-top: 1px solid var(--cais-border);
+        margin: 3rem 0;
+    }
+---
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+    <div class="container">
+        <h1 class="display-5 fw-bold mb-3">CAIS 2026 Leadership Committees</h1>
+        <p class="lead mb-0">The team responsible for delivering the inaugural ACM Conference on Agentic and AI Systems.</p>
+    </div>
+</header>
+
+<!-- ===== STEERING COMMITTEE ===== -->
+<section id="steering" class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-2">Steering Committee</h2>
+        <p class="lead mb-4">The Steering Committee provides strategic guidance and academic oversight for CAIS, ensuring the conference maintains the highest standards of scientific rigor and relevance to the compound AI systems community.</p>
+
+        <div class="row g-4">
+            {% for member in committee.steering %}
+            {% set isSteering = true %}
+            {% include "committee-card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<div class="container"><hr class="section-divider"></div>
+
+<!-- ===== ORGANIZING COMMITTEE ===== -->
+<section id="organizing" class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-2">Organizing Committee</h2>
+        <p class="lead mb-4">The Organizing Committee manages the day-to-day planning and execution of CAIS 2026, including program development, logistics, and community engagement.</p>
+
+        <div class="row g-4">
+            {% for member in committee.organizing %}
+            {% set isSteering = false %}
+            {% include "committee-card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ===== GET INVOLVED CTA ===== -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+            <div>
+                <h2 class="h3 fw-bold mb-1">Interested in getting involved?</h2>
+                <p class="mb-0">We're looking for reviewers, volunteers, and sponsors to help make CAIS 2026 a success.</p>
+            </div>
+            <div>
+                <a href="mailto:{{ site.contact.email }}" class="btn btn-light btn-lg px-4 text-dark">
+                    <i class="bi bi-envelope me-2"></i>Get in Touch
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

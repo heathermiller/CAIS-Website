@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} — {{ site.name }}</title>
+    <meta name="description" content="{{ description | default(site.description) }}" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+    {% if showOpenGraph %}
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ ogTitle | default(title) }} — {{ site.name }}" />
+    <meta property="og:description" content="{{ ogDescription | default(description) | default(site.description) }}" />
+    <meta property="og:image" content="{{ site.url }}/assets/images/hero ultralight gradient.png" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% endif %}
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+
+    {% if extraStyles %}
+    <style>
+    {{ extraStyles | safe }}
+    </style>
+    {% endif %}
+
+    {% if showJsonLd %}
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "{{ site.name }} — {{ site.fullName }}",
+            "description": "{{ site.description }}",
+            "startDate": "{{ site.dates.start }}",
+            "endDate": "{{ site.dates.end }}",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "location": {
+                "@type": "Place",
+                "name": "{{ site.location }}",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "San Francisco",
+                    "addressRegion": "CA",
+                    "addressCountry": "US"
+                }
+            },
+            "organizer": {
+                "@type": "Organization",
+                "name": "ACM",
+                "url": "https://www.acm.org"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "{{ site.url }}/pages/cfp/",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+    </script>
+    {% endif %}
+</head>
+<body>
+
+<!-- Skip to main content (accessibility) -->
+<a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+{% include "nav.njk" %}
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main">
+    {{ content | safe }}
+</main>
+
+{% include "footer.njk" %}
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+
+<!-- Navigation helpers -->
+<script>
+    // Close mobile nav on link click
+    window.addEventListener('DOMContentLoaded', function(){
+        const navMain = document.getElementById('navMain');
+        navMain.querySelectorAll('a.nav-link').forEach(function(link){
+            link.addEventListener('click', function(){
+                const bsCollapse = bootstrap.Collapse.getInstance(navMain);
+                if (bsCollapse) bsCollapse.hide();
+            });
+        });
+    });
+
+    // Smooth scroll with reduced motion respect
+    (function(){
+        const links = document.querySelectorAll('a[href^="#"]');
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        links.forEach(link => link.addEventListener('click', e => {
+            const id = link.getAttribute('href');
+            if(id.length > 1){
+                const target = document.querySelector(id);
+                if(target){
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+                }
+            }
+        }));
+    })();
+</script>
+
+{% if extraScripts %}
+{{ extraScripts | safe }}
+{% endif %}
+</body>
+</html>

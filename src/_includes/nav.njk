@@ -1,0 +1,29 @@
+<!-- ===== NAV ===== -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary navigation">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/" aria-label="{{ site.name }} Home">
+            <img src="/assets/images/CAIS Logo Long.svg" alt="{{ site.name }}" class="brand-logo" loading="eager" decoding="async" style="max-height:6vh; height:auto; width:auto;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navMain" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                {% for item in navigation.main %}
+                <li class="nav-item">
+                    {% if item.disabled %}
+                    <a class="nav-link disabled" href="{{ item.href }}" aria-disabled="true">{{ item.label }}</a>
+                    {% elif page.url == item.href or (item.href != "/" and page.url.startsWith(item.href)) %}
+                    <a class="nav-link active" aria-current="page" href="{{ item.href }}">{{ item.label }}</a>
+                    {% else %}
+                    <a class="nav-link" href="{{ item.href }}">{{ item.label }}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link btn btn-sm ms-lg-2" href="{{ navigation.cta.href }}" {% if navigation.cta.external %}target="_blank" rel="noopener"{% endif %}>{{ navigation.cta.label }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

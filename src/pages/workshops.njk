@@ -1,0 +1,133 @@
+---
+layout: base.njk
+title: Workshops & Tutorials
+description: CAIS 2026 workshops and tutorials. Deep dives into practical methods and frameworks for building compound AI systems.
+permalink: /pages/workshops/
+---
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-6 fw-bold">Workshops &amp; Tutorials</h1>
+        <p class="lead mb-3">{{ site.fullName }} ({{ site.name }})</p>
+        <p class="mb-0"><strong>{{ site.location }} • {{ site.dates.workshops }}</strong></p>
+    </div>
+</header>
+
+<div class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Main Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Overview -->
+                <section id="overview" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Overview</h2>
+                    <p>CAIS 2026 will host workshops and tutorials on <strong>Tuesday, May 26, 2026</strong>, the day before the main conference begins. These sessions provide deep dives into practical methods, frameworks, and emerging research directions in compound AI systems.</p>
+                    <p class="mb-0">We invite proposals for half-day or full-day workshops that bring together researchers and practitioners to explore focused topics within the CAIS scope.</p>
+                </section>
+
+                <!-- Workshop Timeline -->
+                <section id="timeline" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Workshop Proposal Timeline</h2>
+
+                    <div class="alert alert-warning mb-4">
+                        <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> These dates are subject to change. Subscribe for updates to receive notifications of any changes.
+                    </div>
+
+                    <table class="table table-sm mb-4">
+                        <tbody>
+                            <tr>
+                                <td>Workshop Application Open</td>
+                                <td class="text-end"><strong>Mon, February 9, 2026</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Workshop Application Deadline</td>
+                                <td class="text-end"><strong>Mon, March 9, 2026</strong> (11:59 PM AoE)</td>
+                            </tr>
+                            <tr>
+                                <td>Workshop Acceptance Notification</td>
+                                <td class="text-end"><strong>Mon, March 23, 2026</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Suggested Submission Date for Workshop Contributions</td>
+                                <td class="text-end"><strong>Sun, April 26, 2026</strong></td>
+                            </tr>
+                            <tr class="table-active">
+                                <td><strong>Workshops &amp; Tutorials Day</strong></td>
+                                <td class="text-end"><strong>Tue, May 26, 2026</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Topics of Interest -->
+                <section id="topics" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Topics of Interest</h2>
+                    <p>We welcome workshop proposals on topics including but not limited to:</p>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>DSPy and programmatic prompt optimization</li>
+                                <li>Multi-agent system architectures</li>
+                                <li>RAG systems and retrieval optimization</li>
+                                <li>Tool-augmented language models</li>
+                                <li>Evaluation frameworks for compound AI</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>MLOps for compound AI systems</li>
+                                <li>Safety and alignment in agentic systems</li>
+                                <li>Debugging and observability tools</li>
+                                <li>Production deployment case studies</li>
+                                <li>Emerging research directions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Proposal Guidelines -->
+                <section id="proposals" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Proposal Guidelines</h2>
+                    <p>Workshop proposals should include:</p>
+                    <ul>
+                        <li><strong>Title and abstract:</strong> Clear description of the workshop focus</li>
+                        <li><strong>Organizers:</strong> Names, affiliations, and brief bios of organizers</li>
+                        <li><strong>Format:</strong> Half-day or full-day, with tentative schedule</li>
+                        <li><strong>Audience:</strong> Expected attendance and target participants</li>
+                        <li><strong>History:</strong> Previous editions (if applicable) with attendance numbers</li>
+                    </ul>
+                    <p class="text-muted small mb-0">Detailed submission instructions will be posted when the application opens on February 9, 2026.</p>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="dates-card p-4 mb-4">
+                    <h3 class="h5 fw-bold mb-3"><i class="bi bi-calendar-event me-2" style="color: var(--cais-accent);"></i>Key Dates</h3>
+                    <p class="mb-2"><strong>Application Opens:</strong><br>February 9, 2026</p>
+                    <p class="mb-2"><strong>Deadline:</strong><br>March 9, 2026</p>
+                    <p class="mb-2"><strong>Notification:</strong><br>March 23, 2026</p>
+                    <p class="mb-0"><strong>Workshops Day:</strong><br>May 26, 2026</p>
+                    <hr>
+                    <p class="small text-muted mb-0"><i class="bi bi-info-circle me-1"></i>Dates subject to change</p>
+                </div>
+
+                <div class="highlight-box mb-4">
+                    <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
+                    <p class="small mb-3">Get notified when workshop applications open and when deadlines approach.</p>
+                    <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100">
+                        <i class="bi bi-envelope me-2"></i>Subscribe for Updates
+                    </a>
+                </div>
+
+                <div class="highlight-box">
+                    <h3 class="h6 fw-bold mb-3">Questions?</h3>
+                    <p class="small mb-0">Contact us at <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

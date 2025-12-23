@@ -1,0 +1,106 @@
+{
+  "steering": [
+    {
+      "name": "Michele Catasta",
+      "affiliation": "Replit",
+      "photo": "catasta_michele_1.png",
+      "bio": "President and Head of AI at Replit, where he architected and launched Replit Agent. Previously Head of Applied Research at Google X and Google Labs, contributing to PaLM and PaLM 2 coding capabilities. Research Scientist and Instructor at Stanford University, pioneering Transformer architectures for source code. PhD in Computer Science from EPFL. Research positions at MIT Media Lab, Google, and Yahoo Labs."
+    },
+    {
+      "name": "Lingjiao Chen",
+      "affiliation": "Microsoft Research & Stanford",
+      "photo": "chen_lingjiao.png",
+      "bio": "Senior Researcher at Microsoft Research, AI Frontiers Group. PhD from Stanford advised by Matei Zaharia and James Zou. Co-author of \"The Shift from Models to Compound AI Systems\" and co-organizer of the inaugural Compound AI Systems Workshop. Creator of FrugalML/FrugalGPT for cost-efficient AI. Google PhD Fellow. Work cited in White House 2024 Economic Report."
+    },
+    {
+      "name": "Jeff Dean",
+      "affiliation": "Google DeepMind",
+      "photo": "dean_jeff.png",
+      "bio": "Chief Scientist at Google DeepMind and Google Research. Co-lead of Gemini. Designer of MapReduce, BigTable, TensorFlow, and TPUs—foundational infrastructure enabling modern AI systems. Google's 30th employee and one of two Google Senior Fellows. Winner of the ACM Prize in Computing and IEEE John von Neumann Medal. Member of the National Academy of Engineering. 380,000+ citations."
+    },
+    {
+      "name": "Omar Khattab",
+      "affiliation": "MIT EECS & CSAIL",
+      "photo": "khattab_omar.png",
+      "bio": "Assistant Professor at MIT EECS and CSAIL. Creator of DSPy, the leading framework for programming and optimizing compound AI systems, and ColBERT, which revolutionized neural information retrieval. PhD from Stanford advised by Matei Zaharia and Christopher Potts. Co-author of \"The Shift from Models to Compound AI Systems.\" Apple Scholars in AI/ML Fellow. Winner of SIGIR 2025 Best Paper Award. 15,000+ citations."
+    },
+    {
+      "name": "Monica Lam",
+      "affiliation": "Stanford University",
+      "photo": "lam_monica.png",
+      "bio": "Kleiner Perkins, Mayfield, Sequoia Capital Professor at Stanford University. Faculty Director of the Open Virtual Assistant Laboratory. Creator of Genie open virtual assistant platform and STORM multi-agent research system. Co-author of the \"Dragon Book\" compiler textbook. Winner of Wikimedia Foundation Research Award 2024. Member of the National Academy of Engineering. ACM Fellow. 54,000+ citations."
+    },
+    {
+      "name": "Thang Luong",
+      "affiliation": "Google DeepMind",
+      "photo": "luong_thang.png",
+      "bio": "Principal Scientist and Director of Research at Google DeepMind, leading the Superhuman Reasoning team. Co-founder of Project Meena, which evolved into LaMDA and Bard. Principal Investigator on AlphaGeometry (Nature, 2024) and leader of the first AI to achieve gold-medal standard at the International Mathematical Olympiad (2025). Inventor of LuongAttention, key to upgrading Google Translate. ACL 2025 Test-of-Time Award winner. PhD from Stanford University. 52,000+ citations."
+    },
+    {
+      "name": "Graham Neubig",
+      "affiliation": "Carnegie Mellon University & All Hands AI",
+      "photo": "neubig_graham.png",
+      "bio": "Associate Professor in the Language Technologies Institute at Carnegie Mellon University and Chief Scientist at All Hands AI. Creator of OpenHands, the open-source AI agent platform achieving state-of-the-art results on SWE-Bench for agentic code generation. Built TheAgentCompany benchmark for evaluating AI agents on real-world workplace tasks. Area Chair at ACL and NeurIPS. PhD from Kyoto University. 52,000+ citations."
+    },
+    {
+      "name": "Chris Potts",
+      "affiliation": "Stanford & Amazon",
+      "photo": "potts_chris.png",
+      "bio": "Professor and Chair of Linguistics at Stanford University. Amazon Scholar. Senior researcher on DSPy and co-author of \"The Shift from Models to Compound AI Systems.\" Creator of the Stanford Sentiment Treebank, winner of the ACL Test-of-Time Award. Faculty member of Stanford NLP Group, AI Lab, and HAI. Winner of ACL Best Paper Award 2024. 55,000+ citations."
+    },
+    {
+      "name": "Naveen Rao",
+      "affiliation": "Unconventional AI",
+      "photo": "rao_naveen.png",
+      "bio": "CEO and Co-Founder of Unconventional AI. Previously VP of AI at Databricks, leading Mosaic AI compound systems infrastructure. Founded Nervana Systems (acquired by Intel, $408M) and MosaicML (acquired by Databricks, $1.3B). Co-author of \"The Shift from Models to Compound AI Systems.\" PhD in Computational Neuroscience from Brown University. Scientific Advisory Board Member, Allen Institute."
+    },
+    {
+      "name": "Dawn Song",
+      "affiliation": "UC Berkeley",
+      "photo": "song_dawn.png",
+      "bio": "Professor of Computer Science at UC Berkeley and Co-Director of the Berkeley Center for Responsible Decentralized Intelligence. Leading researcher on AI safety and security for agentic systems. Creator of the LLM Agents MOOC (32,000+ learners) and organizer of the inaugural Agentic AI Summit. MacArthur Fellow, Guggenheim Fellow, and Schmidt Sciences AI2050 Senior Fellow. Most cited scholar in computer security (AMiner). ACM Fellow, IEEE Fellow, and member of the American Academy of Arts and Sciences. PhD from UC Berkeley."
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliation": "UC Berkeley & Databricks",
+      "photo": "stoica_ion.png",
+      "bio": "Professor at UC Berkeley EECS and Director of SkyLab. Co-creator of Ray, the distributed computing framework powering compound AI infrastructure at OpenAI, Netflix, and Uber. Co-founder of Databricks ($62B) and Anyscale. Creator of Apache Spark and Apache Mesos. His lab produced vLLM (high-throughput LLM serving) and Chatbot Arena (crowdsourced LLM evaluation). Member of the National Academy of Engineering. ACM Fellow. Winner of the ACM SIGOPS Mark Weiser Award. PhD from Carnegie Mellon University."
+    }
+  ],
+  "organizing": [
+    {
+      "name": "Lingjiao Chen",
+      "affiliation": "Microsoft Research",
+      "photo": "Chen_LJ.png",
+      "role": "Workshop Co-Chair",
+      "bio": "Senior Researcher at Microsoft Research AI Frontiers. Co-author of the foundational compound AI systems blog post and co-organizer of the inaugural Compound AI Systems Workshop. His FrugalML work (NeurIPS 2020 Oral) enables 90% cost reduction in ML deployments."
+    },
+    {
+      "name": "Jared Quincy Davis",
+      "affiliation": "Mithril & Stanford",
+      "photo": "Davis_Jared.png",
+      "bio": "Founder and CEO of Mithril, building AI infrastructure for compound and agentic systems. Co-author of compound AI systems scaling laws and networks-of-networks theory. Jared conducted his PhD in Computer Science at Stanford University and was formerly a research scientist at DeepMind where he worked on mathematical and systems methods for scalable deep learning, including early work on linear attention, transformer scaling, and neural diffusion techniques."
+    },
+    {
+      "name": "Heather Miller",
+      "affiliation": "CMU & Two Sigma",
+      "photo": "Miller_Heather.png",
+      "role": "General Co-Chair",
+      "bio": "Assistant Professor at Carnegie Mellon and VP at Two Sigma. Recipient of the Dahl-Nygaard Prize and ACM SIGPLAN Software Award for her work on Scala. Her research bridges distributed systems and AI infrastructure, including work on DSPy and the Language Model System Interface Model."
+    },
+    {
+      "name": "Deepti Raghavan",
+      "affiliation": "Brown University",
+      "photo": "Raghavan_Deepti.png",
+      "role": "Workshop Co-Chair",
+      "bio": "Assistant Professor of CS at Brown University. Her research focuses on systems for ML, networking, and operating systems. She has received a Google ML and Systems Junior Faculty award, NSF Graduate Research Fellowship, and Distinguished Artifact Award at SOSP."
+    },
+    {
+      "name": "Matei Zaharia",
+      "affiliation": "UC Berkeley & Databricks",
+      "photo": "Zaharia_Matei.png",
+      "role": "General Co-Chair",
+      "bio": "Associate Professor at UC Berkeley and Co-founder/CTO of Databricks. Creator of Apache Spark, MLflow, and Delta Lake. Lead author of \"The Shift from Models to Compound AI Systems\" and co-creator of DSPy. Winner of the ACM Doctoral Dissertation Award."
+    }
+  ]
+}

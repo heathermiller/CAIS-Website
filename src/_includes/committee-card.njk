@@ -1,0 +1,16 @@
+{# Committee member card component #}
+{# Usage: {% include "committee-card.njk" %} with member, isSteering variables #}
+<div class="col-md-6 col-lg-4">
+    <div class="committee-card {{ 'steering-card' if isSteering else '' }} h-100 p-3 rounded">
+        <img src="/assets/images/{{ member.photo }}" alt="{{ member.name }}" class="committee-photo rounded mb-3" loading="lazy" />
+        {% if isSteering %}
+        <span class="role-badge">Steering Committee</span>
+        {% endif %}
+        <h3 class="committee-name h5">{{ member.name }}</h3>
+        <p class="committee-affiliation">{{ member.affiliation }}</p>
+        {% if member.role %}
+        <p style="color: var(--cais-accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.75rem;">{{ member.role }}</p>
+        {% endif %}
+        <p class="committee-bio">{{ member.bio }}</p>
+    </div>
+</div>

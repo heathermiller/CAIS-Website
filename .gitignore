@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Design source files (keep in separate repo/folder)
+*.psd
+*.ai
+*.sketch
+
+# Environment
+.env
+.env.local

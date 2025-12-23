@@ -1,0 +1,62 @@
+{
+  "name": "CAIS 2026",
+  "fullName": "ACM Conference on Agentic and AI Systems",
+  "tagline": "Building the Future of Agentic & AI Systems",
+  "description": "The premier venue for rigorous, reproducible research on compound AI architectures, optimization, and deployment.",
+  "url": "https://caisconf.org",
+  "location": "San Francisco, California",
+  "dates": {
+    "start": "2026-05-26",
+    "end": "2026-05-29",
+    "display": "May 26–29, 2026",
+    "workshops": "May 26, 2026",
+    "mainConference": "May 27–29, 2026"
+  },
+  "deadlines": {
+    "abstractRegistration": {
+      "date": "2026-02-20",
+      "display": "February 20, 2026",
+      "time": "11:59 PM AoE"
+    },
+    "paperSubmission": {
+      "date": "2026-02-27",
+      "display": "February 27, 2026",
+      "time": "11:59 PM AoE"
+    },
+    "reviewsDue": {
+      "date": "2026-04-03",
+      "display": "April 3, 2026"
+    },
+    "rebuttalOpens": {
+      "date": "2026-04-06",
+      "display": "April 6, 2026"
+    },
+    "rebuttalCloses": {
+      "date": "2026-04-17",
+      "display": "April 17, 2026",
+      "time": "11:59 PM AoE"
+    },
+    "authorNotification": {
+      "date": "2026-04-21",
+      "display": "April 21, 2026"
+    },
+    "cameraReady": {
+      "date": "2026-04-27",
+      "display": "April 27, 2026"
+    }
+  },
+  "contact": {
+    "email": "contact@caisconf.org",
+    "sponsorship": "sponsorship@caisconf.org"
+  },
+  "social": {
+    "twitter": "https://x.com/CAISConf",
+    "bluesky": "https://bsky.app/profile/caisconf.bsky.social"
+  },
+  "forms": {
+    "subscribe": "https://forms.gle/gxUDUQZ7KKtEnYYA9"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-WL02FPN13W"
+  }
+}

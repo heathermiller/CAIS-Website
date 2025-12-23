@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Architectural Patterns & Composition",
+    "description": "Networks of Networks and inference-time scaling architectures. Verifier-based systems leveraging generation/verification asymmetry. RAG, multi-agent, and tool-augmented designs.",
+    "image": "Pillars_composition.svg"
+  },
+  {
+    "title": "System Optimization & Efficiency",
+    "description": "End-to-end optimization of non-differentiable pipelines. Cost-performance trade-offs, resource allocation across components, and automated architecture search for compound systems at scale.",
+    "image": "Pillars_optimization.svg"
+  },
+  {
+    "title": "Engineering & Operations",
+    "description": "MLOps for compound AI. Monitoring, debugging, observability, and specifications. Security and safety in multi-component systems. Production deployment case studies.",
+    "image": "Pillars_EngOps.svg"
+  },
+  {
+    "title": "Evaluation & Benchmarking",
+    "description": "Metrics for compound system performance. Reproducibility frameworks and artifact standards. Comparative evaluation methodologies and real-world impact assessment.",
+    "image": "Pillars_evaluation.svg"
+  }
+]

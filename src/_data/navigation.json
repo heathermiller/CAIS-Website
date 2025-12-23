@@ -1,0 +1,65 @@
+{
+  "main": [
+    {
+      "label": "What is CAIS",
+      "href": "/#why"
+    },
+    {
+      "label": "Program",
+      "href": "/#program"
+    },
+    {
+      "label": "Committee",
+      "href": "/pages/committee/"
+    },
+    {
+      "label": "Workshops",
+      "href": "/pages/workshops/"
+    },
+    {
+      "label": "Call for Papers",
+      "href": "/pages/cfp/",
+      "disabled": false
+    }
+  ],
+  "cta": {
+    "label": "Updates",
+    "href": "https://forms.gle/gxUDUQZ7KKtEnYYA9",
+    "external": true
+  },
+  "footerAuthors": [
+    {
+      "label": "Subscribe for CFP Updates",
+      "href": "https://forms.gle/gxUDUQZ7KKtEnYYA9",
+      "external": true
+    },
+    {
+      "label": "ACM Templates",
+      "href": "https://www.acm.org/publications/proceedings-template",
+      "external": true
+    }
+  ],
+  "footerPolicies": [
+    {
+      "label": "Code of Conduct",
+      "href": "/pages/codeofconduct/"
+    },
+    {
+      "label": "Accessibility",
+      "href": "/pages/accessibility/"
+    },
+    {
+      "label": "Diversity & Inclusion",
+      "href": "/pages/inclusion/"
+    },
+    {
+      "label": "Recording & Media",
+      "href": "/pages/recording-media/"
+    },
+    {
+      "label": "ACM Code of Ethics",
+      "href": "https://www.acm.org/code-of-ethics",
+      "external": true
+    }
+  ]
+}

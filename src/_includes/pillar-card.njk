@@ -1,0 +1,9 @@
+{# Pillar card component for "What is CAIS" section #}
+{# Usage: {% include "pillar-card.njk" %} with pillar variable #}
+<div class="col-md-6 col-lg-3">
+    <div class="card card-quiet p-3 h-100">
+        <img src="/assets/images/{{ pillar.image }}" class="rounded mb-3" alt="{{ pillar.title }}" loading="lazy" />
+        <h3 class="h5 fw-bold">{{ pillar.title }}</h3>
+        <p class="mb-0">{{ pillar.description }}</p>
+    </div>
+</div>

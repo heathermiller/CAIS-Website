@@ -1,0 +1,79 @@
+<!-- ===== FOOTER ===== -->
+<footer id="contact" class="pt-5 pb-4 border-top">
+    <div class="container">
+        {% if showSponsorshipCallout %}
+        <!-- Sponsorship Call-out -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="p-4 rounded" style="background: linear-gradient(135deg, #fff5f0 0%, #fff 100%); border: 1px solid var(--cais-accent);">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3 class="h5 fw-bold mb-2"><i class="bi bi-building me-2" style="color: var(--cais-accent);"></i>Become a Sponsor</h3>
+                            <p class="mb-0">Support the inaugural ACM conference on compound AI systems. Sponsorship opportunities available for organizations committed to advancing AI research.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                            <a href="mailto:{{ site.contact.sponsorship }}" class="btn btn-primary" style="background: var(--cais-accent); border: none;">
+                                <i class="bi bi-envelope me-2"></i>{{ site.contact.sponsorship }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="/assets/images/CAIS Logo Long.png" alt="{{ site.name }}" style="max-height:40px; width:auto;" />
+                </div>
+                <p class="mb-2"><strong>{{ site.fullName }}</strong></p>
+                <p class="mb-1">{{ site.dates.display }}</p>
+                <p class="mb-3">{{ site.location }}</p>
+                <p class="mb-3">
+                    <a href="mailto:{{ site.contact.email }}" class="text-decoration-none">
+                        <i class="bi bi-envelope me-2"></i>{{ site.contact.email }}
+                    </a>
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener" aria-label="Follow CAIS on X (Twitter)" class="text-decoration-none fs-5">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="{{ site.social.bluesky }}" target="_blank" rel="noopener" aria-label="Follow CAIS on Bluesky" class="text-decoration-none fs-5">
+                        <i class="bi bi-cloud"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-uppercase fw-bold mb-3">For Authors</h6>
+                <ul class="list-unstyled">
+                    {% for item in navigation.footerAuthors %}
+                    <li class="mb-2">
+                        <a href="{{ item.href }}" {% if item.external %}target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a>
+                    </li>
+                    {% endfor %}
+                    <li class="mb-2"><strong>Deadline:</strong> {{ site.deadlines.paperSubmission.display }}</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 class="text-uppercase fw-bold mb-3">Policies</h6>
+                <ul class="list-unstyled">
+                    {% for item in navigation.footerPolicies %}
+                    <li class="mb-2">
+                        <a href="{{ item.href }}" {% if item.external %}target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="border-top mt-4 pt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <small class="text-muted">© 2026 CAIS — In cooperation with ACM</small>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small><a href="/pages/codeofconduct/">View All Policies</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,167 @@
+---
+layout: base.njk
+title: ACM Conference on Agentic and AI Systems | Call for Papers
+description: Call for Papers now open for CAIS 2026 — the ACM Conference on Agentic and AI Systems. Submit your research on compound AI architectures, optimization, and deployment. May 26–29, 2026 in San Francisco.
+showOpenGraph: true
+showJsonLd: true
+showSponsorshipCallout: true
+---
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+    <div class="container content">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <a href="https://www.acm.org" target="_blank" rel="noopener" aria-label="ACM — Association for Computing Machinery" class="acm-mark-link">
+                    <img src="/assets/images/acm_k_flat_pos.png" alt="ACM — Association for Computing Machinery" class="acm-mark" loading="eager" decoding="async" />
+                </a>
+                <h1 class="display-5 fw-bold mb-3">{{ site.tagline }}</h1>
+                <p class="lead mb-4">Submit your research to {{ site.name }} — {{ site.description | lower }}</p>
+                <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                    <span class="fs-5"><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> {{ site.location }}</span>
+                    <span class="fs-5"><i class="bi bi-calendar-event me-1" aria-hidden="true"></i> {{ site.dates.display }}</span>
+                </div>
+                <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
+                    <span class="fs-4 fw-bold" style="color: var(--cais-accent);"><i class="bi bi-clock me-2" aria-hidden="true"></i>Paper Submission Deadline: {{ site.deadlines.paperSubmission.display }}</span>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
+                        <i class="bi bi-envelope me-2"></i>Subscribe for CFP Updates
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ===== WHY CAIS (Pillars) ===== -->
+<section id="why" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title mb-3">What is CAIS?</h2>
+        <p class="lead mb-5">A high-signal forum for rigorous, reproducible research on agentic and AI systems—architectures that shift the Pareto frontier through principled composition of multiple system components, smart inference-time scaling strategies, and systematic verification methods for reliable deployment.</p>
+        <div class="row g-4">
+            {% for pillar in pillars %}
+            {% set pillar = pillar %}
+            {% include "pillar-card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ===== LEADERSHIP ===== -->
+<section id="leadership" class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-2">Conference Leadership</h2>
+        <p class="lead mb-5">CAIS is guided by leading researchers who defined the compound AI systems paradigm—scholars and practitioners from MIT, Stanford, Google DeepMind, Microsoft Research, and beyond.</p>
+
+        <!-- Steering Committee -->
+        <p class="text-uppercase small fw-bold text-muted mb-3" style="letter-spacing: 1px;">Steering Committee</p>
+        <div class="row g-4 justify-content-center mb-5">
+            {% for member in committee.steering %}
+            {% set linkTo = "/pages/committee/#steering" %}
+            {% include "committee-thumbnail.njk" %}
+            {% endfor %}
+        </div>
+
+        <!-- Organizing Committee -->
+        <p class="text-uppercase small fw-bold text-muted mb-3" style="letter-spacing: 1px;">Organizing Committee</p>
+        <div class="row g-4 justify-content-center">
+            {% for member in committee.organizing %}
+            {% set linkTo = "/pages/committee/#organizing" %}
+            {% include "committee-thumbnail.njk" %}
+            {% endfor %}
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="/pages/committee/" class="btn btn-outline-primary">View Full Committee <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROGRAM PREVIEW ===== -->
+<section id="program" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title mb-3">Conference Program</h2>
+        <p class="lead mb-4">Four days of cutting-edge research presentations, hands-on tutorials, and community building—{{ site.dates.display }} in San Francisco.</p>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card card-quiet p-4 h-100">
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-file-earmark-text fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-2">Research Track</h3>
+                            <p class="mb-3">Peer-reviewed papers on architectural patterns, optimization, engineering, and evaluation of agentic AI systems. Includes keynotes, plenaries, and poster sessions.</p>
+                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-outline-primary">Get CFP Updates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-quiet p-4 h-100">
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-code-slash fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-2">Tutorials &amp; Workshops</h3>
+                            <p class="mb-3">Deep dives into practical methods and frameworks—DSPy, LangChain, and more tools for building compound AI systems at scale.</p>
+                            <a href="/pages/workshops/" class="btn btn-outline-primary">View Workshop Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rigor & Recognition (simplified) -->
+        <div class="row g-4 mt-3">
+            <div class="col-12">
+                <div class="highlight-box p-4">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3 class="h5 fw-bold mb-2">Artifact-Centric Review with Reproducibility Badges</h3>
+                            <p class="mb-0">CAIS emphasizes open artifacts, transparent evaluation, and benchmarking standards. We adopt ACM's reproducibility badging taxonomy to recognize high-quality, deployable research.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-outline-primary">Subscribe for Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+            <div>
+                <h2 class="h3 fw-bold mb-1">Be part of the inaugural CAIS</h2>
+                <p class="mb-0">Submission timeline and important dates available in the Call for Papers. Early submissions encouraged.</p>
+            </div>
+            <div>
+                <a class="btn btn-light btn-lg text-dark px-4" href="{{ site.forms.subscribe }}" target="_blank" rel="noopener">
+                    <i class="bi bi-envelope me-2"></i>Subscribe for CFP Updates
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STAY UPDATED ===== -->
+<section id="subscribe" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="h4 fw-bold mb-3">Stay Updated</h2>
+                <p class="mb-4">Get notified when the Call for Papers opens, submission deadlines approach, and keynote speakers are announced. We'll only email you for major conference updates.</p>
+                <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
+                    <i class="bi bi-envelope me-2"></i>Subscribe to Updates
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

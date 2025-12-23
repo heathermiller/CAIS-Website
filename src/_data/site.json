@@ -4,7 +4,20 @@
   "tagline": "Building the Future of Agentic & AI Systems",
   "description": "The premier venue for rigorous, reproducible research on compound AI architectures, optimization, and deployment.",
   "url": "https://caisconf.org",
-  "location": "San Francisco, California",
+  "location": "San Jose, California",
+  "venue": {
+    "name": "DoubleTree by Hilton San Jose",
+    "streetAddress": "2050 Gateway Place",
+    "city": "San Jose",
+    "state": "CA",
+    "zip": "95110",
+    "country": "US",
+    "airport": "San Jose International Airport (SJC)",
+    "shuttleInfo": "Complimentary shuttle to/from San Jose International Airport (SJC)",
+    "parkingInfo": "Discounted parking $10/day",
+    "groupRate": "$159/night + tax",
+    "bookingUrl": "https://book.passkey.com/go/ACMConferenceonAiAgentic"
+  },
   "dates": {
     "start": "2026-05-26",
     "end": "2026-05-29",

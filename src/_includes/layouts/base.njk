@@ -51,12 +51,14 @@
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "location": {
                 "@type": "Place",
-                "name": "{{ site.location }}",
+                "name": "{{ site.venue.name }}",
                 "address": {
                     "@type": "PostalAddress",
-                    "addressLocality": "San Francisco",
-                    "addressRegion": "CA",
-                    "addressCountry": "US"
+                    "streetAddress": "{{ site.venue.streetAddress }}",
+                    "addressLocality": "{{ site.venue.city }}",
+                    "addressRegion": "{{ site.venue.state }}",
+                    "postalCode": "{{ site.venue.zip }}",
+                    "addressCountry": "{{ site.venue.country }}"
                 }
             },
             "organizer": {

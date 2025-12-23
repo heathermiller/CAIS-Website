@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: ACM Conference on Agentic and AI Systems | Call for Papers
-description: Call for Papers now open for CAIS 2026 — the ACM Conference on Agentic and AI Systems. Submit your research on compound AI architectures, optimization, and deployment. May 26–29, 2026 in San Francisco.
+description: Call for Papers now open for CAIS 2026 — the ACM Conference on Agentic and AI Systems. Submit your research on compound AI architectures, optimization, and deployment. May 26–29, 2026 in San Jose.
 showOpenGraph: true
 showJsonLd: true
 showSponsorshipCallout: false
@@ -33,6 +33,33 @@ showSponsorshipCallout: false
         </div>
     </div>
 </header>
+
+<!-- ===== VENUE DETAILS ===== -->
+<section class="py-4 bg-white border-bottom">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="h5 fw-bold mb-2">
+                    <i class="bi bi-building me-2" style="color:var(--cais-accent);"></i>
+                    {{ site.venue.name }}
+                </h2>
+                <p class="mb-2">{{ site.venue.streetAddress }}, {{ site.venue.city }}, {{ site.venue.state }} {{ site.venue.zip }}</p>
+                <p class="mb-0 text-muted small">
+                    <i class="bi bi-airplane me-1"></i>
+                    {{ site.venue.shuttleInfo }} •
+                    <i class="bi bi-p-circle ms-2 me-1"></i>
+                    {{ site.venue.parkingInfo }}
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                <p class="mb-2"><strong>Group Rate: {{ site.venue.groupRate }}</strong></p>
+                <a href="{{ site.venue.bookingUrl }}" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--cais-accent); border:none; color:#fff;">
+                    <i class="bi bi-calendar-check me-2"></i>Book Hotel
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ===== WHY CAIS (Pillars) ===== -->
 <section id="why" class="py-5 bg-light">
@@ -82,7 +109,7 @@ showSponsorshipCallout: false
 <section id="program" class="py-5 bg-light">
     <div class="container">
         <h2 class="section-title mb-3">Conference Program</h2>
-        <p class="lead mb-4">Four days of cutting-edge research presentations, hands-on tutorials, and community building—{{ site.dates.display }} in San Francisco.</p>
+        <p class="lead mb-4">Four days of cutting-edge research presentations, hands-on tutorials, and community building—{{ site.dates.display }} in San Jose.</p>
 
         <div class="row g-4">
             <div class="col-md-6">

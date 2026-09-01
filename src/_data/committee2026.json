@@ -116,7 +116,7 @@
       "bio": "Assistant Professor of CS at Brown University. Her research focuses on systems for ML, networking, and operating systems. She has received a Google ML and Systems Junior Faculty award, NSF Graduate Research Fellowship, and Distinguished Artifact Award at SOSP."
     },
     {
-      "name": "Bogdan Stoica",
+      "name": "Bogdan 'Bo' Stoica",
       "affiliation": "University of Illinois Urbana-Champaign",
       "photo": "Bogdan_Stoica.png",
       "role": "Artifact Evaluation Chair",
@@ -785,8 +785,8 @@
         "affiliation": "IBM"
       },
       {
-        "name": "Bogdan Alexandru Stoica",
-        "affiliation": "UIUC"
+        "name": "Bogdan 'Bo' Stoica",
+        "affiliation": "University of Illinois Urbana-Champaign"
       },
       {
         "name": "Georgios Syros",
@@ -1041,7 +1041,326 @@
     ]
   },
   "artifactEvaluationCommittee": {
-    "chairs": [],
-    "members": []
+    "chairs": [
+      {
+        "name": "Bogdan 'Bo' Stoica",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "photo": "Bogdan_Stoica.png"
+      }
+    ],
+    "members": [
+      {
+        "name": "Aditi Ahuja",
+        "affiliation": "University of Illinois"
+      },
+      {
+        "name": "Afsara Benazir",
+        "affiliation": "University of Virginia"
+      },
+      {
+        "name": "Agustin Leon",
+        "affiliation": "New York University"
+      },
+      {
+        "name": "Alan Jojo",
+        "affiliation": "Indian Institute of Science"
+      },
+      {
+        "name": "Anirudh Sarma",
+        "affiliation": "Georgia Tech"
+      },
+      {
+        "name": "Ansh Sarkar",
+        "affiliation": "New York University"
+      },
+      {
+        "name": "Anup Niroula",
+        "affiliation": "New York University"
+      },
+      {
+        "name": "Atal Narayan Sahu",
+        "affiliation": "UCLA"
+      },
+      {
+        "name": "Ayush Bhardwaj",
+        "affiliation": "Akamai Technology"
+      },
+      {
+        "name": "Banruo Liu",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Bhanu Prakash Vangala",
+        "affiliation": "University of Missouri"
+      },
+      {
+        "name": "Boxi Zhou",
+        "affiliation": "Nanyang Technological University"
+      },
+      {
+        "name": "Chen Qian",
+        "affiliation": "CMU"
+      },
+      {
+        "name": "Chengpo Yan",
+        "affiliation": "University of Wisconsin-Madison"
+      },
+      {
+        "name": "Cláudia Brito",
+        "affiliation": "INESC TEC"
+      },
+      {
+        "name": "Duo Lu",
+        "affiliation": "Brown University"
+      },
+      {
+        "name": "Fanjiang Ye",
+        "affiliation": "Rice University"
+      },
+      {
+        "name": "Feng Cheng",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Ghadeer Almusaddar",
+        "affiliation": "Binghamton University"
+      },
+      {
+        "name": "Giannis Roumpos",
+        "affiliation": "IMDEA Software Institute"
+      },
+      {
+        "name": "Han-Ting Liang",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Harinder Kaur",
+        "affiliation": "IIIT DELHI"
+      },
+      {
+        "name": "Hung Tran",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Jacky Zhao",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Jinyao Liu",
+        "affiliation": "Shandong University"
+      },
+      {
+        "name": "Jiyu Hu",
+        "affiliation": "University of Illinois Urbana Champaign"
+      },
+      {
+        "name": "Jongho Baik",
+        "affiliation": "Korea University"
+      },
+      {
+        "name": "Junhong Liu",
+        "affiliation": "Beihang University"
+      },
+      {
+        "name": "Kaiwei Tu",
+        "affiliation": "University of Wisconsin-Madison"
+      },
+      {
+        "name": "Keisuke Kamahori",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Kenan Alghythee",
+        "affiliation": "University of Illinois Chicago"
+      },
+      {
+        "name": "Konstantinos Papaioannou",
+        "affiliation": "IMDEA Software Institute"
+      },
+      {
+        "name": "Kunlin Li",
+        "affiliation": "The Hong Kong University of Science and Technology (Guangzhou)"
+      },
+      {
+        "name": "Lana Honcharuk",
+        "affiliation": "Crusoe"
+      },
+      {
+        "name": "Li Yi",
+        "affiliation": "Beijing Institute of Technology"
+      },
+      {
+        "name": "Luyao Bai",
+        "affiliation": "University of Illinois Chicago"
+      },
+      {
+        "name": "Mark Xiao",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Megh Rathod",
+        "affiliation": "New York University"
+      },
+      {
+        "name": "Mengze Tang",
+        "affiliation": "University of Wisconsin–Madison"
+      },
+      {
+        "name": "Moshood Fakorede",
+        "affiliation": "Louisiana State University"
+      },
+      {
+        "name": "Muhammad Farrukh",
+        "affiliation": "Stony Brook University"
+      },
+      {
+        "name": "Muhammad Hassnain",
+        "affiliation": "University of California Davis"
+      },
+      {
+        "name": "Nidhi Bhatia",
+        "affiliation": "NVIDIA"
+      },
+      {
+        "name": "Nikolaos Pagonas",
+        "affiliation": "Columbia University"
+      },
+      {
+        "name": "Noppapon Chalermchockchareonkit",
+        "affiliation": "UC Berkeley Sky Lab / Crusoe AI"
+      },
+      {
+        "name": "Peter Zhong",
+        "affiliation": "Replit / Carnegie Mellon University"
+      },
+      {
+        "name": "Pragna Mamidipaka",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Pushkal Mishra",
+        "affiliation": "UC San Diego"
+      },
+      {
+        "name": "Ragini Gupta",
+        "affiliation": "University of Illinois at Urbana-Champaign"
+      },
+      {
+        "name": "Raja Gond",
+        "affiliation": "Cornell University"
+      },
+      {
+        "name": "Rixin Liu",
+        "affiliation": "Rice University"
+      },
+      {
+        "name": "Rohan Bhosle",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Rubaiya Tasnim Sholi",
+        "affiliation": "PhD in Computer Science, Louisiana State University"
+      },
+      {
+        "name": "Ruijie Gao",
+        "affiliation": "University of Michigan"
+      },
+      {
+        "name": "Ruiyang Wang",
+        "affiliation": "Anthropic"
+      },
+      {
+        "name": "Runzhou Han",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Sachin Gupta",
+        "affiliation": "eBay"
+      },
+      {
+        "name": "Saidu Sokoto",
+        "affiliation": "City St George’s, University of London"
+      },
+      {
+        "name": "Shanchao Liang",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Shawn Zhong",
+        "affiliation": "University of Wisconsin-Madison"
+      },
+      {
+        "name": "Sheng Jiang",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Sheng Yao",
+        "affiliation": "The Hong Kong University of Science and Technology"
+      },
+      {
+        "name": "Shreya Kochar",
+        "affiliation": "CMU"
+      },
+      {
+        "name": "Shu Wang",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Stratos Psomadakis",
+        "affiliation": "National Technical University of Athens"
+      },
+      {
+        "name": "Sumit Kumar",
+        "affiliation": "IIIT-Delhi"
+      },
+      {
+        "name": "Tuowei Wang",
+        "affiliation": "Tsinghua University"
+      },
+      {
+        "name": "Umakant Kulkarni",
+        "affiliation": "Nokia Bell Labs"
+      },
+      {
+        "name": "Vishnu Ramadas",
+        "affiliation": "University of WIsconsin-Madison"
+      },
+      {
+        "name": "Wenjie Hu",
+        "affiliation": "University of Wisconsin Madison"
+      },
+      {
+        "name": "Wenkai Li",
+        "affiliation": "Xi'an Jiaotong University"
+      },
+      {
+        "name": "Yash Kothari",
+        "affiliation": "Databricks/Carnegie Mellon University"
+      },
+      {
+        "name": "Yi Wu",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Yiwei Jiang",
+        "affiliation": "University of Wisconsin-Madison"
+      },
+      {
+        "name": "Yuchen Cai",
+        "affiliation": "The University of Texas at Dallas"
+      },
+      {
+        "name": "Yuchen Lu",
+        "affiliation": "Brown University"
+      },
+      {
+        "name": "Yuheng Tang",
+        "affiliation": "UCSB"
+      },
+      {
+        "name": "Yuxuan Jiang",
+        "affiliation": "SambaNova Systems"
+      }
+    ]
   }
 }
